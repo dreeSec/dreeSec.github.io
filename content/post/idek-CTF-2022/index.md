@@ -1,7 +1,7 @@
 +++
 author = "dree"
 title = "idek CTF 2023"
-date = "2022-01-24"
+date = "2023-01-24"
 tags = [
     "OSINT", "Forensics"
 ]
@@ -11,6 +11,8 @@ tags = [
 
 
 <!--more-->
+
+---
 
 # HiddenGem Mixtape 1: Initial Access
 Authors: `Bquanman`  
@@ -54,6 +56,6 @@ And there we see a `$flag` variable, signaling this is likely our flag. Running 
 
 {{< img src="idek-CTF-2022/tiooutput.png" >}}
 
-And we get the flag! As well as Resource: https://sensepost.com/blog/2016/powershell-c-sharp-and-dde-the-power-within
+And we get the flag! As well as the resource: https://sensepost.com/blog/2016/powershell-c-sharp-and-dde-the-power-within
 
 flag: `sdctf{morning_noon_and_night_I_meme}`
