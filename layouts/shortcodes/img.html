@@ -1,4 +1,4 @@
-{{- $res := resources.GetMatch (.Get "src") -}}
+{{- $res := .Page.Resources.GetMatch (.Get "src") -}}
 {{- if $res -}}
 <figure>
     <img
