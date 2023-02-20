@@ -55,4 +55,4 @@ And there we see a `$flag` variable, signaling this is likely our flag. Running 
 
 And we get the flag! As well as the resource: https://sensepost.com/blog/2016/powershell-c-sharp-and-dde-the-power-within
 
-flag: `sdctf{morning_noon_and_night_I_meme}`
+flag: `idek{MS_ExCel_DyN4m1c_D4ta_ExcH@ng3_1s_3a5y_t0_d3teCt}`
