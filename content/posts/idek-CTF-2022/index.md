@@ -1,6 +1,6 @@
 +++
 author = "dree"
-title = "idek CTF 2023"
+title = "idek CTF 2022"
 date = "2023-01-24"
 tags = [
     "OSINT", "Forensics"
