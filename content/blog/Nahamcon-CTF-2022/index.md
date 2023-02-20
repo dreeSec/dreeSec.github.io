@@ -30,11 +30,11 @@ The first step in your investigation is to find more information about the compa
 ### Approach
 Starting off we get this prompt that the Keeber Security Group about them wanting us to perform an investigation on them using our OSINT knowledge. We see that someone registered a domain, so step 1 should be finding this website. Not too hard after a quick google search for Keeber Security Group.
 
-{{< img src="Nahamcon-CTF-2022/1.png" >}}
+{{< img src="1.png" >}}
 
 We can use external websites to find out who registered the domain, such as [whois.com](https://www.whois.com).
 
-{{< img src="Nahamcon-CTF-2022/2.png" >}}
+{{< img src="2.png" >}}
 
 flag: `flag{ef67b2243b195eba43c7dc797b75d75b}`
 
@@ -50,11 +50,11 @@ The Keeber Security Group is a new startup in its infant stages. The team is alw
 ### Approach
 I started off looking at the Github for this one, and found a contributor named `Tiffany Douglas` who wasn’t on the team section of the website. However, I couldn't find the flag there. I then pivoted to the [Wayback Machine](https://web.archive.org/web/20220419212259/https://keebersecuritygroup.com/team/) and noticed a snapshot was taken prior to the competition starting.
 
-{{< img src="Nahamcon-CTF-2022/3.png" >}}
+{{< img src="3.png" >}}
 
 Looking at this, we can find the flag under Tiffany's name in the team section.
 
-{{< img src="Nahamcon-CTF-2022/4.png" >}}
+{{< img src="4.png" >}}
 
 flag: `flag{cddb59d78a6d50905340a62852e315c9}`
 
@@ -70,7 +70,7 @@ The ex-employee you found was fired for "committing a secret to public github re
 ### Approach
 To find the committed secret, I turned to github to see if there were any commits by Tiffany that were undone. Under the `.gitignore` in `security-evaluation-workflow` we see a secret that Tiffany must have added by mistake. 
 
-{{< img src="Nahamcon-CTF-2022/5.png" >}}
+{{< img src="5.png" >}}
 
 I wasn’t sure what asana was at first, but after googling it seems that it’s some software that Keeber uses. I went to the [asana documentation](https://developers.asana.com/docs) to see what we could do with this and came across a way to access the api: 
 
@@ -81,7 +81,7 @@ curl https://app.asana.com/api/1.0/users/me \
 
 Replacing the string with the one in the github, we get the flag.
 
-{{< img src="Nahamcon-CTF-2022/6.png" >}}
+{{< img src="6.png" >}}
 
 flag: `flag{49305a2a9dcc503cb2b1fdeef8a7ac04}`
 
@@ -103,8 +103,8 @@ The hardest part for me in this challenge was creating a good word list to use. 
 
 I looked closer at the `security-evaluation-workflow` in the github and found a lot of strange words that did not exist like in “We strive to achieve *minivivi* and *clainebookahl* through this”. I figured one of these made up words would be the password, and compiled a wordlist of the 72 of them. Using hashcat, we get the password is `craccurrelss` in 4 mins, 35 seconds.
 
-{{< img src="Nahamcon-CTF-2022/7.png" >}}
-{{< img src="Nahamcon-CTF-2022/8.png" >}}
+{{< img src="7.png" >}}
+{{< img src="8.png" >}}
 
 Using Keepass, we can open the .kdbx file with `craccurrelss` and get access to the passwords. After messing around for a bit I found that performing auto-type on an entry outputs the flag.
 
@@ -152,24 +152,24 @@ After all of the damage the ex-employee's mistakes caused to the company, the Ke
 ### Approach
 The hint tells us that we need to use `tif.hearts.science@gmail.com` to eventually find this new workplace. I tried to use [epieos](https://epieos.com/) to get more information. This only gives us her name and that she has a GitHub account, which we already knew. Since we are trying to find their new workplace, I figured they may have a social media account that would allow us to find this place (similar to a recent [OSINT](https://github.com/dree314/WolvSec-CTF-2022-Writeups/blob/main/OSINT/Where%20in%20the%20world.md) I made for WolvSecCon). Linkedin produced no results, and I thought Instagram was not either. None of the Tiffany Douglas accounts on instagram seemed to be her, but searching `tif.hearts.science` we find an account that is hers. 
 
-{{< img src="Nahamcon-CTF-2022/10.png" >}}
-{{< img src="Nahamcon-CTF-2022/11.png" >}}
+{{< img src="10.png" >}}
+{{< img src="11.png" >}}
 
 I started with this first post to find her work location. We can see a Google watermark on it, so I set out to find where this could be on Google Maps. On Tiffany's GitHub profile, she states that she is from Maine. This can also be deduced from the 207 area code on Keeber's website. Searching on the coast of Google Maps, we can easily see ferry routes denoted by blue dashed lines. I eliminated the minor cities in Maine and figured it must be Portland, which would also be why she called it “the city.”
 
-{{< img src="Nahamcon-CTF-2022/12.png" >}}
+{{< img src="12.png" >}}
 
 After scanning these ports I eventually came across [this one](https://www.google.com/maps/@43.6568766,-70.2480553,3a,75y,178.19h,87.69t/data=!3m7!1e1!3m5!1seNEkVm0dTjxhVTHSt2B5Qw!2e0!5s20151101T000000!7i16384!8i8192) that looked like the image, and sure enough if we turn the date back to 2015 we see the same image that was on her instagram.
 
-{{< img src="Nahamcon-CTF-2022/13.png" >}}
+{{< img src="13.png" >}}
 
 From her first instagram post I see that there is a courtyard at the place she works at, so I start scanning for courtyards in Portland on Google Maps to see if any of them had similar photospheres. This was not getting me anywhere, so I looked more at her Instagram and figured she works at a hotel from the “but the pool is indoors” meme. In hindsight, the bedding Instagram posts were also indications of this. I searched for hotels in Portland and found one with a courtyard in satellite mode.
 
-{{< img src="Nahamcon-CTF-2022/14.png" >}}
+{{< img src="14.png" >}}
 
 Searching [this hotel on yelp](https://www.yelp.com/biz/residence-inn-by-marriott-portland-downtown-waterfront-portland), we find Tiffany’s review with the flag in it.
 
-{{< img src="Nahamcon-CTF-2022/15.png" >}}
+{{< img src="15.png" >}}
 
 flag: `flag{0d707179f4c993c5eb3ba9becfb046034}`
 
@@ -190,19 +190,19 @@ Multiple employees have gotten strange phishing emails from the same phishing sc
 ### Approach
 Thankfully, Princess of the Ugbo Kingdom Ayofemi Akinruntan’s valiant attempt to get Keeber to donate to him and Sir. Beiber did not trick them. However, they did leave their email `cheerios.fanatic1941@gmail.com` which we may be able to use to figure out whoever sent this. 
 
-{{< img src="Nahamcon-CTF-2022/16.png" >}}
+{{< img src="16.png" >}}
 
 I thought about doing forensics work on the pdf, but since this was an OSINT challenge and the description said *use the email* I didn’t bother doing anything past looking at the metadata, to which there was nothing. The note saying we did not need to pay for any OSINT tool hinted that we should be able to use a public one, so I went back to [epieos](https://epieos.com/). This gave us the information that this gmail is registered with the name `Issac Anderson` and with [holehe](https://github.com/megadose/holehe) we know that they have a Myspace account created with this email. 
 
-{{< img src="Nahamcon-CTF-2022/17.png" >}}
+{{< img src="17.png" >}}
 
 I looked for a while to see if there was a way to find a Myspace account with just an email, but could not find anything. I then searched for Issac Anderson on Myspace and checked the ones that showed up but did not see a flag. I thought for a bit that maybe holehe was wrong or someone else registered an account with that email, but looking at the pdf again I figured the mention of Justin Bieber was a hint that we should in fact be looking for a Myspace account, since people like to share music there. I then realized I did not look through all the Issac Andersons, of which many, many results showed up.
 
-{{< img src="Nahamcon-CTF-2022/18.png" >}}
+{{< img src="18.png" >}}
 
 I went through opening all of them and quickly looked through to see if I found the right one. Sure enough, the flag showed up on one of them.
 
-{{< img src="Nahamcon-CTF-2022/19.png" >}}
+{{< img src="19.png" >}}
 
 flag: `flag{4a7e2fcd7f85a315a3914197c8a20f0d}`
 
@@ -218,11 +218,11 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
 ### Approach
 From the Myspace account in `Keeber 7` the url leaves us with their username `cereal_lover1990`. The [Sherlock tool](https://github.com/sherlock-project/sherlock) is great for finding accounts connected to usernames. 
 
-{{< img src="Nahamcon-CTF-2022/20.png" >}}
+{{< img src="20.png" >}}
 
 A lot of the results that showed up like CapFriendly show up for most searches but don’t actually have an account linked to that username. However, Pastebin doesn’t normally show up, and that seems like a great place to post personal information. Going to the *Chump list* on [their pastebin](https://pastebin.com/u/cereal_lover1990), we can find the flag in Maria’s personal information.
 
-{{< img src="Nahamcon-CTF-2022/21.png" >}}
+{{< img src="21.png" >}}
 
 flag: `flag{70b5a5d461d8a9c5529a66fa018ba0d0}`
 

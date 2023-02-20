@@ -25,7 +25,7 @@ This could be encrypted with ANYTHING!
 
 1.The flag seems to be encrypted by some 1:1 cipher, since there are still 3 letters before the flag. The challenge name and description imply that the word “Anything” might be useful to help decrypt this msg. Since the first letter is not encrypted, and the first letter of anything is an A, one might be able to deduce that this is a vigenere cipher. Putting it through a vigenere cipher on [dcode](https://www.dcode.fr/vigenere-cipher) yields the following results: 
 
-{{< img src="WolvSec-CTF-2022/1.png" >}}
+{{< img src="1.png" >}}
 
 flag: `wsc{vigenere_not_bad}`
 
@@ -194,15 +194,15 @@ While listening to the audio file, you can hear the audio has gotten corrupted t
   
 If you run strings on the file, it will output hidden comments:
 
-{{< img src="WolvSec-CTF-2022/2.png" >}}
+{{< img src="2.png" >}}
 
 This is hinting that you will need to view this as a raw file in photoshop. This is also hinted in the description with RAW being capitalized. To convert it to a raw file, change the file extension from ".wav" to ".raw". Then, when trying to open the file in photoshop you are presented with the following options:
 
-{{< img src="WolvSec-CTF-2022/3.png" >}}
+{{< img src="3.png" >}}
 
 From the hint, we are given that the channels should be set to 1 and the depth should be set to 8 bits. These are also the default settings, so the hint was not necessarily needed.
 
-{{< img src="WolvSec-CTF-2022/4.png" >}}
+{{< img src="4.png" >}}
 
 flag: `wsc{t0t4lly_w1ck3d_dud3}`
   
@@ -226,18 +226,18 @@ Format: wsc{STREETNAME}
 
 Vividpineconepig appears to be the name of some unique user. The description tells us we might want to find their social media account. Using tools like [Sherlock](https://github.com/sherlock-project/sherlock) we can find possible social media accounts of unique users. Once we try instagram, we find the following account and picture:
 
-{{< img src="WolvSec-CTF-2022/5.png" >}}
-{{< img src="WolvSec-CTF-2022/6.png" >}}
+{{< img src="5.png" >}}
+{{< img src="6.png" >}}
 
 One might initially think that we are going to need to brute force search the location, but we can actually narrow down this location using the two main clues in the picture. After doing research, one would find that the **Adopt a Highway sign** on the right is exclusive to the state on Montana. The other major clue is the **Mile 280** mile marker. Since we know the state is Montana, one might find this [Montana's DOT Mile Marker map](https://gis-mdt.opendata.arcgis.com/datasets/eaa5f283dd7f4a33bd30f8a392925e7f_0/explore?location=47.504619%2C-108.692992%2C7.94) to be useful. There are now very little locations you would have to check on programs such as google maps.
 
 Once we find that the town is **Shelby, MT**, the next step is finding the streetname. From the picture, we might consider this elevated street over the traintracks to be the street the description is referring to.
 
-{{< img src="WolvSec-CTF-2022/7.png" >}}
+{{< img src="7.png" >}}
 
 Looking on google maps, we can find the most updated street name (NOTE: If you check on google street view, it will give you an older name of the street, which is incorrect):
 
-{{< img src="WolvSec-CTF-2022/8.png" >}}
+{{< img src="8.png" >}}
 
 Here, we can see the street is Oilfield Ave.
 

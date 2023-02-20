@@ -24,22 +24,22 @@ The flag is lactf{location}, where location is the name of the POI that this per
 
 Please note: contacting anyone or any organization beyond official LA CTF support channels regarding this challenge is against the rules. Please be respectful of those who are involved in this challenge.
 
-{{< img src="LA-CTF-2023/picture.jpg" >}}
+{{< img src="picture.jpg" >}}
 
 ### Approach
 
 We are given this image of someone who looks like they hiked up a mountain, and also is part of computer science at UCLA. My first step was figuring out who this was, so just did a quick google search for "Computer science professors at UCLA"
 
-{{< img src="LA-CTF-2023/quora.png" >}}
+{{< img src="quora.png" >}}
 
 
 One of the first things I found is a [Quora article](https://www.quora.com/Who-is-the-best-computer-science-professor-at-UCLA) about him. So once I have the name I just google it, and then found his rock climbing website off that. Helped to confirm it was the same guy.
 
-{{< img src="LA-CTF-2023/personal_website.png" >}}
+{{< img src="personal_website.png" >}}
 
 I tried searching some of the mountains listed on Google Maps, but to no avail. I realized he didn't have hiking gear though unlike a lot of the photos on his website, but instead a UCLA T Shirt, signifying it could be a university trip. I came across [peaksandprofessorsucla.org](https://www.peaksandprofessorsucla.org/) which is a group of students at UCLA and professors. I looked at the blog posts with Carey Nachenberg, and found one about a trip to Skull Rock.
 
-{{< img src="LA-CTF-2023/skull_rock.png" >}}
+{{< img src="skull_rock.png" >}}
 
 I didn't really know if this was the exact place or not, but I went ahead and submitted that as the flag anyway and was correct! Anyways this was a weird OSINT challenge because I haven't had to deal with googling an actual person in a CTF, before this is more applicable to real world OSINT I guess?
 
@@ -59,7 +59,7 @@ My friend sent me [this](https://discord.com/channels/1060030874722259057/106003
 
 Note: Discord phone verification is NOT required for this challenge.
 
-{{< img src="LA-CTF-2023/embed.png" >}}
+{{< img src="embed.png" >}}
 
 ### Approach
 
@@ -73,18 +73,18 @@ From messing around with other message links that I created, I noticed having th
 
 Ok cool, but how do we join a server with this? Well after more research I stumbled across [this Reddit post](https://www.reddit.com/r/discordapp/comments/vwzj18/if_i_have_the_id_of_a_server_would_this_help_me/) that just so happens to explain what to do when a widget is enabled, and you have the server ID. 
 
-{{< img src="LA-CTF-2023/reddit.png" >}}
+{{< img src="reddit.png" >}}
 
 Using this the link would be:
 
 ```
 https://discord.com/widget?id=1060030874722259057
 ```
-{{< img src="LA-CTF-2023/widget.png" >}}
+{{< img src="widget.png" >}}
 
 And this Works! We can see here that the widget looks the same as the one pictured.
 
-{{< img src="LA-CTF-2023/discord_flag.png" >}}
+{{< img src="discord_flag.png" >}}
 
 From that we hit join, and we get the flag!
 
@@ -160,7 +160,7 @@ Cool! Hashcat told us that the password for the encrypted drive is `hacker765`. 
 └─$ sudo cryptsetup open --type luks hackers-drive.dd hackers-drive
 Enter passphrase for hackers-drive.dd: [ENTER hacker765 HERE]
 ```
-{{< img src="LA-CTF-2023/directory.png" >}}
+{{< img src="directory.png" >}}
 
 Alright, let's see what we have. Upon entering the drive we see some text files that contain command history and other important notes.
 
@@ -235,7 +235,7 @@ Interesting. This looks somewhat like the flag format? I tried for a while to re
 
 Let's take a look at that `encrypted-notes` folder:
 
-{{< img src="LA-CTF-2023/encrypted_notes.png" >}}
+{{< img src="encrypted_notes.png" >}}
 
 We see here two markdown files and `info.json` This json file contains encryption of the master keys. According to Joplin's [E2EE Spec](https://joplinapp.org/spec/e2ee/) the master keys are themselves encrypted. 
 
@@ -267,23 +267,23 @@ I first tried to decrypt this with this [SJCL demo](https://bitwiseshiftleft.git
 
 But what password do we use to decrypt these encrypted notes? That comes to the second part of the challenge description, where there's `a much stronger encryption password once you login`. Well the master password is actually stored in cleartext in the database file!
 
-{{< img src="LA-CTF-2023/cleartext_password.png" >}}
+{{< img src="cleartext_password.png" >}}
 
 I tried using variations of this and the password found in `info.json` (which is also in `syncInfoCache` in the database) on the SJCL demo website, but to no avail. This is probably possible, but why make this harder than it needs to be? Let's just download our own version of Joplin and replace the database file! Swapping out important parameter values should also work, like the `syncInfoCache`, `encryption.masterPassword`, and `sync_items`.
 
 Once you're in Joplin make sure the Encryption Keys look as such:
 
-{{< img src="LA-CTF-2023/encryption_keys.png" >}}
+{{< img src="encryption_keys.png" >}}
 
 Then, make sure the Synchronization target is on the file system and pointed to the `encrypted-notes` folder, or a copy of it.
 
 After all this is done, select the `Delete local data and re-download from sync target` to sync the new data into Joplin!
 
-{{< img src="LA-CTF-2023/sync_settings.png" >}}
+{{< img src="sync_settings.png" >}}
 
 There we go! We can see the *secert info* that the hacker was keeping from us.
 
-{{< img src="LA-CTF-2023/notebook_flag.png" >}}
+{{< img src="notebook_flag.png" >}}
 
 Flag: `lactf{S3cUr3_yOUR_C4cH3D_3nCRYP71On_P422woRD2}`
 
