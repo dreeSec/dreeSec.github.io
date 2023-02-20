@@ -6,6 +6,11 @@
 {{ define "main" }}
 <div class="postWrapper">
     <h1>{{ .Title }}</h1>
+    <style>
+        .content { max-width: calc(100vw - 40px); }
+        .content .imageWrapper { margin: 0; display: flex; justify-content: center; }
+        .content img { max-width: calc(100vw - 40px) }
+    </style>
     <div>
         {{ .Content }}
     </div>

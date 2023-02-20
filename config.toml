@@ -6,7 +6,7 @@ theme = "hugo-theme-nightfall"
   [[menu.header]]
     name = "blog"
     weight = 0
-    url = "blog"
+    url = "posts"
   [[menu.header]]
     name = "about"
     weight = 1
