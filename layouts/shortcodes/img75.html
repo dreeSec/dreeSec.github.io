@@ -1,0 +1,18 @@
+{{- $src := .Page.Resources.GetMatch (.Get "src") -}}
+{{- if $src -}}
+<style>
+    .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
+</style>
+<div class="postWrapper">
+<img
+    src="{{ $src.RelPermalink }}" 
+     width = "75%"
+     class="center"
+    />
+</div>
+
+{{- end -}}

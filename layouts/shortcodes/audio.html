@@ -1,0 +1,15 @@
+{{- $src := .Get "src" -}}
+{{- $autoplay := .Get "autoplay" -}}
+{{- $loop := .Get "loop" -}}
+<style>
+    .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+}
+</style>
+
+<audio controls >
+  <source src="{{ $src }}" type="audio/wav" class="center">
+  Your browser does not support the audio element.
+</audio>

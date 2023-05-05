@@ -1,0 +1,18 @@
+<style>
+.video-shortcode {
+max-width: 50%;
+height: auto;
+}
+    .center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50%;
+}
+</style>
+</style>
+<video class="center" class="video-shortcode" preload="{{ .Get "preload" }}" controls>
+    <source src="{{ .Get "src" }}" type="{{ .Get "type" }}">
+    There should have been a video here but your browser does not seem
+    to support it.
+</video>
