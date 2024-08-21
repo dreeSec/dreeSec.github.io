@@ -1,0 +1,709 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
+  
+  <title>WolvSec CTF 2022 &middot; dree.blog</title>
+    <meta name="title" content="WolvSec CTF 2022 &middot; dree.blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.74ad8406faea02f3e186ba5126249aaeed9073629e04b05037b903396b188724.js"
+    integrity="sha256-dK2EBvrqAvPhhrpRJiSaru2Qc2KeBLBQN7kDOWsYhyQ="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9602fe0216290b9ff0322c1fd14e88ab9fc0a13741f4de563f67831708d72bb2.css"
+    integrity="sha256-lgL&#43;AhYpC5/wMiwf0U6Iq5/AoTdB9N5WP2eDFwjXK7I="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Author writeups for my 4 challenges in Crypto, Forensics, and OSINT
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/wolvsec-ctf-2022/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/blog/wolvsec-ctf-2022/">
+  <meta property="og:site_name" content="dree.blog">
+  <meta property="og:title" content="WolvSec CTF 2022">
+  <meta property="og:description" content="Author writeups for my 4 challenges in Crypto, Forensics, and OSINT">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2022-03-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-03-29T00:00:00+00:00">
+    <meta property="article:tag" content="OSINT">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WolvSec CTF 2022">
+  <meta name="twitter:description" content="Author writeups for my 4 challenges in Crypto, Forensics, and OSINT">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "WolvSec CTF 2022",
+    "headline": "WolvSec CTF 2022",
+    
+    "abstract": "\u003cp\u003eAuthor writeups for my 4 challenges in Crypto, Forensics, and OSINT\u003c\/p\u003e",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/blog\/wolvsec-ctf-2022\/",
+    "author" : {
+      "@type": "Person",
+      "name": "dree"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-03-29T00:00:00\u002b00:00",
+    "datePublished": "2022-03-29T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-03-29T00:00:00\u002b00:00",
+    
+    "keywords": ["OSINT"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1752"
+  }
+  </script>
+
+
+  
+  <meta name="author" content="dree" />
+  
+    
+      <link href="mailto:dree.31415@gmail.com" rel="me" />
+    
+      <link href="https://github.com/dreeSec" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >dree.blog</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/blog/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        WolvSec CTF 2022
+      </h1>
+      
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-03-29 00:00:00 &#43;0000 UTC">29 March 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>Author writeups for my 4 challenges in Crypto, Forensics, and OSINT</p>
+<hr>
+<p><a href="https://dree.blog/posts/wolvsec-ctf-2022#anything" target="_blank" rel="noreferrer"><strong>ANYTHING</strong></a> [Crypto] [241 solves]</p>
+<p><a href="https://dree.blog/posts/wolvsec-ctf-2022#rsa-frustration" target="_blank" rel="noreferrer"><strong>RSA Frustration</strong></a> [Crypto] [12 solves]</p>
+<p><a href="https://dree.blog/posts/wolvsec-ctf-2022#noise" target="_blank" rel="noreferrer"><strong>Noise</strong></a> [Forensics] [18 solves]</p>
+<p><a href="https://dree.blog/posts/wolvsec-ctf-2022#where-in-the-world" target="_blank" rel="noreferrer"><strong>Where in the world?</strong></a> [OSINT] [39 solves]</p>
+<hr>
+<h1 id="anything" class="relative group">ANYTHING <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#anything" aria-label="Anchor">#</a></span></h1><p>Category: <strong>Crypto</strong><br>
+Difficulty: <strong>Easy</strong><br>
+Points: <strong>100</strong><br>
+Solves: <strong>241</strong></p>
+<p>Challenge Description:
+This could be encrypted with ANYTHING!
+<code>wfa{oporteec_gvb_ogd}</code></p>
+<h3 id="approach" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach" aria-label="Anchor">#</a></span></h3><p>1.The flag seems to be encrypted by some 1:1 cipher, since there are still 3 letters before the flag. The challenge name and description imply that the word “Anything” might be useful to help decrypt this msg. Since the first letter is not encrypted, and the first letter of anything is an A, one might be able to deduce that this is a vigenere cipher. Putting it through a vigenere cipher on <a href="https://www.dcode.fr/vigenere-cipher" target="_blank" rel="noreferrer">dcode</a> yields the following results:</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/1.png" 
+     width = "100%"
+    />
+</div>
+<p>flag: <code>wsc{vigenere_not_bad}</code></p>
+<hr>
+<h1 id="rsa-frustration" class="relative group">RSA Frustration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rsa-frustration" aria-label="Anchor">#</a></span></h1><p>Category: <strong>Crypto</strong><br>
+Difficulty: <strong>Hard</strong><br>
+Points: <strong>499</strong><br>
+Solves: <strong>12</strong></p>
+<p>Challenge Description:
+My friend encrypted the flag but realized they can’t decrypt it. Frustrated, they decided to keep encrypting the flag hoping this will somehow fix it. How are we going to recover it now? An efficient solution would probably be useful here.</p>
+<h3 id="files" class="relative group">Files <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#files" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">getPrime</span><span class="p">,</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">numToEncrypt</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">getPrimeCustom</span><span class="p">(</span><span class="n">bitLength</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span> <span class="o">=</span> <span class="n">getPrime</span><span class="p">(</span><span class="n">bitLength</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">e</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">e</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">C</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bitLength</span> <span class="o">=</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">numToEncrypt</span><span class="p">))</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl">    <span class="n">e</span> <span class="o">=</span> <span class="mi">113</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span> <span class="o">=</span> <span class="n">getPrimeCustom</span><span class="p">(</span><span class="n">bitLength</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q</span> <span class="o">=</span> <span class="n">getPrimeCustom</span><span class="p">(</span><span class="n">bitLength</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">N</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;N = </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">C</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">numToEncrypt</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">C</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">msg</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;wsc{????????????????????}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">numToEncrypt</span> <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># maybe if I keep encrypting it will fix itself???</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># surely it won&#39;t make it worse</span>
+</span></span><span class="line"><span class="cl"><span class="n">encryptedNum</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">numToEncrypt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">26</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">encryptedNum</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">encryptedNum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;e = </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;C = </span><span class="si">{</span><span class="n">C</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p><a href="https://github.com/drewd314/WolvSec-CTF-2022-Writeups/files/8358502/RSA_Frustration_-_output.2.txt" target="_blank" rel="noreferrer">RSA_Frustration output</a></p>
+<h3 id="approach-1" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-1" aria-label="Anchor">#</a></span></h3><p>The idea for this challenge stemmed from <a href="https://ctftime.org/writeup/32264" target="_blank" rel="noreferrer">Dice CTF&rsquo;s</a> recent RSA challenge!</p>
+<p>Based off the description, the person is having trouble decrypting their flag. This means something is broken with the algorithm. We can see that the encryption script is choosing primes that are divisible by the second power of e, meaning phi is not coprime to e!. This will cause a decryption using the inverse mod of the ciphertext to not be useful.</p>
+<p>Therefore, we have to use a solution similar to <a href="https://ctftime.org/writeup/32264" target="_blank" rel="noreferrer">Dice CTF&rsquo;s</a> where we take all candidate decryptions using the nth root algorithm in sage.</p>
+<p><strong>Step 1:</strong>
+We need all p and q values of the Ns. This can take a long time to generate since the largest N is 199 digits long. To accommodate for this, I uploaded the factors to <a href="http://factordb.com/" target="_blank" rel="noreferrer">FactorDB</a>. An algorithm that fetches the primes from factor DB can be used, or just manually doing it since there are only 27 Ns to factor.</p>
+<p><strong>Step 2:</strong>
+We are given the encrypted ciphertext after 27 encryptions, so we have to start by using the largest N&rsquo;s p and q values and the nth root algorithm to get possible p and q roots. We use the Chinese remainder theorem with the p and q roots to give us possible candidate decryptions, for which there will be e^2 of (12769 in this case).</p>
+<p><strong>Step 3:</strong>
+We are then going to have to construct an algorithm to keep recursing through the possible candidate decryptions, using the correct p and q values based on the depth of the recursion. A depth first search (DFS) is most useful here to get the flag quicker. Using <a href="https://github.com/christheyankee" target="_blank" rel="noreferrer">OPz qt&rsquo;s</a> DFS Sage Script we can get the flag!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="mi">113</span>
+</span></span><span class="line"><span class="cl"><span class="n">cipher</span> <span class="o">=</span> <span class="mi">289223688898876062358163081273625341952297233921219593553513840208424403509027574309712966219651401244239931354412620786106157789544225699742107659898527749034941786967678022482729534370307963310016</span>
+</span></span><span class="line"><span class="cl"><span class="n">N_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1134876149917575363176366704410565158549594427794901202977560677131703617</span><span class="p">,</span> <span class="mi">68506321231437453734007374706367120760326482177047006099953454136095248103663</span><span class="p">,</span> <span class="mi">7783503593765446343363083302704731608384677185199537317445372251030064778965500447</span><span class="p">,</span> <span class="mi">1070135687488356161164202697449500843725645617129661751744246979913699130211505096520493</span><span class="p">,</span> <span class="mi">84012402115704505952834528733063574032699054524475028392540927197962976150657887637275643641</span><span class="p">,</span> <span class="mi">4497278582433699034700211877087309784829036823057043402314297478185216205338241432310114079123771</span><span class="p">,</span> <span class="mi">222438508972972285373674471797570608108219830357859030918870564627162064662598790037437036093579139489</span><span class="p">,</span> <span class="mi">19116847751264029874551971240684579996570601026679560309305369168779130317938356692609176166515369250878437</span><span class="p">,</span> <span class="mi">1549903986709797721131070830901667744892392382636347158789834851868638863292232718716074359148785900673192362699</span><span class="p">,</span> <span class="mi">62387766690725996279968636478698222263235233511074646032501495855928095611796694112573478405813305623307157261619643</span><span class="p">,</span> <span class="mi">1496134688150941811618178638810353297864345150241986530472328508974364124440160181353848429438725939837967063441528305921</span><span class="p">,</span> <span class="mi">128744123633657656499069966444992201456797762973822340505291131642660343436783413140023509983315177426811890315424928661125061</span><span class="p">,</span> <span class="mi">6917342652058596217869122177298094984415751234677039849514181349685079073411591975537016273056773954075238307918266361998553646469</span><span class="p">,</span> <span class="mi">1999306851167477770905800721615579416365273707414308684419794311809177595829473632853128686208533753019224536487399393397120864878000113</span><span class="p">,</span> <span class="mi">138594056023048386926766329537127538558164718841925506735112367176642328352257472034381662493666299220910783237918231719166519833124529218331</span><span class="p">,</span> <span class="mi">8397272388904583425531462714999219642572091279898695377838194583995214737828538895164195817973441184775814069396690436662985593377966417476040659</span><span class="p">,</span> <span class="mi">83372889332166088651413254885376085265561130214754686361784964744744711092668473281132249352040520639092871294276293287744276919265091479681667169671</span><span class="p">,</span> <span class="mi">10684953914628370830889219903654707140968094024767031366624595731918523435466123514094659595357231410471738736952266383928737163485550013190959149252435167</span><span class="p">,</span> <span class="mi">428359134899960532964729749713513106760306719712194950954567619156985067322564731294653991204666853689688900339268764469280769569535109069729404621290809120793</span><span class="p">,</span> <span class="mi">24491413133428851306933688733518898516890217803647806829002775935975741568422047344206442746983871735723486865901743352102305801200224958166496937663406627341150101</span><span class="p">,</span> <span class="mi">2247517335600310176909964109060502815240207684510918447209767597511414934626668616704865548059751008841620288545344598917362752622130186820039265603312354963258673860579</span><span class="p">,</span> <span class="mi">157978379942536176944325875241196121764116712487226808271002140500926678942090491383544034591205964958130852055691446362753906164711087278555153881606839791499207025307202087</span><span class="p">,</span> <span class="mi">43938571869497484913682975192955012614794498816057204091016374302341854100775132924321569876797699342959191646206571444845883942305710956894334106963321644724361549027630634869933</span><span class="p">,</span> <span class="mi">2609065298534470914730686454716224905333131812890643378630636043224255484662185236061585264231004975072801053316107165770342161619265243081616632312934742288262985830181883449780965531</span><span class="p">,</span> <span class="mi">222235907202454132555071455958700740228567465616560859711214102245461514428187391909176054661864893645713338391509536653547350134615807194339839952004333949540567943568810413945779642106201</span><span class="p">,</span> <span class="mi">44890472824427626252451120059527486677662371033945481542195354255473403815853320591468917295474578271680865394304946847791535710766947049195816261224382109115684638995528332538466194474846836399</span><span class="p">,</span> <span class="mi">1062789633774349417938788353001516763303743389381120380522262327123099728631034935663418832664265833959487018276693680850987382421521055508477988016246558095545925414048663082368488342633334571240563</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">p_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1189933229053113361422958527792232151</span><span class="p">,</span> <span class="mi">295185057334340451492588650872876746227</span><span class="p">,</span> <span class="mi">88380889077762105057154017276462714444697</span><span class="p">,</span> <span class="mi">43974782968656404951924524450501283426052127</span><span class="p">,</span> <span class="mi">7832299017937880395583715032476962329929226581</span><span class="p">,</span> <span class="mi">1656848589754467667368312855929759764100120657831</span><span class="p">,</span> <span class="mi">385788223643735590500185001710758495904528462058461</span><span class="p">,</span> <span class="mi">135813272566456906193934636644217527100917542578856697</span><span class="p">,</span> <span class="mi">41680117092754807988080699273322244961911189757589699867</span><span class="p">,</span> <span class="mi">9419832152875820180139633405089278278408407453522978357309</span><span class="p">,</span> <span class="mi">1567597041534155679238655992215022394597376421096298363211067</span><span class="p">,</span> <span class="mi">350121371461894793578110243222665782247737840410076591434903787</span><span class="p">,</span> <span class="mi">103424977238409568447978495499643051307907366367259219393937014631</span><span class="p">,</span> <span class="mi">43449898447639409732732812916430042263570178747794530133229640125923</span><span class="p">,</span> <span class="mi">12445294229358634680867170058509842935273054334385354032543323581223253</span><span class="p">,</span> <span class="mi">3200631836176555526009533059891690177091538103904679780020639896015937897</span><span class="p">,</span> <span class="mi">317277895959173163347650321012213555955385929418622006880521870012130207557</span><span class="p">,</span> <span class="mi">102366458668689911004027849640392002821642295855327735994412634235696717329671</span><span class="p">,</span> <span class="mi">26984206512970181742033712455904984758134288864531714209886622060356697128804201</span><span class="p">,</span> <span class="mi">4479430800690915874719403516331677127806963529247809966024777708496270901092401687</span><span class="p">,</span> <span class="mi">1328165608715012145707239303399129070657427496129541416861187541092152796676371237057</span><span class="p">,</span> <span class="mi">368461902207817023013078031477042541053987571003677386333567043030477451518424731838173</span><span class="p">,</span> <span class="mi">206721456778089912780641186795393376537372828449722520397829606593267585681448641482345737</span><span class="p">,</span> <span class="mi">59471978701477648587546053450213894562580907285714122639903144859545186463681183925646967041</span><span class="p">,</span> <span class="mi">15115713372931874518523751684548940147062395364112500028355694776530968944848166318295947674571</span><span class="p">,</span> <span class="mi">5952590790902091635268726673538951527433355660839816621733964706901441977862333411532558667717227</span><span class="p">,</span> <span class="mi">1086686910531802445146659484012613083647370307628438760118376029969836222533970554565751069314622539</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">q_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">953730950786751671162019537171974567</span><span class="p">,</span> <span class="mi">232079231415308325450092906880606082069</span><span class="p">,</span> <span class="mi">88067722275537586769787599991567203589751</span><span class="p">,</span> <span class="mi">24335212484189159197840692460327461505035059</span><span class="p">,</span> <span class="mi">10726403821316775206273675267109184566904426261</span><span class="p">,</span> <span class="mi">2714357008989072105081411295741540337141142641741</span><span class="p">,</span> <span class="mi">576581905150085393327734090419529952232186498060949</span><span class="p">,</span> <span class="mi">140758317578347635848563045232314610161039815135897421</span><span class="p">,</span> <span class="mi">37185691759470013533730603170661686570987787098353146897</span><span class="p">,</span> <span class="mi">6623023178993627032758350846838617937710601663528839184727</span><span class="p">,</span> <span class="mi">954412804126450754097808991490470782833291028309980575506163</span><span class="p">,</span> <span class="mi">367712839396521757736384350030802803477965822058616833553305103</span><span class="p">,</span> <span class="mi">66882708962198932251728043152245270662769508317424500666902658099</span><span class="p">,</span> <span class="mi">46014074200352892806829193743016415423205917845271691428043440245531</span><span class="p">,</span> <span class="mi">11136261905010083405430254612464029672882837025885682392810368001188527</span><span class="p">,</span> <span class="mi">2623629589005115152329094552749299711026240699896424120660145647226563547</span><span class="p">,</span> <span class="mi">262775599542220820608778738911414710660835549772895468394761119434220071003</span><span class="p">,</span> <span class="mi">104379442774418262390337411577160146519860415840398189010112686742489182665577</span><span class="p">,</span> <span class="mi">15874438801602936764330936047390981280096007684699625987478211613419079727910193</span><span class="p">,</span> <span class="mi">5467527956822382309398095704409409074818664888285375307055715842283183939297839923</span><span class="p">,</span> <span class="mi">1692196606246085729483398884059069884182535824953762329164855466589577530953493347747</span><span class="p">,</span> <span class="mi">428750921047556327595864876619292414694543668237320723518704707914310601565770504401619</span><span class="p">,</span> <span class="mi">212549643149353357950643557614966235999942509894271006476145929120541407503538644651435909</span><span class="p">,</span> <span class="mi">43870497594014737833600078975099212558645315030912084285417550950854483979406797450479252891</span><span class="p">,</span> <span class="mi">14702310219802004876082313481498680940324963613770096574742182597840558294030859405666549879531</span><span class="p">,</span> <span class="mi">7541333580839789645678699855290145212677767915429008863004397257213367753100058966625356835737037</span><span class="p">,</span> <span class="mi">978009050697262759337388871320370165458800566798280419667959552859180906066907114053826258140106617</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">factorize</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">depth</span><span class="p">,</span><span class="n">cip</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span> <span class="o">==</span> <span class="n">N</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_roots</span> <span class="o">=</span> <span class="n">mod</span><span class="p">(</span><span class="n">cip</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">nth_root</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q_roots</span> <span class="o">=</span> <span class="n">mod</span><span class="p">(</span><span class="n">cip</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span><span class="o">.</span><span class="n">nth_root</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">xp</span> <span class="ow">in</span> <span class="n">p_roots</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">xq</span> <span class="ow">in</span> <span class="n">q_roots</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="n">crt</span><span class="p">([</span><span class="n">Integer</span><span class="p">(</span><span class="n">xp</span><span class="p">),</span> <span class="n">Integer</span><span class="p">(</span><span class="n">xq</span><span class="p">)],</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">flag</span> <span class="o">=</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#print(flag)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">flag</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;wsc&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">depth</span> <span class="o">!=</span> <span class="mi">26</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">factorize</span><span class="p">(</span><span class="n">p_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">q_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">N_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>           
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">factorize</span><span class="p">(</span><span class="n">p_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">q_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">N_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cipher</span><span class="p">)</span>
+</span></span></code></pre></div><p>flag: <code>wsc{s4g3m4th_i5_5up3r_co0l!}</code></p>
+<p><em><strong>The Optimization:</strong></em>
+The above solution was able to find the flag, however, we can make this even faster. Since the encryption added 9 more bits to the minimum size p and q could be <code>bitLength = ((len(bin(numToEncrypt)) - 2) // 2) + 9</code>, this means we don&rsquo;t have to DFS through 12769 candidate decryptions each time but actually just a couple or even sometimes 1! The algorithm below gets all candidate decryptions, and only chooses the smallest one for ciphers &gt; 400 bits, smallest 5 for ciphers &gt; 350 bits and smallest 10 for the rest. This will save about a minute&rsquo;s time (on my machine) when trying to find the flag.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">long_to_bytes</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sage.all</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">e</span> <span class="o">=</span> <span class="mi">113</span>
+</span></span><span class="line"><span class="cl"><span class="n">cipher</span> <span class="o">=</span> <span class="mi">289223688898876062358163081273625341952297233921219593553513840208424403509027574309712966219651401244239931354412620786106157789544225699742107659898527749034941786967678022482729534370307963310016</span>
+</span></span><span class="line"><span class="cl"><span class="n">N_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1134876149917575363176366704410565158549594427794901202977560677131703617</span><span class="p">,</span> <span class="mi">68506321231437453734007374706367120760326482177047006099953454136095248103663</span><span class="p">,</span> <span class="mi">7783503593765446343363083302704731608384677185199537317445372251030064778965500447</span><span class="p">,</span> <span class="mi">1070135687488356161164202697449500843725645617129661751744246979913699130211505096520493</span><span class="p">,</span> <span class="mi">84012402115704505952834528733063574032699054524475028392540927197962976150657887637275643641</span><span class="p">,</span> <span class="mi">4497278582433699034700211877087309784829036823057043402314297478185216205338241432310114079123771</span><span class="p">,</span> <span class="mi">222438508972972285373674471797570608108219830357859030918870564627162064662598790037437036093579139489</span><span class="p">,</span> <span class="mi">19116847751264029874551971240684579996570601026679560309305369168779130317938356692609176166515369250878437</span><span class="p">,</span> <span class="mi">1549903986709797721131070830901667744892392382636347158789834851868638863292232718716074359148785900673192362699</span><span class="p">,</span> <span class="mi">62387766690725996279968636478698222263235233511074646032501495855928095611796694112573478405813305623307157261619643</span><span class="p">,</span> <span class="mi">1496134688150941811618178638810353297864345150241986530472328508974364124440160181353848429438725939837967063441528305921</span><span class="p">,</span> <span class="mi">128744123633657656499069966444992201456797762973822340505291131642660343436783413140023509983315177426811890315424928661125061</span><span class="p">,</span> <span class="mi">6917342652058596217869122177298094984415751234677039849514181349685079073411591975537016273056773954075238307918266361998553646469</span><span class="p">,</span> <span class="mi">1999306851167477770905800721615579416365273707414308684419794311809177595829473632853128686208533753019224536487399393397120864878000113</span><span class="p">,</span> <span class="mi">138594056023048386926766329537127538558164718841925506735112367176642328352257472034381662493666299220910783237918231719166519833124529218331</span><span class="p">,</span> <span class="mi">8397272388904583425531462714999219642572091279898695377838194583995214737828538895164195817973441184775814069396690436662985593377966417476040659</span><span class="p">,</span> <span class="mi">83372889332166088651413254885376085265561130214754686361784964744744711092668473281132249352040520639092871294276293287744276919265091479681667169671</span><span class="p">,</span> <span class="mi">10684953914628370830889219903654707140968094024767031366624595731918523435466123514094659595357231410471738736952266383928737163485550013190959149252435167</span><span class="p">,</span> <span class="mi">428359134899960532964729749713513106760306719712194950954567619156985067322564731294653991204666853689688900339268764469280769569535109069729404621290809120793</span><span class="p">,</span> <span class="mi">24491413133428851306933688733518898516890217803647806829002775935975741568422047344206442746983871735723486865901743352102305801200224958166496937663406627341150101</span><span class="p">,</span> <span class="mi">2247517335600310176909964109060502815240207684510918447209767597511414934626668616704865548059751008841620288545344598917362752622130186820039265603312354963258673860579</span><span class="p">,</span> <span class="mi">157978379942536176944325875241196121764116712487226808271002140500926678942090491383544034591205964958130852055691446362753906164711087278555153881606839791499207025307202087</span><span class="p">,</span> <span class="mi">43938571869497484913682975192955012614794498816057204091016374302341854100775132924321569876797699342959191646206571444845883942305710956894334106963321644724361549027630634869933</span><span class="p">,</span> <span class="mi">2609065298534470914730686454716224905333131812890643378630636043224255484662185236061585264231004975072801053316107165770342161619265243081616632312934742288262985830181883449780965531</span><span class="p">,</span> <span class="mi">222235907202454132555071455958700740228567465616560859711214102245461514428187391909176054661864893645713338391509536653547350134615807194339839952004333949540567943568810413945779642106201</span><span class="p">,</span> <span class="mi">44890472824427626252451120059527486677662371033945481542195354255473403815853320591468917295474578271680865394304946847791535710766947049195816261224382109115684638995528332538466194474846836399</span><span class="p">,</span> <span class="mi">1062789633774349417938788353001516763303743389381120380522262327123099728631034935663418832664265833959487018276693680850987382421521055508477988016246558095545925414048663082368488342633334571240563</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">p_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1189933229053113361422958527792232151</span><span class="p">,</span> <span class="mi">295185057334340451492588650872876746227</span><span class="p">,</span> <span class="mi">88380889077762105057154017276462714444697</span><span class="p">,</span> <span class="mi">43974782968656404951924524450501283426052127</span><span class="p">,</span> <span class="mi">7832299017937880395583715032476962329929226581</span><span class="p">,</span> <span class="mi">1656848589754467667368312855929759764100120657831</span><span class="p">,</span> <span class="mi">385788223643735590500185001710758495904528462058461</span><span class="p">,</span> <span class="mi">135813272566456906193934636644217527100917542578856697</span><span class="p">,</span> <span class="mi">41680117092754807988080699273322244961911189757589699867</span><span class="p">,</span> <span class="mi">9419832152875820180139633405089278278408407453522978357309</span><span class="p">,</span> <span class="mi">1567597041534155679238655992215022394597376421096298363211067</span><span class="p">,</span> <span class="mi">350121371461894793578110243222665782247737840410076591434903787</span><span class="p">,</span> <span class="mi">103424977238409568447978495499643051307907366367259219393937014631</span><span class="p">,</span> <span class="mi">43449898447639409732732812916430042263570178747794530133229640125923</span><span class="p">,</span> <span class="mi">12445294229358634680867170058509842935273054334385354032543323581223253</span><span class="p">,</span> <span class="mi">3200631836176555526009533059891690177091538103904679780020639896015937897</span><span class="p">,</span> <span class="mi">317277895959173163347650321012213555955385929418622006880521870012130207557</span><span class="p">,</span> <span class="mi">102366458668689911004027849640392002821642295855327735994412634235696717329671</span><span class="p">,</span> <span class="mi">26984206512970181742033712455904984758134288864531714209886622060356697128804201</span><span class="p">,</span> <span class="mi">4479430800690915874719403516331677127806963529247809966024777708496270901092401687</span><span class="p">,</span> <span class="mi">1328165608715012145707239303399129070657427496129541416861187541092152796676371237057</span><span class="p">,</span> <span class="mi">368461902207817023013078031477042541053987571003677386333567043030477451518424731838173</span><span class="p">,</span> <span class="mi">206721456778089912780641186795393376537372828449722520397829606593267585681448641482345737</span><span class="p">,</span> <span class="mi">59471978701477648587546053450213894562580907285714122639903144859545186463681183925646967041</span><span class="p">,</span> <span class="mi">15115713372931874518523751684548940147062395364112500028355694776530968944848166318295947674571</span><span class="p">,</span> <span class="mi">5952590790902091635268726673538951527433355660839816621733964706901441977862333411532558667717227</span><span class="p">,</span> <span class="mi">1086686910531802445146659484012613083647370307628438760118376029969836222533970554565751069314622539</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">q_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">953730950786751671162019537171974567</span><span class="p">,</span> <span class="mi">232079231415308325450092906880606082069</span><span class="p">,</span> <span class="mi">88067722275537586769787599991567203589751</span><span class="p">,</span> <span class="mi">24335212484189159197840692460327461505035059</span><span class="p">,</span> <span class="mi">10726403821316775206273675267109184566904426261</span><span class="p">,</span> <span class="mi">2714357008989072105081411295741540337141142641741</span><span class="p">,</span> <span class="mi">576581905150085393327734090419529952232186498060949</span><span class="p">,</span> <span class="mi">140758317578347635848563045232314610161039815135897421</span><span class="p">,</span> <span class="mi">37185691759470013533730603170661686570987787098353146897</span><span class="p">,</span> <span class="mi">6623023178993627032758350846838617937710601663528839184727</span><span class="p">,</span> <span class="mi">954412804126450754097808991490470782833291028309980575506163</span><span class="p">,</span> <span class="mi">367712839396521757736384350030802803477965822058616833553305103</span><span class="p">,</span> <span class="mi">66882708962198932251728043152245270662769508317424500666902658099</span><span class="p">,</span> <span class="mi">46014074200352892806829193743016415423205917845271691428043440245531</span><span class="p">,</span> <span class="mi">11136261905010083405430254612464029672882837025885682392810368001188527</span><span class="p">,</span> <span class="mi">2623629589005115152329094552749299711026240699896424120660145647226563547</span><span class="p">,</span> <span class="mi">262775599542220820608778738911414710660835549772895468394761119434220071003</span><span class="p">,</span> <span class="mi">104379442774418262390337411577160146519860415840398189010112686742489182665577</span><span class="p">,</span> <span class="mi">15874438801602936764330936047390981280096007684699625987478211613419079727910193</span><span class="p">,</span> <span class="mi">5467527956822382309398095704409409074818664888285375307055715842283183939297839923</span><span class="p">,</span> <span class="mi">1692196606246085729483398884059069884182535824953762329164855466589577530953493347747</span><span class="p">,</span> <span class="mi">428750921047556327595864876619292414694543668237320723518704707914310601565770504401619</span><span class="p">,</span> <span class="mi">212549643149353357950643557614966235999942509894271006476145929120541407503538644651435909</span><span class="p">,</span> <span class="mi">43870497594014737833600078975099212558645315030912084285417550950854483979406797450479252891</span><span class="p">,</span> <span class="mi">14702310219802004876082313481498680940324963613770096574742182597840558294030859405666549879531</span><span class="p">,</span> <span class="mi">7541333580839789645678699855290145212677767915429008863004397257213367753100058966625356835737037</span><span class="p">,</span> <span class="mi">978009050697262759337388871320370165458800566798280419667959552859180906066907114053826258140106617</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">lenTable</span><span class="p">(</span><span class="n">cip</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bitLen</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">bin</span><span class="p">(</span><span class="n">cip</span><span class="p">))</span> <span class="o">-</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">bitLen</span> <span class="o">&gt;</span> <span class="mi">400</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="n">bitLen</span> <span class="o">&gt;</span> <span class="mi">350</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">factorize</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">depth</span><span class="p">,</span><span class="n">cip</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span> <span class="o">==</span> <span class="n">N</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p_roots</span> <span class="o">=</span> <span class="n">mod</span><span class="p">(</span><span class="n">cip</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">nth_root</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">q_roots</span> <span class="o">=</span> <span class="n">mod</span><span class="p">(</span><span class="n">cip</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span><span class="o">.</span><span class="n">nth_root</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">xp</span> <span class="ow">in</span> <span class="n">p_roots</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">xq</span> <span class="ow">in</span> <span class="n">q_roots</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="n">crt</span><span class="p">([</span><span class="n">Integer</span><span class="p">(</span><span class="n">xp</span><span class="p">),</span> <span class="n">Integer</span><span class="p">(</span><span class="n">xq</span><span class="p">)],</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">lenTable</span><span class="p">(</span><span class="n">cip</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">s1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">s1</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">s1</span><span class="p">[</span><span class="n">lenTable</span><span class="p">(</span><span class="n">cip</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">            <span class="n">s1</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">flag</span> <span class="o">=</span> <span class="n">long_to_bytes</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">flag</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;wsc&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">depth</span> <span class="o">!=</span> <span class="mi">26</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">s1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">factorize</span><span class="p">(</span><span class="n">p_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">q_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">N_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)],</span> <span class="p">(</span><span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">num</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">factorize</span><span class="p">(</span><span class="n">p_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">p_list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">q_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">N_list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">q_list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cipher</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="notes" class="relative group">Notes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#notes" aria-label="Anchor">#</a></span></h3><p>The initial idea was to make the optimization needed to find the flag, however this would likely lead to people with very great computing power to be able to still use the sole DFS algorithm without the e optimization. Therefore, the optimization is just a bonus idea. It is most useful when trying to replicate the results of the challenge. Sage remembers factors, so when running the scripts a second time the non-optimized one takes a minute whereas the optimized one takes 5 seconds on my machine. Maybe someone could force this optimization in a challenge of their own! If 10 bits were added instead of 9 then we would not even need a DFS, and could do it linear with the smallest candidate decryption each time. However, the idea for this challenge was to incorporate a DFS but to be able to use the optimization as assistance.</p>
+<hr>
+<h1 id="noise" class="relative group">Noise <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#noise" aria-label="Anchor">#</a></span></h1><p>Category: <strong>Forensics</strong><br>
+Difficulty: <strong>Medium</strong><br>
+Points: <strong>498</strong><br>
+Solves: <strong>18</strong></p>
+<p>Challenge Description:
+My buddy sent me this totally RAW clip of them playing guitar. Doesn’t sound quite right to me, something might be off. Also don’t listen with headphones at the end!</p>
+<h3 id="approach-2" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-2" aria-label="Anchor">#</a></span></h3><p>This challenge was based off of <a href="https://youtu.be/tU8WbB9vhDg" target="_blank" rel="noreferrer">Joshua Casper&rsquo;s</a> steganography idea!</p>
+<p>While listening to the audio file, you can hear the audio has gotten corrupted towards the end of the recording.</p>
+<p>If you run strings on the file, it will output hidden comments:</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/2.png" 
+     width = "100%"
+    />
+</div>
+<p>This is hinting that you will need to view this as a raw file in photoshop. This is also hinted in the description with RAW being capitalized. To convert it to a raw file, change the file extension from &ldquo;.wav&rdquo; to &ldquo;.raw&rdquo;. Then, when trying to open the file in photoshop you are presented with the following options:</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/3.png" 
+     width = "100%"
+    />
+</div>
+<p>From the hint, we are given that the channels should be set to 1 and the depth should be set to 8 bits. These are also the default settings, so the hint was not necessarily needed.</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/4.png" 
+     width = "100%"
+    />
+</div>
+<p>flag: <code>wsc{t0t4lly_w1ck3d_dud3}</code></p>
+<h3 id="note" class="relative group">Note <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#note" aria-label="Anchor">#</a></span></h3><p>At least one team was able to do this without the use of photoshop, and just online tools.</p>
+<hr>
+<h1 id="where-in-the-world" class="relative group">Where in the world? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#where-in-the-world" aria-label="Anchor">#</a></span></h1><p>Category: <strong>OSINT</strong><br>
+Difficulty: <strong>Medium</strong><br>
+Points: <strong>486</strong><br>
+Solves: <strong>39</strong></p>
+<p>Challenge Description:
+User Vividpineconepig claims on to live next to a street that&rsquo;s above some train tracks. Where are they? Maybe finding their social media could help. We’ll give you a flag for tracking them down. Give us this elevated STREETNAME preceding the St/Rd/Ave/Lane to prove it.</p>
+<p>Format: wsc{STREETNAME}</p>
+<h3 id="approach-3" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-3" aria-label="Anchor">#</a></span></h3><p>Vividpineconepig appears to be the name of some unique user. The description tells us we might want to find their social media account. Using tools like <a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noreferrer">Sherlock</a> we can find possible social media accounts of unique users. Once we try instagram, we find the following account and picture:</p>
+<p><div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/5.png" 
+     width = "100%"
+    />
+</div>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/6.png" 
+     width = "100%"
+    />
+</div></p>
+<p>One might initially think that we are going to need to brute force search the location, but we can actually narrow down this location using the two main clues in the picture. After doing research, one would find that the <strong>Adopt a Highway sign</strong> on the right is exclusive to the state on Montana. The other major clue is the <strong>Mile 280</strong> mile marker. Since we know the state is Montana, one might find this <a href="https://gis-mdt.opendata.arcgis.com/datasets/eaa5f283dd7f4a33bd30f8a392925e7f_0/explore?location=47.504619%2C-108.692992%2C7.94" target="_blank" rel="noreferrer">Montana&rsquo;s DOT Mile Marker map</a> to be useful. There are now very little locations you would have to check on programs such as google maps.</p>
+<p>Once we find that the town is <strong>Shelby, MT</strong>, the next step is finding the streetname. From the picture, we might consider this elevated street over the traintracks to be the street the description is referring to.</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/7.png" 
+     width = "100%"
+    />
+</div>
+<p>Looking on google maps, we can find the most updated street name (NOTE: If you check on google street view, it will give you an older name of the street, which is incorrect):</p>
+<div class="postWrapper">
+<img
+    src="/blog/wolvsec-ctf-2022/8.png" 
+     width = "100%"
+    />
+</div>
+<p>Here, we can see the street is Oilfield Ave.</p>
+<p>flag: <code>wsc{OILFIELD}</code></p>
+<p>Shoutout to the <a href="https://discord.gg/wx7CUMAxJQ" target="_blank" rel="noreferrer">USA Geoguessr community</a>! would not have all adopt a highway signs memorized without them :)</p>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="717"
+        height="717"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="dree"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg"
+          srcset="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_330x0_resize_q75_box.jpg 330w,/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg 660w
+          
+            ,/img/author.jpg 717w
+          
+          
+            ,/img/author.jpg 717w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          dree
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">test test 123</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:dree.31415@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/dreeSec"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/blog/nahamcon-ctf-2022/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Nahamcon CTF 2022</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-01 00:00:00 &#43;0000 UTC">1 May 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2024
+            dree
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

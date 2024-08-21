@@ -1,0 +1,767 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
+  
+  <title>LA CTF 2023 &middot; dree.blog</title>
+    <meta name="title" content="LA CTF 2023 &middot; dree.blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.74ad8406faea02f3e186ba5126249aaeed9073629e04b05037b903396b188724.js"
+    integrity="sha256-dK2EBvrqAvPhhrpRJiSaru2Qc2KeBLBQN7kDOWsYhyQ="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.9602fe0216290b9ff0322c1fd14e88ab9fc0a13741f4de563f67831708d72bb2.css"
+    integrity="sha256-lgL&#43;AhYpC5/wMiwf0U6Iq5/AoTdB9N5WP2eDFwjXK7I="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        This was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in 20th place out of 980 teams, and solved 35/46 challenges. I&rsquo;ll be going over the 3 misc challenges that I solved for our team.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/la-ctf-2023/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/blog/la-ctf-2023/">
+  <meta property="og:site_name" content="dree.blog">
+  <meta property="og:title" content="LA CTF 2023">
+  <meta property="og:description" content="This was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in 20th place out of 980 teams, and solved 35/46 challenges. I’ll be going over the 3 misc challenges that I solved for our team.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-02-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-02-18T00:00:00+00:00">
+    <meta property="article:tag" content="Forensics">
+    <meta property="article:tag" content="OSINT">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LA CTF 2023">
+  <meta name="twitter:description" content="This was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in 20th place out of 980 teams, and solved 35/46 challenges. I’ll be going over the 3 misc challenges that I solved for our team.">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "LA CTF 2023",
+    "headline": "LA CTF 2023",
+    
+    "abstract": "\u003cp\u003eThis was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in \u003cstrong\u003e20th\u003c\/strong\u003e place out of \u003cstrong\u003e980\u003c\/strong\u003e teams, and solved \u003cstrong\u003e35\/46\u003c\/strong\u003e challenges. I\u0026rsquo;ll be going over the 3 \u003cstrong\u003emisc\u003c\/strong\u003e challenges that I solved for our team.\u003c\/p\u003e",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/blog\/la-ctf-2023\/",
+    "author" : {
+      "@type": "Person",
+      "name": "dree"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-02-18T00:00:00\u002b00:00",
+    "datePublished": "2023-02-18T00:00:00\u002b00:00",
+    
+    "dateModified": "2023-02-18T00:00:00\u002b00:00",
+    
+    "keywords": ["forensics","OSINT"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1681"
+  }
+  </script>
+
+
+  
+  <meta name="author" content="dree" />
+  
+    
+      <link href="mailto:dree.31415@gmail.com" rel="me" />
+    
+      <link href="https://github.com/dreeSec" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >dree.blog</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/blog/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        LA CTF 2023
+      </h1>
+      
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-02-18 00:00:00 &#43;0000 UTC">18 February 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>This was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in <strong>20th</strong> place out of <strong>980</strong> teams, and solved <strong>35/46</strong> challenges. I&rsquo;ll be going over the 3 <strong>misc</strong> challenges that I solved for our team.</p>
+<hr>
+<p><a href="https://dree.blog/posts/la-ctf-2023#mischike-to-where" target="_blank" rel="noreferrer"><strong>misc/hike to where?</strong></a> [209 solves]</p>
+<p><a href="https://dree.blog/posts/la-ctf-2023#miscdiscord-l34k" target="_blank" rel="noreferrer"><strong>misc/discord l34k</strong></a> [142 solves]</p>
+<p><a href="https://dree.blog/posts/la-ctf-2023#misca-hackers-notes" target="_blank" rel="noreferrer"><strong>misc/a hacker&rsquo;s notes</strong></a> [43 solves]</p>
+<hr>
+<h1 id="mischike-to-where" class="relative group">misc/hike to where? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mischike-to-where" aria-label="Anchor">#</a></span></h1><p>Authors: <code>burturt</code><br>
+Points: <strong>353</strong><br>
+Solves: <strong>209</strong></p>
+<h3 id="challenge-description" class="relative group">Challenge Description: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description" aria-label="Anchor">#</a></span></h3><p>Where was this photo taken? I think it used to be in the original photo, but someone cropped it out!</p>
+<p>The flag is lactf{location}, where location is the name of the POI that this person hiked up to, all lowercase and replacing spaces with underscrolls. Use the google maps name of the POI: for example, if the solution is the UCLA Bruin Bear statue, <a href="https://www.google.com/maps/place/UCLA&#43;Bruin&#43;Statue/@34.0709817,-118.4451726,21z" target="_blank" rel="noreferrer">this</a> is the google maps location, and the flag would be lactf{bruin_statue}.</p>
+<p>Please note: contacting anyone or any organization beyond official LA CTF support channels regarding this challenge is against the rules. Please be respectful of those who are involved in this challenge.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/picture.jpg" 
+     width = "100%"
+    />
+</div>
+<h3 id="approach" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach" aria-label="Anchor">#</a></span></h3><p>We are given this image of someone who looks like they hiked up a mountain, and also is part of computer science at UCLA. My first step was figuring out who this was, so just did a quick google search for &ldquo;Computer science professors at UCLA&rdquo;</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/quora.png" 
+     width = "100%"
+    />
+</div>
+<p>One of the first things I found is a <a href="https://www.quora.com/Who-is-the-best-computer-science-professor-at-UCLA" target="_blank" rel="noreferrer">Quora article</a> about him. So once I have the name I just google it, and then found his rock climbing website off that. Helped to confirm it was the same guy.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/personal_website.png" 
+     width = "100%"
+    />
+</div>
+<p>I tried searching some of the mountains listed on Google Maps, but to no avail. I realized he didn&rsquo;t have hiking gear though unlike a lot of the photos on his website, but instead a UCLA T Shirt, signifying it could be a university trip. I came across <a href="https://www.peaksandprofessorsucla.org/" target="_blank" rel="noreferrer">peaksandprofessorsucla.org</a> which is a group of students at UCLA and professors. I looked at the blog posts with Carey Nachenberg, and found one about a trip to Skull Rock.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/skull_rock.png" 
+     width = "100%"
+    />
+</div>
+<p>I didn&rsquo;t really know if this was the exact place or not, but I went ahead and submitted that as the flag anyway and was correct! Anyways this was a weird OSINT challenge because I haven&rsquo;t had to deal with googling an actual person in a CTF, before this is more applicable to real world OSINT I guess?</p>
+<p>Flag:  <code>lactf{skull_rock}</code>
+<br/><br/><br/><br/></p>
+<hr>
+<h1 id="miscdiscord-l34k" class="relative group">misc/discord l34k <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#miscdiscord-l34k" aria-label="Anchor">#</a></span></h1><p>Authors: <code>burturt</code><br>
+Points: <strong>410</strong><br>
+Solves: <strong>142</strong></p>
+<h3 id="challenge-description-1" class="relative group">Challenge Description: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-1" aria-label="Anchor">#</a></span></h3><p>My friend sent me <a href="https://discord.com/channels/1060030874722259057/1060030875187822724/1060031064669700186" target="_blank" rel="noreferrer">this</a> message link that apparently links to a &ldquo;flag&rdquo;, but discord says &ldquo;You don&rsquo;t have access to this link&rdquo;! They did mention something about them being able to embed a list of online users on their own website, and sent me this image. Can you figure out how to join the server?</p>
+<p>Note: Discord phone verification is NOT required for this challenge.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/embed.png" 
+     width = "100%"
+    />
+</div>
+<h3 id="approach-1" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-1" aria-label="Anchor">#</a></span></h3><p>I first started looking at the message link to see what I could do with that</p>
+<pre tabindex="0"><code>https://discord.com/channels/1060030874722259057/1060030875187822724/1060031064669700186
+</code></pre><p>From messing around with other message links that I created, I noticed having the first number of the message link only, so <code>https://discord.com/channels/1060030874722259057</code> for example, would take you to the server it belonged to <strong>only if</strong> you are a member. From more research I discovered that this was the server ID.</p>
+<p>Ok cool, but how do we join a server with this? Well after more research I stumbled across <a href="https://www.reddit.com/r/discordapp/comments/vwzj18/if_i_have_the_id_of_a_server_would_this_help_me/" target="_blank" rel="noreferrer">this Reddit post</a> that just so happens to explain what to do when a widget is enabled, and you have the server ID.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/reddit.png" 
+     width = "100%"
+    />
+</div>
+<p>Using this the link would be:</p>
+<pre tabindex="0"><code>https://discord.com/widget?id=1060030874722259057
+</code></pre><div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/widget.png" 
+     width = "100%"
+    />
+</div>
+<p>And this Works! We can see here that the widget looks the same as the one pictured.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/discord_flag.png" 
+     width = "100%"
+    />
+</div>
+<p>From that we hit join, and we get the flag!</p>
+<p>Flag: <code>lactf{D15C0rD_W1D6375_134K_1NV1735}</code></p>
+<hr>
+<h1 id="misca-hackers-notes" class="relative group">misc/a hacker&rsquo;s notes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#misca-hackers-notes" aria-label="Anchor">#</a></span></h1><p>Authors: <code>burturt</code><br>
+Points: <strong>478</strong><br>
+Solves: <strong>43</strong></p>
+<h3 id="challenge-description-2" class="relative group">Challenge Description: <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-2" aria-label="Anchor">#</a></span></h3><p>We managed to get ahold of a flash drive which we think contains the decryption keys for the ransomware that a hacker group tried to deploy on our computer network! However, it seems like the hacker encrypted the flash drive. We know that the organization uses passwords in the format <code>hacker###</code> (hacker + 3 digits) for their disks, but a much stronger encryption password once you login. Can you try to get access to their notes?</p>
+<h3 id="approach-2" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-2" aria-label="Anchor">#</a></span></h3><p>So we are given a dd file, which should be a disk image file. To check, we can run the <code>file</code> command.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/Downloads/hackers-drive]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ file hackers-drive.dd 
+</span></span></span><span class="line"><span class="cl"><span class="go">hackers-drive.dd: LUKS encrypted file, ver 1 [twofish, cbc-plain, sha1] UUID: 456aa573-ab59-4146-a2f3-874a808b9c08
+</span></span></span></code></pre></div><p>This drive appears to be encrypted, which is also told by the challenge description. However, we know there are only 1000 variations. We can write a quick python script that outputs all of these:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">char1</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="n">char2</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="n">char3</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hacker&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">char1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">char2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">char3</span><span class="p">))</span>
+</span></span></code></pre></div><p>We can crack this LUKS encrypted file with <code>hashcat</code> as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/Downloads/hackers-drive]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ hashcat -m 14600 -a 0 -w 3 hackers-drive.dd wordlist.txt
+</span></span></span><span class="line"><span class="cl"><span class="go">hashcat (v6.2.5) starting
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">...
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">Approaching final keyspace - workload adjusted.           
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">hackers-drive.dd:hacker765                                
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                          
+</span></span></span><span class="line"><span class="cl"><span class="go">Session..........: hashcat
+</span></span></span><span class="line"><span class="cl"><span class="go">Status...........: Cracked
+</span></span></span><span class="line"><span class="cl"><span class="go">Hash.Mode........: 14600 (LUKS)
+</span></span></span><span class="line"><span class="cl"><span class="go">Hash.Target......: hackers-drive.dd
+</span></span></span><span class="line"><span class="cl"><span class="go">Time.Started.....: Sun Feb 12 20:49:18 2023 (1 sec)
+</span></span></span><span class="line"><span class="cl"><span class="go">Time.Estimated...: Sun Feb 12 20:49:19 2023 (0 secs)
+</span></span></span><span class="line"><span class="cl"><span class="go">Kernel.Feature...: Pure Kernel
+</span></span></span><span class="line"><span class="cl"><span class="go">Guess.Base.......: File (wordlist.txt)
+</span></span></span><span class="line"><span class="cl"><span class="go">Guess.Queue......: 1/1 (100.00%)
+</span></span></span><span class="line"><span class="cl"><span class="go">Speed.#1.........:     1953 H/s (9.55ms) @ Accel:512 Loops:1024 Thr:1 Vec:8
+</span></span></span><span class="line"><span class="cl"><span class="go">Recovered........: 1/1 (100.00%) Digests
+</span></span></span><span class="line"><span class="cl"><span class="go">Progress.........: 1000/1000 (100.00%)
+</span></span></span><span class="line"><span class="cl"><span class="go">Rejected.........: 0/1000 (0.00%)
+</span></span></span><span class="line"><span class="cl"><span class="go">Restore.Point....: 0/1000 (0.00%)
+</span></span></span><span class="line"><span class="cl"><span class="go">Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:1024-1085
+</span></span></span><span class="line"><span class="cl"><span class="go">Candidate.Engine.: Device Generator
+</span></span></span><span class="line"><span class="cl"><span class="go">Candidates.#1....: hacker0 -&gt; hacker999
+</span></span></span><span class="line"><span class="cl"><span class="go">Hardware.Mon.#1..: Util: 38%
+</span></span></span></code></pre></div><p>Cool! Hashcat told us that the password for the encrypted drive is <code>hacker765</code>. From this we can run <code>cryptsetup</code> to decrypt the drive, then just double click the output and kali will mount it for us!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/Downloads/hackers-drive]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ sudo cryptsetup open --type luks hackers-drive.dd hackers-drive
+</span></span></span><span class="line"><span class="cl"><span class="go">Enter passphrase for hackers-drive.dd: [ENTER hacker765 HERE]
+</span></span></span></code></pre></div><div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/directory.png" 
+     width = "100%"
+    />
+</div>
+<p>Alright, let&rsquo;s see what we have. Upon entering the drive we see some text files that contain command history and other important notes.</p>
+<p>Inside <code>.bash_history</code> we see:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">joplin
+</span></span></span><span class="line"><span class="cl"><span class="go">cd .config/joplin
+</span></span></span><span class="line"><span class="cl"><span class="go">ls -lah
+</span></span></span><span class="line"><span class="cl"><span class="go">sqlite3 database.sqlite 
+</span></span></span><span class="line"><span class="cl"><span class="go">ls
+</span></span></span><span class="line"><span class="cl"><span class="go">ls -lah
+</span></span></span><span class="line"><span class="cl"><span class="go">cat database.sqlite | grep lactf
+</span></span></span><span class="line"><span class="cl"><span class="go">cd ..
+</span></span></span><span class="line"><span class="cl"><span class="go">cd ..
+</span></span></span><span class="line"><span class="cl"><span class="go">ls
+</span></span></span><span class="line"><span class="cl"><span class="go">ls -lah
+</span></span></span><span class="line"><span class="cl"><span class="go">nano note_to_self.txt
+</span></span></span><span class="line"><span class="cl"><span class="go">ls -lah
+</span></span></span><span class="line"><span class="cl"><span class="go">ls
+</span></span></span><span class="line"><span class="cl"><span class="go">zerofree /dev/mapper/notes
+</span></span></span><span class="line"><span class="cl"><span class="go">exit
+</span></span></span></code></pre></div><p>Ok so we are dealing with notes being taken on <a href="https://joplinapp.org/" target="_blank" rel="noreferrer">Joplin</a>, an open source note-taking app. <code>joplin</code> initializes the notebook and <code>.config</code> folder, and our hacker here then enters the database that joplin uses. We can see their edit history in the <code>.sqlite_history</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="p">.</span><span class="n">tables</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes_fts</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">qexit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">tables</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">vacuum</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">exit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">pragma</span><span class="w"> </span><span class="n">secure_delete</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes_normalized</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes_normalized</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">notes_normalized</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">vacuum</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">.</span><span class="n">exit</span><span class="w">
+</span></span></span></code></pre></div><p>Looks like they are deleting their notes from the database, as hackers do. They nicely lay out their process in the <code>note_to_self.txt</code> file:</p>
+<pre tabindex="0"><code>Note to self: delete notes and notes_normalized tables in .config/joplin/database.sqlite when not in use; allow encrypted sync to restore notes after
+</code></pre><p>This matches up with the history files we just looked at, where the hacker is creating notes, then erasing them. Also shown by <code>zerofree /dev/mapper/notes</code>. Now time to figure out how to get these notes back! One of the first things I tried was just <code>cat database.sqlite | grep -a 'lactf'</code> in the <code>.config</code> folder, and we get this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[/media/kali/ed1c79a8-8148-4ce2-b482-91334a211dc9/.config/joplin]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ cat database.sqlite | grep -a &#39;lactf&#39;
+</span></span></span><span class="line"><span class="cl"><span class="go">3ncryp71onc4ch3dinfolactf       p422word2s3cur3ecert�n0 113
+</span></span></span><span class="line"><span class="cl"><span class="go">3ncryp71onc4ch3dinfolactf       p422word2s3cur3ecertyo40 20infosec@0 26infosecert
+</span></span></span></code></pre></div><p>Interesting. This looks somewhat like the flag format? I tried for a while to rearrange this into something like <code>lactf{p422word_2_s3cur3_your_3ncryp71on_c4ch3d_info}</code>. But no flag :( wasn&rsquo;t going to be this easy. After more checking I discovered this was just some residue data that comes from creating a note that the database saved, but the capitalization and punctuation is not correct. But hey! We know the flag is here assuming this isn&rsquo;t bait.</p>
+<p>Let&rsquo;s take a look at that <code>encrypted-notes</code> folder:</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/encrypted_notes.png" 
+     width = "100%"
+    />
+</div>
+<p>We see here two markdown files and <code>info.json</code> This json file contains encryption of the master keys. According to Joplin&rsquo;s <a href="https://joplinapp.org/spec/e2ee/" target="_blank" rel="noreferrer">E2EE Spec</a> the master keys are themselves encrypted.</p>
+<p>The markdown files look like such:</p>
+<pre tabindex="0"><code>id: f6fdd827811741a5b8b796b7778b2f4b
+created_time: 
+updated_time: 2023-01-16T01:07:30.122Z
+user_created_time: 
+user_updated_time: 
+encryption_cipher_text: JED01000022057fc1b793673943df83c6d6ef862416250002d0{&#34;iv&#34;:&#34;EJ1h/RpLa3kHQshwbAzg/w==&#34;,&#34;v&#34;:1,&#34;iter&#34;:101,&#34;ks&#34;:128,&#34;ts&#34;:64,&#34;mode&#34;:&#34;ccm&#34;,&#34;adata&#34;:&#34;&#34;,&#34;cipher&#34;:&#34;aes&#34;,&#34;salt&#34;:&#34;t+kHfSSLUOk=&#34;,&#34;ct&#34;:&#34;8rNT3WgTYYHbeXFvYNiebAD1Lz0lcmMBGjVoEe2vic0sTV8nzUUmP1gBVA/R7oCyOQLbcGrXc1hl1amvVE/Lln8erhqi1+tje9Amx+0tZPcwpQKiIht2hQmCqzBbCEYQ9f0OjFS01wJTTPl9M9PgIRc2eNvmN5VYCOiq3TqHOeBgiiyKFhXTd/1Xpbv++Y58M9Nombzmx3lRujjF2LAKUaYnO33BRQ7EJoadjqNE0PBNeMvZRBxsdt2Y2VmV3evWkA8htlf5R/Zhe8Di4CPupFJgBDF2j9P7R27f3UcrWzauqlLi4BfSjYggTQGe0YdxOJxHxXZIZX0KHqsTtpYXZDgnj0g4AkxDVBQhxJVQObdo/u8JUQofHLCZyyD2pn8A6cYF7QbItz3J9flQVtZw59UtLq2Oiip6OCWj75xLy48EqEtUjQsXY5AidrCR36S7fPsVilSCXBWX6x+43xArg+rMCAnColo+0XW/Beu+OHUPEkUl60pvuPcwiVo2tmR3Niiq+M2Fy+dpYfdH7pCqnIdKOJCrm/MGKGJyLYjlwYqhXwoKs32tVsNyhxFl1c3feZwCOw==&#34;}
+encryption_applied: 1
+parent_id: 
+is_shared: 
+share_id: 
+master_key_id: 
+icon: 
+type_: 2
+</code></pre><p>With the other file having the header:</p>
+<pre tabindex="0"><code>id: b692aaeaf3494fa29121524802940dc2
+parent_id: f6fdd827811741a5b8b796b7778b2f4b
+</code></pre><p>As well as a similar body. This indicates that this file likely is a note as part of the parent notebook.</p>
+<p>I first tried to decrypt this with this <a href="https://bitwiseshiftleft.github.io/sjcl/demo/" target="_blank" rel="noreferrer">SJCL demo</a> that&rsquo;s the same scheme Joplin uses, as per the spec.</p>
+<p>But what password do we use to decrypt these encrypted notes? That comes to the second part of the challenge description, where there&rsquo;s <code>a much stronger encryption password once you login</code>. Well the master password is actually stored in cleartext in the database file!</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/cleartext_password.png" 
+     width = "100%"
+    />
+</div>
+<p>I tried using variations of this and the password found in <code>info.json</code> (which is also in <code>syncInfoCache</code> in the database) on the SJCL demo website, but to no avail. This is probably possible, but why make this harder than it needs to be? Let&rsquo;s just download our own version of Joplin and replace the database file! Swapping out important parameter values should also work, like the <code>syncInfoCache</code>, <code>encryption.masterPassword</code>, and <code>sync_items</code>.</p>
+<p>Once you&rsquo;re in Joplin make sure the Encryption Keys look as such:</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/encryption_keys.png" 
+     width = "100%"
+    />
+</div>
+<p>Then, make sure the Synchronization target is on the file system and pointed to the <code>encrypted-notes</code> folder, or a copy of it.</p>
+<p>After all this is done, select the <code>Delete local data and re-download from sync target</code> to sync the new data into Joplin!</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/sync_settings.png" 
+     width = "100%"
+    />
+</div>
+<p>There we go! We can see the <em>secert info</em> that the hacker was keeping from us.</p>
+<div class="postWrapper">
+<img
+    src="/blog/la-ctf-2023/notebook_flag.png" 
+     width = "100%"
+    />
+</div>
+<p>Flag: <code>lactf{S3cUr3_yOUR_C4cH3D_3nCRYP71On_P422woRD2}</code></p>
+<h3 id="thoughts" class="relative group">Thoughts <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#thoughts" aria-label="Anchor">#</a></span></h3><p>This challenge was a good one, and took up a lot of my time this CTF. I learned a lot about the importance of documenting your findings, considering every clue thrown at you without falling into rabbit holes of overthinking, and ensuring integrity of the files for data you&rsquo;re given. Trying to sync the encryption notes should have been more of a priority in retrospect, instead of trying to decipher the encryption files manually.</p>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="717"
+        height="717"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="dree"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg"
+          srcset="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_330x0_resize_q75_box.jpg 330w,/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg 660w
+          
+            ,/img/author.jpg 717w
+          
+          
+            ,/img/author.jpg 717w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          dree
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">test test 123</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:dree.31415@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/dreeSec"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/blog/idek-ctf-2022/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >idek CTF 2022</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-01-24 00:00:00 &#43;0000 UTC">24 January 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/blog/umd-ctf-2023/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >UMD CTF 2023</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-05-04 00:00:00 &#43;0000 UTC">4 May 2023</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2024
+            dree
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
