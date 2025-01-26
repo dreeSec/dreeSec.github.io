@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/osint-hw-rf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UMD CTF 2023</title>
-      <link>http://localhost:1313/blog/umd-ctf-2023/</link>
+      <link>http://localhost:1313/posts/umd-ctf-2023/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/umd-ctf-2023/</guid>
+      <guid>http://localhost:1313/posts/umd-ctf-2023/</guid>
       <description>&lt;p&gt;This past weekend my team WolvSec competed in fellow big-10 University of Maryland&amp;rsquo;s CTF and placed 20th! This had a crazy amount of challenges, almost all of which had some pokemon theme, and overall was a lot of fun!&lt;/p&gt;&#xA;&lt;p&gt;I solved 16 challenges totaling 4914 points, including all the OSINT, most of the forensics, most of the HW+RF (Hardware and Radio Frequency), and one crypto.&lt;/p&gt;</description>
     </item>
   </channel>

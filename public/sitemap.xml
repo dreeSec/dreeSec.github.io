@@ -10,7 +10,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/blog/</loc>
+            <loc>http://localhost:1313/posts/</loc>
             <lastmod>2023-05-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -19,7 +19,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/blog/umd-ctf-2023/</loc>
+            <loc>http://localhost:1313/posts/umd-ctf-2023/</loc>
             <lastmod>2023-05-04T00:00:00+00:00</lastmod>
           </url>
     
@@ -33,7 +33,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/blog/la-ctf-2023/</loc>
+            <loc>http://localhost:1313/posts/la-ctf-2023/</loc>
             <lastmod>2023-02-18T00:00:00+00:00</lastmod>
           </url>
     
@@ -42,28 +42,28 @@
   
     
       <url>
-            <loc>http://localhost:1313/blog/idek-ctf-2022/</loc>
+            <loc>http://localhost:1313/posts/idek-ctf-2022/</loc>
             <lastmod>2023-01-24T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/blog/sd-ctf-2022/</loc>
+            <loc>http://localhost:1313/posts/sd-ctf-2022/</loc>
             <lastmod>2022-05-10T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/blog/nahamcon-ctf-2022/</loc>
+            <loc>http://localhost:1313/posts/nahamcon-ctf-2022/</loc>
             <lastmod>2022-05-01T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/blog/wolvsec-ctf-2022/</loc>
+            <loc>http://localhost:1313/posts/wolvsec-ctf-2022/</loc>
             <lastmod>2022-03-29T00:00:00+00:00</lastmod>
           </url>
     

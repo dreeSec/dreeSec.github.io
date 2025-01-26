@@ -10,23 +10,23 @@
     <atom:link href="http://localhost:1313/tags/forensics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UMD CTF 2023</title>
-      <link>http://localhost:1313/blog/umd-ctf-2023/</link>
+      <link>http://localhost:1313/posts/umd-ctf-2023/</link>
       <pubDate>Thu, 04 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/umd-ctf-2023/</guid>
+      <guid>http://localhost:1313/posts/umd-ctf-2023/</guid>
       <description>&lt;p&gt;This past weekend my team WolvSec competed in fellow big-10 University of Maryland&amp;rsquo;s CTF and placed 20th! This had a crazy amount of challenges, almost all of which had some pokemon theme, and overall was a lot of fun!&lt;/p&gt;&#xA;&lt;p&gt;I solved 16 challenges totaling 4914 points, including all the OSINT, most of the forensics, most of the HW+RF (Hardware and Radio Frequency), and one crypto.&lt;/p&gt;</description>
     </item>
     <item>
       <title>LA CTF 2023</title>
-      <link>http://localhost:1313/blog/la-ctf-2023/</link>
+      <link>http://localhost:1313/posts/la-ctf-2023/</link>
       <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/la-ctf-2023/</guid>
+      <guid>http://localhost:1313/posts/la-ctf-2023/</guid>
       <description>&lt;p&gt;This was a great CTF hosted by ACM Cyber and Psi Beta Rho at UCLA. My team WolvSec finished in &lt;strong&gt;20th&lt;/strong&gt; place out of &lt;strong&gt;980&lt;/strong&gt; teams, and solved &lt;strong&gt;35/46&lt;/strong&gt; challenges. I&amp;rsquo;ll be going over the 3 &lt;strong&gt;misc&lt;/strong&gt; challenges that I solved for our team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>idek CTF 2022</title>
-      <link>http://localhost:1313/blog/idek-ctf-2022/</link>
+      <link>http://localhost:1313/posts/idek-ctf-2022/</link>
       <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/idek-ctf-2022/</guid>
+      <guid>http://localhost:1313/posts/idek-ctf-2022/</guid>
       <description>&lt;p&gt;*Was in 2023, not 2022 since event delayed. Great CTF with a lot of challenges from the team &lt;strong&gt;idek&lt;/strong&gt; ¯_(ツ)_/¯. My team WolvSec came in &lt;strong&gt;17th&lt;/strong&gt; out of &lt;strong&gt;846&lt;/strong&gt; teams. I will be going over my 2 Forensics solves and 5 OSINT. Currently just Forensics 1, I plan to add the rest later!&lt;/p&gt;</description>
     </item>
   </channel>

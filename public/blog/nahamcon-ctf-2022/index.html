@@ -15,7 +15,7 @@
 ><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(255,255,255)" />
+  <meta name="theme-color" content="#FFFFFF" />
   
   <title>Nahamcon CTF 2022 &middot; dree.blog</title>
     <meta name="title" content="Nahamcon CTF 2022 &middot; dree.blog" />
@@ -26,8 +26,8 @@
   
   <script
     type="text/javascript"
-    src="/js/appearance.min.74ad8406faea02f3e186ba5126249aaeed9073629e04b05037b903396b188724.js"
-    integrity="sha256-dK2EBvrqAvPhhrpRJiSaru2Qc2KeBLBQN7kDOWsYhyQ="
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
   
@@ -40,14 +40,36 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.9602fe0216290b9ff0322c1fd14e88ab9fc0a13741f4de563f67831708d72bb2.css"
-    integrity="sha256-lgL&#43;AhYpC5/wMiwf0U6Iq5/AoTdB9N5WP2eDFwjXK7I="
+    href="/css/main.bundle.min.8f25b3b1fdd42cfaf2092d7e98b41f6474cfaf471f6aeb265f7ba2579197e54e.css"
+    integrity="sha256-jyWzsf3ULPryCS1&#43;mLQfZHTPr0cfausmX3uiV5GX5U4="
   />
   
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
   
   
   
   
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e2f23ac92b690a4e99ab2dffef9aa96a95f7ec39636fb9fa7eeb70d55ba347ae.js"
+      integrity="sha256-4vI6yStpCk6Zqy3/75qpapX37Dljb7n6futw1VujR64="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
   
   
   <meta
@@ -120,7 +142,32 @@
     "wordCount": "1994"
   }
   </script>
-
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Welcome to Congo! Tada",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/blog/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Nahamcon Ctf 2022",
+       "position": 3
+     }
+   ]
+ }
+  </script>
 
   
   <meta name="author" content="dree" />
@@ -146,7 +193,7 @@
   
 </head>
 <body
-    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
@@ -158,7 +205,7 @@
     </div>
     
     
-      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
   <nav class="flex items-start justify-between sm:items-center">
     
     <div class="flex flex-row items-center">
@@ -181,7 +228,7 @@
               
                 <a
                   href="/blog/"
-                  title=""
+                  title="Posts"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -197,7 +244,7 @@
               
                 <a
                   href="/categories/"
-                  title=""
+                  title="Categories"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -213,7 +260,7 @@
               
                 <a
                   href="/tags/"
-                  title=""
+                  title="Tags"
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
@@ -228,6 +275,21 @@
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
               
                 
+                
+                  <button
+                    id="search-button-1"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
                 
               
             </li>
@@ -248,11 +310,48 @@
   <article>
     <header class="max-w-prose">
       
-      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/"
+      >Welcome to Congo! :tada:</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/blog/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/blog/nahamcon-ctf-2022/"
+      >Nahamcon CTF 2022</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         Nahamcon CTF 2022
       </h1>
       
-        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
           
 
 
@@ -280,12 +379,30 @@
   
 
   
+    
+  
 
 
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-05-01 00:00:00 &#43;0000 UTC">1 May 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="2022-05-01 00:00:00 &#43;0000 UTC">1 May 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://github.com/jpanther/congo/tree/dev/exampleSite/content/blog/Nahamcon-CTF-2022/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+</span></a
+  >
+</span>
     
 
     
@@ -302,9 +419,72 @@
     </header>
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#challenge-keeber">Challenge: Keeber</a>
+      <ul>
+        <li><a href="#keeber-1">Keeber 1</a>
+          <ul>
+            <li><a href="#approach">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-2">Keeber 2</a>
+          <ul>
+            <li><a href="#approach-1">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-3">Keeber 3</a>
+          <ul>
+            <li><a href="#approach-2">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-4">Keeber 4</a>
+          <ul>
+            <li><a href="#approach-3">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-5">Keeber 5</a>
+          <ul>
+            <li><a href="#approach-4">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-6">Keeber 6</a>
+          <ul>
+            <li><a href="#approach-5">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-7">Keeber 7</a>
+          <ul>
+            <li><a href="#approach-6">Approach</a></li>
+          </ul>
+        </li>
+        <li><a href="#keeber-8">Keeber 8</a>
+          <ul>
+            <li><a href="#approach-7">Approach</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <p>Keeber OSINT Complete 1-8</p>
-<h1 id="challenge-keeber" class="relative group">Challenge: Keeber <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-keeber" aria-label="Anchor">#</a></span></h1><p>Category: <strong>OSINT</strong><br>
+<h2 id="challenge-keeber" class="relative group">Challenge: Keeber <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-keeber" aria-label="Anchor">#</a></span></h2><p>Category: <strong>OSINT</strong><br>
 Difficulty: <strong>Medium</strong><br>
 Authors: <code>@matlac#2291, @Gary#4657</code><br>
 Points: <strong>1842</strong></p>
@@ -318,12 +498,12 @@ Points: <strong>1842</strong></p>
 <p><a href="https://dree.blog/posts/nahamcon-ctf-2022#keeber-7" target="_blank" rel="noreferrer"><strong>Keeber 7</strong></a> [74 solves]</p>
 <p><a href="https://dree.blog/posts/nahamcon-ctf-2022#keeber-8" target="_blank" rel="noreferrer"><strong>Keeber 8</strong></a> [62 solves]</p>
 <hr>
-<h1 id="keeber-1" class="relative group">Keeber 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-1" aria-label="Anchor">#</a></span></h1><p>Points: <strong>50</strong><br>
+<h3 id="keeber-1" class="relative group">Keeber 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-1" aria-label="Anchor">#</a></span></h3><p>Points: <strong>50</strong><br>
 Solves: <strong>1246</strong></p>
 <p>Challenge Description:
 You have been applying to entry-level cybersecurity jobs focused on reconnaissance and open source intelligence (OSINT). Great news! You got an interview with a small cybersecurity company; the Keeber Security Group. Before interviewing, they want to test your skills through a series of challenges oriented around investigating the Keeber Security Group.</p>
 <p>The first step in your investigation is to find more information about the company itself. All we know is that the company is named Keeber Security Group and they are a cybersecurity startup. To start, help us find the person who registered their domain. The flag is in regular format.</p>
-<h3 id="approach" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach" aria-label="Anchor">#</a></span></h3><p>Starting off we get this prompt that the Keeber Security Group about them wanting us to perform an investigation on them using our OSINT knowledge. We see that someone registered a domain, so step 1 should be finding this website. Not too hard after a quick google search for Keeber Security Group.</p>
+<h4 id="approach" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach" aria-label="Anchor">#</a></span></h4><p>Starting off we get this prompt that the Keeber Security Group about them wanting us to perform an investigation on them using our OSINT knowledge. We see that someone registered a domain, so step 1 should be finding this website. Not too hard after a quick google search for Keeber Security Group.</p>
 <div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/1.png" 
@@ -339,11 +519,11 @@ You have been applying to entry-level cybersecurity jobs focused on reconnaissan
 </div>
 <p>flag: <code>flag{ef67b2243b195eba43c7dc797b75d75b}</code></p>
 <hr>
-<h1 id="keeber-2" class="relative group">Keeber 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-2" aria-label="Anchor">#</a></span></h1><p>Points: <strong>50</strong><br>
+<h3 id="keeber-2" class="relative group">Keeber 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-2" aria-label="Anchor">#</a></span></h3><p>Points: <strong>50</strong><br>
 Solves: <strong>890</strong></p>
 <p>Challenge Description:
 The Keeber Security Group is a new startup in its infant stages. The team is always changing and some people have left the company. The Keeber Security Group has been quick with changing their website to reflect these changes, but there must be some way to find ex-employees. Find an ex-employee through the group&rsquo;s website. The flag is in regular format.</p>
-<h3 id="approach-1" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-1" aria-label="Anchor">#</a></span></h3><p>I started off looking at the Github for this one, and found a contributor named <code>Tiffany Douglas</code> who wasn’t on the team section of the website. However, I couldn&rsquo;t find the flag there. I then pivoted to the <a href="https://web.archive.org/web/20220419212259/https://keebersecuritygroup.com/team/" target="_blank" rel="noreferrer">Wayback Machine</a> and noticed a snapshot was taken prior to the competition starting.</p>
+<h4 id="approach-1" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-1" aria-label="Anchor">#</a></span></h4><p>I started off looking at the Github for this one, and found a contributor named <code>Tiffany Douglas</code> who wasn’t on the team section of the website. However, I couldn&rsquo;t find the flag there. I then pivoted to the <a href="https://web.archive.org/web/20220419212259/https://keebersecuritygroup.com/team/" target="_blank" rel="noreferrer">Wayback Machine</a> and noticed a snapshot was taken prior to the competition starting.</p>
 <div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/3.png" 
@@ -359,11 +539,11 @@ The Keeber Security Group is a new startup in its infant stages. The team is alw
 </div>
 <p>flag: <code>flag{cddb59d78a6d50905340a62852e315c9}</code></p>
 <hr>
-<h1 id="keeber-3" class="relative group">Keeber 3 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-3" aria-label="Anchor">#</a></span></h1><p>Points: <strong>50</strong><br>
+<h3 id="keeber-3" class="relative group">Keeber 3 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-3" aria-label="Anchor">#</a></span></h3><p>Points: <strong>50</strong><br>
 Solves: <strong>377</strong></p>
 <p>Challenge Description:
 The ex-employee you found was fired for &ldquo;committing a secret to public github repositories&rdquo;. Find the committed secret, and use that to find confidential company information. The flag is in regular format.</p>
-<h3 id="approach-2" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-2" aria-label="Anchor">#</a></span></h3><p>To find the committed secret, I turned to github to see if there were any commits by Tiffany that were undone. Under the <code>.gitignore</code> in <code>security-evaluation-workflow</code> we see a secret that Tiffany must have added by mistake.</p>
+<h4 id="approach-2" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-2" aria-label="Anchor">#</a></span></h4><p>To find the committed secret, I turned to github to see if there were any commits by Tiffany that were undone. Under the <code>.gitignore</code> in <code>security-evaluation-workflow</code> we see a secret that Tiffany must have added by mistake.</p>
 <div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/5.png" 
@@ -382,12 +562,12 @@ The ex-employee you found was fired for &ldquo;committing a secret to public git
 </div>
 <p>flag: <code>flag{49305a2a9dcc503cb2b1fdeef8a7ac04}</code></p>
 <hr>
-<h1 id="keeber-4" class="relative group">Keeber 4 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-4" aria-label="Anchor">#</a></span></h1><p>Points: <strong>318</strong><br>
+<h3 id="keeber-4" class="relative group">Keeber 4 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-4" aria-label="Anchor">#</a></span></h3><p>Points: <strong>318</strong><br>
 Solves: <strong>192</strong></p>
 <p>Challenge Description:
 The ex-employee also left the company password database exposed to the public through GitHub. Since the password is shared throughout the company, it must be easy for employees to remember. The password used to encrypt the database is a single lowercase word somehow relating to the company. Make a custom word list using the Keeber Security Groups public facing information, and use it to open the password database The flag is in regular format.</p>
 <p>(Hint: John the Ripper may have support for cracking .kdbx password hashes!)</p>
-<h3 id="approach-3" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-3" aria-label="Anchor">#</a></span></h3><p>Finding the password database wasn&rsquo;t hard, as it&rsquo;s under <code>password-manager</code> in the github. After some research, we find that the <code>.kdbx</code> extension is a Keepass database hash. Following the steps in <a href="https://github.com/patecm/cracking_keepass" target="_blank" rel="noreferrer">this github</a> we can crack this keepass using John the Ripper and Hashcat together. With <code>keepass2john</code> in John the Ripper we can get a hash file that is readable by hashcat. You must remove the file name from the start of the hash file by editing it or with <code>| grep -o &quot;$keepass$.*&quot;</code>.</p>
+<h4 id="approach-3" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-3" aria-label="Anchor">#</a></span></h4><p>Finding the password database wasn&rsquo;t hard, as it&rsquo;s under <code>password-manager</code> in the github. After some research, we find that the <code>.kdbx</code> extension is a Keepass database hash. Following the steps in <a href="https://github.com/patecm/cracking_keepass" target="_blank" rel="noreferrer">this github</a> we can crack this keepass using John the Ripper and Hashcat together. With <code>keepass2john</code> in John the Ripper we can get a hash file that is readable by hashcat. You must remove the file name from the start of the hash file by editing it or with <code>| grep -o &quot;$keepass$.*&quot;</code>.</p>
 <p>The hardest part for me in this challenge was creating a good word list to use. I initially used <a href="https://github.com/digininja/CeWL" target="_blank" rel="noreferrer">CeWL</a> to compile a list of words on the website and github, then turned them to lowercase and removed duplicates. The correct password was in here, but the wordlist was 30k+ words and hashcat would not have finished in time.</p>
 <p>I looked closer at the <code>security-evaluation-workflow</code> in the github and found a lot of strange words that did not exist like in “We strive to achieve <em>minivivi</em> and <em>clainebookahl</em> through this”. I figured one of these made up words would be the password, and compiled a wordlist of the 72 of them. Using hashcat, we get the password is <code>craccurrelss</code> in 4 mins, 35 seconds.</p>
 <p><div class="postWrapper">
@@ -405,11 +585,11 @@ The ex-employee also left the company password database exposed to the public th
 <p>Using Keepass, we can open the .kdbx file with <code>craccurrelss</code> and get access to the passwords. After messing around for a bit I found that performing auto-type on an entry outputs the flag.</p>
 <p>flag: <code>flag{9a59bc85ebf02d5694d4b517143efba6}</code></p>
 <hr>
-<h1 id="keeber-5" class="relative group">Keeber 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-5" aria-label="Anchor">#</a></span></h1><p>Points: <strong>50</strong><br>
+<h3 id="keeber-5" class="relative group">Keeber 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-5" aria-label="Anchor">#</a></span></h3><p>Points: <strong>50</strong><br>
 Solves: <strong>573</strong></p>
 <p>Challenge Description:
 The ex-employee in focus made other mistakes while using the company&rsquo;s GitHub. All employees were supposed to commit code using the <a href="mailto:keeber-@protonmail.com">keeber-@protonmail.com</a> email assigned to them. They made some commits without following this practice. Find the personal email of this employee through GitHub. The flag is in regular format.</p>
-<h3 id="approach-4" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-4" aria-label="Anchor">#</a></span></h3><p>The challenge description tells us that we should look in the company’s GitHub to find the email of Tiffany. My initial thought is that she may have made a commit on another public GitHub repo. However, the Keeber repository is the only public one she has made commits to.</p>
+<h4 id="approach-4" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-4" aria-label="Anchor">#</a></span></h4><p>The challenge description tells us that we should look in the company’s GitHub to find the email of Tiffany. My initial thought is that she may have made a commit on another public GitHub repo. However, the Keeber repository is the only public one she has made commits to.</p>
 <p>I then did some research to see if there was a way to get the email of an account through GitHub and came across <a href="https://www.nymeria.io/blog/how-to-manually-find-email-addresses-for-github-users" target="_blank" rel="noreferrer">this article</a>. Following these steps, I went through each of Tiffany’s commits in the GitHub repo adding <code>.patch</code> to all of the urls. Eventually, we get to <a href="https://github.com/keebersecuritygroup/security-evaluation-workflow/commit/b25ed7f5aa72f88c0145a3832012546360c2ffc2" target="_blank" rel="noreferrer">this commit</a> and get the following output when adding <code>.patch</code>:</p>
 <pre tabindex="0"><code>From b25ed7f5aa72f88c0145a3832012546360c2ffc2 Mon Sep 17 00:00:00 2001
 From: flag{2c90416c24a91a9e1eb18168697e8ff5} &lt;tif.hearts.science@gmail.com&gt;
@@ -422,12 +602,12 @@ Subject: [PATCH] started code_reviews.txt
 ...
 </code></pre><p>flag: <code>flag{2c90416c24a91a9e1eb18168697e8ff5}</code></p>
 <hr>
-<h1 id="keeber-6" class="relative group">Keeber 6 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-6" aria-label="Anchor">#</a></span></h1><p>Points: <strong>368</strong><br>
+<h3 id="keeber-6" class="relative group">Keeber 6 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-6" aria-label="Anchor">#</a></span></h3><p>Points: <strong>368</strong><br>
 Solves: <strong>164</strong></p>
 <p>Challenge Description:
 After all of the damage the ex-employee&rsquo;s mistakes caused to the company, the Keeber Security Group is suing them for negligence! In order to file a proper lawsuit, we need to know where they are so someone can go and serve them. Can you find the ex-employee’s new workplace? The flag is in regular format, and can be found in a recent yelp review of their new workplace.</p>
 <p>(Hint: You will need to pivot off of the email found in the past challenge!)</p>
-<h3 id="approach-5" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-5" aria-label="Anchor">#</a></span></h3><p>The hint tells us that we need to use <code>tif.hearts.science@gmail.com</code> to eventually find this new workplace. I tried to use <a href="https://epieos.com/" target="_blank" rel="noreferrer">epieos</a> to get more information. This only gives us her name and that she has a GitHub account, which we already knew. Since we are trying to find their new workplace, I figured they may have a social media account that would allow us to find this place (similar to a recent <a href="https://github.com/dree314/WolvSec-CTF-2022-Writeups/blob/main/OSINT/Where%20in%20the%20world.md" target="_blank" rel="noreferrer">OSINT</a> I made for WolvSecCon). Linkedin produced no results, and I thought Instagram was not either. None of the Tiffany Douglas accounts on instagram seemed to be her, but searching <code>tif.hearts.science</code> we find an account that is hers.</p>
+<h4 id="approach-5" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-5" aria-label="Anchor">#</a></span></h4><p>The hint tells us that we need to use <code>tif.hearts.science@gmail.com</code> to eventually find this new workplace. I tried to use <a href="https://epieos.com/" target="_blank" rel="noreferrer">epieos</a> to get more information. This only gives us her name and that she has a GitHub account, which we already knew. Since we are trying to find their new workplace, I figured they may have a social media account that would allow us to find this place (similar to a recent <a href="https://github.com/dree314/WolvSec-CTF-2022-Writeups/blob/main/OSINT/Where%20in%20the%20world.md" target="_blank" rel="noreferrer">OSINT</a> I made for WolvSecCon). Linkedin produced no results, and I thought Instagram was not either. None of the Tiffany Douglas accounts on instagram seemed to be her, but searching <code>tif.hearts.science</code> we find an account that is hers.</p>
 <p><div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/10.png" 
@@ -470,13 +650,13 @@ After all of the damage the ex-employee&rsquo;s mistakes caused to the company, 
 </div>
 <p>flag: <code>flag{0d707179f4c993c5eb3ba9becfb046034}</code></p>
 <hr>
-<h1 id="keeber-7" class="relative group">Keeber 7 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-7" aria-label="Anchor">#</a></span></h1><p>Points: <strong>474</strong><br>
+<h3 id="keeber-7" class="relative group">Keeber 7 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-7" aria-label="Anchor">#</a></span></h3><p>Points: <strong>474</strong><br>
 Solves: <strong>74</strong></p>
 <p>Challenge Description:
 Multiple employees have gotten strange phishing emails from the same phishing scheme. Use the email corresponding to the phishing email to find the true identity of the scammer. The flag is in regular format.</p>
 <p>(Note: This challenge can be solved without paying for anything!)</p>
 <p><a href="https://github.com/dree314/Nahamcon-CTF-2022-Keeeber-OSINT-Writeups/files/8599678/keeber_7.pdf" target="_blank" rel="noreferrer">keeber_7.pdf</a></p>
-<h3 id="approach-6" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-6" aria-label="Anchor">#</a></span></h3><p>Thankfully, Princess of the Ugbo Kingdom Ayofemi Akinruntan’s valiant attempt to get Keeber to donate to him and Sir. Beiber did not trick them. However, they did leave their email <code>cheerios.fanatic1941@gmail.com</code> which we may be able to use to figure out whoever sent this.</p>
+<h4 id="approach-6" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-6" aria-label="Anchor">#</a></span></h4><p>Thankfully, Princess of the Ugbo Kingdom Ayofemi Akinruntan’s valiant attempt to get Keeber to donate to him and Sir. Beiber did not trick them. However, they did leave their email <code>cheerios.fanatic1941@gmail.com</code> which we may be able to use to figure out whoever sent this.</p>
 <div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/16.png" 
@@ -506,11 +686,11 @@ Multiple employees have gotten strange phishing emails from the same phishing sc
 </div>
 <p>flag: <code>flag{4a7e2fcd7f85a315a3914197c8a20f0d}</code></p>
 <hr>
-<h1 id="keeber-8" class="relative group">Keeber 8 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-8" aria-label="Anchor">#</a></span></h1><p>Points: <strong>482</strong><br>
+<h3 id="keeber-8" class="relative group">Keeber 8 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#keeber-8" aria-label="Anchor">#</a></span></h3><p>Points: <strong>482</strong><br>
 Solves: <strong>62</strong></p>
 <p>Challenge Description:
 Despite all of the time we spend teaching people about phishing, someone at Keeber fell for one! Maria responded to the email and sent some of her personal information. Pivot off of what you found in the previous challenge to find where Maria&rsquo;s personal information was posted. The flag is in regular format.</p>
-<h3 id="approach-7" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-7" aria-label="Anchor">#</a></span></h3><p>From the Myspace account in <code>Keeber 7</code> the url leaves us with their username <code>cereal_lover1990</code>. The <a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noreferrer">Sherlock tool</a> is great for finding accounts connected to usernames.</p>
+<h4 id="approach-7" class="relative group">Approach <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#approach-7" aria-label="Anchor">#</a></span></h4><p>From the Myspace account in <code>Keeber 7</code> the url leaves us with their username <code>cereal_lover1990</code>. The <a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noreferrer">Sherlock tool</a> is great for finding accounts connected to usernames.</p>
 <div class="postWrapper">
 <img
     src="/blog/nahamcon-ctf-2022/20.png" 
@@ -563,8 +743,8 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
         alt="dree"
         loading="lazy" decoding="async"
         
-          src="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg"
-          srcset="/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_330x0_resize_q75_box.jpg 330w,/img/author_hu43e57b3df93ff13c2afcf4403c749508_159721_660x0_resize_q75_box.jpg 660w
+          src="/img/author_hu_3d4218d30e0097d.jpg"
+          srcset="/img/author_hu_b4defe7435004ded.jpg 330w,/img/author_hu_3d4218d30e0097d.jpg 660w
           
             ,/img/author.jpg 717w
           
@@ -590,7 +770,7 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
         </div>
       
       
-        <div class="text-sm text-neutral-700 dark:text-neutral-400">test test 123</div>
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">i hack things</div>
       
       <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
@@ -675,7 +855,7 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
                 </span>
               </span>
               <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&rarr;</span
                 ><span class="ltr:hidden rtl:inline">&larr;</span></span
               >
@@ -691,19 +871,23 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
     </footer>
   </article>
 
-        
-          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
-            <a
-              href="#the-top"
-              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-              aria-label="Scroll to top"
-              title="Scroll to top"
-            >
-              &uarr;
-            </a>
-          </div>
-        
-      </main><footer class="py-10 print:hidden">
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
   
   
   <div class="flex items-center justify-between">
@@ -712,7 +896,7 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
       
         <p class="text-sm text-neutral-500 dark:text-neutral-400">
             &copy;
-            2024
+            2025
             dree
         </p>
       
@@ -731,11 +915,71 @@ Despite all of the time we spend teaching people about phishing, someone at Keeb
       
       
       
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
     </div>
   </div>
   
   
 </footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
     </div>
   </body>
