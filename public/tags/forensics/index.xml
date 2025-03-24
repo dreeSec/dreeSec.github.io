@@ -29,5 +29,12 @@
       <guid>http://localhost:1313/posts/idek-ctf-2022/</guid>
       <description>&lt;p&gt;*Was in 2023, not 2022 since event delayed. Great CTF with a lot of challenges from the team &lt;strong&gt;idek&lt;/strong&gt; ¯_(ツ)_/¯. My team WolvSec came in &lt;strong&gt;17th&lt;/strong&gt; out of &lt;strong&gt;846&lt;/strong&gt; teams. I will be going over my 2 Forensics solves and 5 OSINT. Currently just Forensics 1, I plan to add the rest later!&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>WolvCTF 2025</title>
+      <link>http://localhost:1313/posts/wolvctf-2025/</link>
+      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wolvctf-2025/</guid>
+      <description>&lt;p&gt;Author writeups for my 6 challenges&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
