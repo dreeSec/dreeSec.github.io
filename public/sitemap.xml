@@ -11,7 +11,32 @@
     
       <url>
             <loc>http://localhost:1313/posts/</loc>
-            <lastmod>2023-05-04T00:00:00+00:00</lastmod>
+            <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
+            <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/wolvctf-2025-active-series/</loc>
+            <lastmod>2025-03-24T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/wolvctf-2025-individual/</loc>
+            <lastmod>2025-03-24T00:00:00+00:00</lastmod>
           </url>
     
   
@@ -26,18 +51,9 @@
   
     
       <url>
-            <loc>http://localhost:1313/</loc>
-            <lastmod>2023-05-04T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
             <loc>http://localhost:1313/posts/la-ctf-2023/</loc>
             <lastmod>2023-02-18T00:00:00+00:00</lastmod>
           </url>
-    
-  
     
   
     
@@ -58,15 +74,6 @@
       <url>
             <loc>http://localhost:1313/posts/nahamcon-ctf-2022/</loc>
             <lastmod>2022-05-01T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/wolvctf-2025/</loc>
-            <lastmod>2022-03-29T00:00:00+00:00</lastmod>
           </url>
     
   

@@ -6,8 +6,22 @@
     <description>Recent content in Forensics on dree.blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 May 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/forensics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WolvCTF 2025 Active Series</title>
+      <link>http://localhost:1313/posts/wolvctf-2025-active-series/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wolvctf-2025-active-series/</guid>
+      <description>Author Writeups for the Active Series from WolvCTF 2025</description>
+    </item>
+    <item>
+      <title>WolvCTF 2025 Individual Challenges</title>
+      <link>http://localhost:1313/posts/wolvctf-2025-individual/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wolvctf-2025-individual/</guid>
+      <description>&lt;p&gt;Author writeups for my 6 individual challenges&lt;/p&gt;</description>
+    </item>
     <item>
       <title>UMD CTF 2023</title>
       <link>http://localhost:1313/posts/umd-ctf-2023/</link>
@@ -28,13 +42,6 @@
       <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/idek-ctf-2022/</guid>
       <description>&lt;p&gt;*Was in 2023, not 2022 since event delayed. Great CTF with a lot of challenges from the team &lt;strong&gt;idek&lt;/strong&gt; ¯_(ツ)_/¯. My team WolvSec came in &lt;strong&gt;17th&lt;/strong&gt; out of &lt;strong&gt;846&lt;/strong&gt; teams. I will be going over my 2 Forensics solves and 5 OSINT. Currently just Forensics 1, I plan to add the rest later!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WolvCTF 2025</title>
-      <link>http://localhost:1313/posts/wolvctf-2025/</link>
-      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/wolvctf-2025/</guid>
-      <description>&lt;p&gt;Author writeups for my 6 challenges&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

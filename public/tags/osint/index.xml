@@ -6,8 +6,15 @@
     <description>Recent content in OSINT on dree.blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WolvCTF 2025 Individual Challenges</title>
+      <link>http://localhost:1313/posts/wolvctf-2025-individual/</link>
+      <pubDate>Mon, 24 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wolvctf-2025-individual/</guid>
+      <description>&lt;p&gt;Author writeups for my 6 individual challenges&lt;/p&gt;</description>
+    </item>
     <item>
       <title>LA CTF 2023</title>
       <link>http://localhost:1313/posts/la-ctf-2023/</link>
@@ -35,13 +42,6 @@
       <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/nahamcon-ctf-2022/</guid>
       <description>&lt;p&gt;Keeber OSINT Complete 1-8&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WolvCTF 2025</title>
-      <link>http://localhost:1313/posts/wolvctf-2025/</link>
-      <pubDate>Tue, 29 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/wolvctf-2025/</guid>
-      <description>&lt;p&gt;Author writeups for my 6 challenges&lt;/p&gt;</description>
     </item>
     <item>
       <title>WolvSec CTF 2022</title>

